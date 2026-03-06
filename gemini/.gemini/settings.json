@@ -67,7 +67,8 @@
       "hideContextPercentage": false
     },
     "showModelInfoInChat": true,
-    "useFullWidth": true
+    "useFullWidth": true,
+    "useAlternateBuffer": true
   },
   "ide": {
     "enabled": true
@@ -92,5 +93,8 @@
   },
   "output": {
     "format": "text"
+  },
+  "experimental": {
+    "plan": true
   }
 }
