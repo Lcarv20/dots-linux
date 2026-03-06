@@ -1,3 +1,0 @@
-{
-  "output": "Output: /home/lcarv/.config/menus  /home/lcarv/.config/mimeapps.list  /home/lcarv/.config/mise  /home/lcarv/.config/mozilla\nls: cannot access '/home/lcarv/dots-linux/m*': No such file or directory\nExit Code: 2\nProcess Group PGID: 153857"
-}

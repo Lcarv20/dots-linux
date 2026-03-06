@@ -1,3 +1,0 @@
-{
-  "output": "Output: lrwxrwxrwx 1 lcarv lcarv 46 Mar  5 20:32 /home/lcarv/.config/wezterm -> /home/lcarv/dots-linux/wezterm/.config/wezterm\n-rw-rw-r-- 1 lcarv lcarv 1513 Mar  5 20:07 /home/lcarv/.config/wezterm/wezterm.lua\nProcess Group PGID: 161526"
-}

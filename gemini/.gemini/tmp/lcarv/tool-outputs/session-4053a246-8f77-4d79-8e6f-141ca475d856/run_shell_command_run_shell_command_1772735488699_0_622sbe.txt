@@ -1,3 +1,0 @@
-{
-  "output": "Output: /home/lcarv/.local/share/fonts/MonaspiceKrNerdFontPropo-Bold.otf: MonaspiceKr Nerd Font Propo,MonaspiceKr NFP:style=Bold\n/home/lcarv/.local/share/fonts/MonaspiceKrNerdFont-LightItalic.otf: MonaspiceKr Nerd Font,MonaspiceKr NF,MonaspiceKr NF Light:style=Light Italic,Italic\n/home/lcarv/.local/share/fonts/MonaspiceKrNerdFont-BoldItalic.otf: MonaspiceKr Nerd Font,MonaspiceKr NF:style=Bold Italic\nProcess Group PGID: 140977"
-}

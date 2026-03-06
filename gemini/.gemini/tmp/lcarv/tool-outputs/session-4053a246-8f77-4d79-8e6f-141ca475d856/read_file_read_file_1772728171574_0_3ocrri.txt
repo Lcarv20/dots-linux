@@ -1,3 +1,0 @@
-{
-  "output": "require(\"config.options\")\nrequire(\"config.lazy\")\nrequire(\"config.autocmds\")\nrequire(\"config.keymaps\")\nrequire(\"config.highlight\")\nif vim.g.neovide then\n\trequire(\"config.neovide\")\nend\n"
-}

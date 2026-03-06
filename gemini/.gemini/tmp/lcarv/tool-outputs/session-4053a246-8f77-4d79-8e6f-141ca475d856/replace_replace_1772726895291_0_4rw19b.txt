@@ -1,3 +1,0 @@
-{
-  "output": "Successfully modified file: /home/lcarv/dots-linux/zed/.config/zed/keymap.json (1 replacements). Here is the updated code:\n...\n    }\n  },\n  {\n    \"context\": \"Terminal\",\n    \"bindings\": {\n      \"ctrl-n\": \"workspace::NewTerminal\",\n      \"ctrl-d\": \"pane::CloseActiveItem\"\n    }\n  },\n  {\n    \"context\": \"Editor && vim_mode == normal && !VimWaiting && !menu\",\n    \"bindings\": {\n..."
-}

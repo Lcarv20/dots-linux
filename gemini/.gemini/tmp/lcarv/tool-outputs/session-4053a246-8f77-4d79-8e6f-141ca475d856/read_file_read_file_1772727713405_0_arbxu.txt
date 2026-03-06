@@ -1,3 +1,0 @@
-{
-  "output": "[colors.primary]\nforeground = \"#ebdbb2\"\nbackground = \"#1d2021\"\n\n[colors.cursor]\ntext = \"#1d2021\"\ncursor = \"#ebdbb2\"\n\n[colors.selection]\ntext = \"#1d2021\"\nbackground = \"#ebdbb2\"\n\n[colors.normal]\nblack = \"#1d2021\"\nred = \"#cc241d\"\ngreen = \"#98971a\"\nyellow = \"#d79921\"\nblue = \"#458588\"\nmagenta = \"#b16286\"\ncyan = \"#689d6a\"\nwhite = \"#a89984\"\n\n[colors.bright]\nblack = \"#928374\"\nred = \"#fb4934\"\ngreen = \"#b8bb26\"\nyellow = \"#fabd2f\"\nblue = \"#83a598\"\nmagenta = \"#d3869b\"\ncyan = \"#8ec07c\"\nwhite = \"#ebdbb2\"\n"
-}

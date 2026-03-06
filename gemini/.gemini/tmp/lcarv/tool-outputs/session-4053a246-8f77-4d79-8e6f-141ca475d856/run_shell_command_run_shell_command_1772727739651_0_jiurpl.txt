@@ -1,3 +1,0 @@
-{
-  "output": "Output: lrwxrwxrwx 1 lcarv lcarv   41 Mar  5 17:22 /home/lcarv/.config/alacritty -> ../dots-linux/alacritty/.config/alacritty\n-rw-rw-r-- 1 lcarv lcarv 3627 Mar  5 17:18 /home/lcarv/.config/zed/keymap.json\nProcess Group PGID: 110440"
-}

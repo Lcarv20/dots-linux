@@ -1,3 +1,0 @@
-{
-  "output": "Output: Flatpak 1.16.1\nLooking for matches…\n\ncom.rioterm.Rio permissions:\n    ipc     fallback-x11     wayland    x11    dri    dbus access [1]\n\n    [1] org.freedesktop.Flatpak\n\n\n        ID                      Branch         Op         Remote          Download\n 1.     com.rioterm.Rio         stable         i          flathub         < 17.0 MB\n\n\nInstalling… ████████████████████ 100%  16.2 MB/s\nwezterm 20240203-110809-5046fc22\nrioterm 0.2.37\nProcess Group PGID: 150344"
-}

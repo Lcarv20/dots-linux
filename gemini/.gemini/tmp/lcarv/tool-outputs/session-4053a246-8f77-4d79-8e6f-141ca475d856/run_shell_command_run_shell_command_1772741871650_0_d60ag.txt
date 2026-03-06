@@ -1,3 +1,0 @@
-{
-  "output": "Output: mise 2026.3.3 by @jdx                                                                                                                               [3/3]\nripgrep@15.1.0  extract ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz                                                                                 ✔\nmise ERROR Failed to install tools: fd-find@latest, tree-sitter-cli@latest\n\nfd-find@latest: fd-find not found in mise tool registry\n\nDid you mean?\n  fd\n\ntree-sitter-cli@latest: tree-sitter-cli not found in mise tool registry\n\nDid you mean?\n  tree-sitter\n  aqua:peteretelej/tree\n  aqua:dduan/tre\nmise ERROR Run with --verbose or MISE_VERBOSE=1 for more information\nExit Code: 1\nProcess Group PGID: 161988"
-}

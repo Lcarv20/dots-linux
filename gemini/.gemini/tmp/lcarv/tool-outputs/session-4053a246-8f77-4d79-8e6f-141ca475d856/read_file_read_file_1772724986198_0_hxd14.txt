@@ -1,3 +1,0 @@
-{
-  "error": "Path not in workspace: Attempted path \"/usr/bin/antidote\" resolves outside the allowed workspace directories: /home/lcarv or the project temp directory: /home/lcarv/.gemini/tmp/lcarv"
-}

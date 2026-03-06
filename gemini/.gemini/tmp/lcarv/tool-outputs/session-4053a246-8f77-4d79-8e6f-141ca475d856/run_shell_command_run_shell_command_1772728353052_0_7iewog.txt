@@ -1,3 +1,0 @@
-{
-  "output": "Output: NVIM v0.11.6\nBuild type: Release\nLuaJIT 2.1.1741730670\nRun \"nvim -V1 -v\" for more info\n/usr/bin/nvim\n-rwxr-xr-x 1 root root 4853352 Apr  1  2024 /usr/bin/nvim\nProcess Group PGID: 113283"
-}

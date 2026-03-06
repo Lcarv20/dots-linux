@@ -1,3 +1,0 @@
-{
-  "output": "Successfully modified file: /home/lcarv/dots-linux/zed/.config/zed/settings.json (1 replacements). Here is the updated code:\n...\n  // },\n\n  // 🖼️ background settings\n  \"terminal\": {\n    \"font_size\": 14,\n    \"font_family\": \"MonaspiceNe Nerd Font\",\n    \"line_height\": { \"custom\": 1.2 },\n    \"font_weight\": 500\n  },\n\n  // ⚙️ vim settings\n...\n  },\n\n  // 🎨 font settings\n  // \"ui_font_family\": \"CaskaydiaCove Nerd Font\",\n  // \"buffer_line_height\": { \"custom\": 1.4 },\n  \"buffer_font_family\": \"MonaspiceNe Nerd Font\",\n  \"buffer_font_size\": 14.0,\n\n  // disable cursor blink\n  \"cursor_blink\": false,\n  // \"cursor_shape\": \"hollow\",\n..."
-}

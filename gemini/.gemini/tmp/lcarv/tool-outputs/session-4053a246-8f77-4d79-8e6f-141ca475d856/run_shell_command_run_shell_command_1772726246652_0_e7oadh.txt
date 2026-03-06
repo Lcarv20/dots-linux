@@ -1,3 +1,0 @@
-{
-  "output": "Output: /home/lcarv/dots-macos/zsh:\ncolorscript  poke-colorscript\n/home/lcarv/dots-macos/zed:\nProcess Group PGID: 106778"
-}

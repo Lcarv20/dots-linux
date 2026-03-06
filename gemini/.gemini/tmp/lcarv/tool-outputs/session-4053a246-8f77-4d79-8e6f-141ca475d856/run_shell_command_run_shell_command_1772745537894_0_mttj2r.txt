@@ -1,3 +1,0 @@
-{
-  "output": "Output:                                         require(\"treesitter-context\").setup({})\n                        require(\"nvim-treesitter.configs\").setup({\nProcess Group PGID: 171173"
-}

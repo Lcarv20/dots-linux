@@ -1,3 +1,0 @@
-{
-  "output": "Successfully overwrote file: /home/lcarv/.zshrc. Here is the updated code:\n# Set the antidote path\nzsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins.zsh\nzsh_plugins_txt=${ZDOTDIR:-$HOME}/.zsh_plugins.txt\n\n# Source antidote\nsource /usr/share/zsh-antidote/antidote.zsh\n\n# Static load antidote plugins\nif [[ ! $zsh_plugins -nt $zsh_plugins_txt ]]; then\n  antidote bundle < $zsh_plugins_txt > $zsh_plugins\nfi\nsource $zsh_plugins\n\n# Initialize completions\nautoload -Uz compinit && compinit\n\n# Eval Mise\neval \"$(mise activate zsh)\"\n\n# Starship\neval \"$(starship init zsh)\"\n\n# pnpm\nexport PNPM_HOME=\"/home/lcarv/.local/share/pnpm\"\ncase \":$PATH:\" in\n  *\":$PNPM_HOME:\"*) ;;\n  *) export PATH=\"$PNPM_HOME:$PATH\" ;;\n..."
-}

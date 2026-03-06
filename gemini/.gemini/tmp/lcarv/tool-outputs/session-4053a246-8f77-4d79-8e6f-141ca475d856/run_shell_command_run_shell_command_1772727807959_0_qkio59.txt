@@ -1,3 +1,0 @@
-{
-  "output": "Output: /home/lcarv/dots-linux/lazygit:\n\n/home/lcarv/dots-linux/lsd:\nmise 2026.3.3 by @jdx                                                                                                                               [2/2]\nlsd@1.2.0       extract lsd-v1.2.0-x86_64-unknown-linux-musl.tar.gz                                                                                     ✔\nlazygit@0.59.0  extract lazygit_0.59.0_linux_x86_64.tar.gz                                                                                              ✔\nmise ~/.config/mise/config.toml tools: lazygit@0.59.0, lsd@1.2.0\nExit Code: 1\nProcess Group PGID: 111029"
-}

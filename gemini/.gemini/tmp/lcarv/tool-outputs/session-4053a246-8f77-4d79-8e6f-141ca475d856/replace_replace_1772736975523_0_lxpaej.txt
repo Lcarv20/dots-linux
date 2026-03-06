@@ -1,3 +1,0 @@
-{
-  "output": "Successfully modified file: /home/lcarv/dots-linux/nvim/.config/nvim/lua/plugins/tree-sitter.lua (1 replacements). Here is the updated code:\nreturn {\n\t{\n\t\t\"nvim-treesitter/nvim-treesitter\",\n    tag = \"v0.9.3\",\n\t\tevent = { \"BufReadPost\", \"BufNewFile\" },\n\t\tdependencies = {\n\t\t\t{ \"OXY2DEV/markview.nvim\" },\n\t\t\t{ \"nvim-treesitter/nvim-treesitter-textobjects\", event = \"VeryLazy\" },\n\t\t\t{\n..."
-}

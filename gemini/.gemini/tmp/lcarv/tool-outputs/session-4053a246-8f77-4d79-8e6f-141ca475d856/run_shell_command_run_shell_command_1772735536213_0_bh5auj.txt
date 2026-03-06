@@ -1,3 +1,0 @@
-{
-  "output": "Output: No default nvim config\ntotal 12\ndrwxrwxr-x  3 lcarv lcarv 4096 Mar  5 17:26 .\ndrwxrwxr-x 17 lcarv lcarv 4096 Mar  5 19:18 ..\ndrwxrwxr-x  3 lcarv lcarv 4096 Mar  5 17:26 .config\nProcess Group PGID: 141026"
-}

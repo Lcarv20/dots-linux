@@ -1,3 +1,0 @@
-{
-  "output": "Successfully modified file: /home/lcarv/dots-linux/zsh/.zshrc (1 replacements). Here is the updated code:\n...\n\n# 7. Poke-colorscript (if stowed)\nif [ -f \"$HOME/.local/bin/poke-colorscript\" ]; then\n    \"$HOME/.local/bin/poke-colorscript\"\nfi\n"
-}

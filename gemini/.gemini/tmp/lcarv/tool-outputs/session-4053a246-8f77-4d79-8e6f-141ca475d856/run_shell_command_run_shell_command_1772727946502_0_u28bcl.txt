@@ -1,3 +1,0 @@
-{
-  "output": "Output: /home/lcarv/dots-macos/mvim:\nProcess Group PGID: 111432"
-}

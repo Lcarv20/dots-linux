@@ -1,3 +1,0 @@
-{
-  "output": "Output: -rw-rw-r-- 1 lcarv lcarv 3839 Mar  5 19:35 /home/lcarv/.local/share/nvim/lazy/lazy.nvim/lua/lazy/init.lua\nProcess Group PGID: 162184"
-}

@@ -1,3 +1,0 @@
-{
-  "output": "Output: 106-})\n107-\n108--- Lsp progress\n109----@type table<number, {token:lsp.ProgressToken, msg:string, done:boolean}[]>\n110-local progress = vim.defaulttable()\n111:vim.api.nvim_create_autocmd(\"LspProgress\", {\n112-    ---@param ev {data: {client_id: integer, params: lsp.ProgressParams}}\n113-    callback = function(ev)\n114-            local client = vim.lsp.get_client_by_id(ev.data.client_id)\n115-            local value = ev.data.params.value --[[@as {percentage?: number, title?: string, message?: string, kind: \"begin\" | \"report\" | \"end\"}]]\n116-            if not client or type(value) ~= \"table\" then\nProcess Group PGID: 164542"
-}

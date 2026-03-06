@@ -1,3 +1,0 @@
-{
-  "output": "Output: total 24\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 17:08 .\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 17:08 ..\n-rw-rw-r-- 1 lcarv lcarv 3627 Mar  5 17:18 keymap.json\n-rw-rw-r-- 1 lcarv lcarv 3953 Mar  5 17:08 settings.json\n-rw-rw-r-- 1 lcarv lcarv 1990 Mar  5 17:08 tasks.json\ndrwxrwxr-x 2 lcarv lcarv 4096 Mar  5 17:08 themes\nProcess Group PGID: 110446"
-}

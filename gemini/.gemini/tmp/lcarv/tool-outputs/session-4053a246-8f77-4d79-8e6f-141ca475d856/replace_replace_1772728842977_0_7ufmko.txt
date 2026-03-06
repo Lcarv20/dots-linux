@@ -1,3 +1,0 @@
-{
-  "output": "Successfully modified file: /home/lcarv/dots-linux/zsh/.zshrc (1 replacements). Here is the updated code:\n...\nexport PATH=\"$PNPM_HOME:$PATH\"\nexport EDITOR='nvim'\nexport XDG_CONFIG_HOME=\"$HOME/.config\"\nexport NEXT_TELEMETRY_DISABLED=1\n\n# 6. Vi Mode Cursor (from macOS)\n# (Ported from macOS config to handle Vi mode cursor shape)\nzle-keymap-select() {\n  if [[ ${KEYMAP} == vicmd ]]; then\n    echo -ne \"\\e[1 q\"\n  else\n    echo -ne \"\\e[5 q\"\n  fi\n  zle reset-prompt\n}\nzle -N zle-keymap-select\n\nzle-line-init() {\n  zle -K viins\n  echo -ne \"\\e[5 q\"\n}\nzle -N zle-line-init\n\n# 7. Poke-colorscript (if stowed)\nif [ -f \"$HOME/.local/bin/poke-colorscript\" ]; then\n    \"$HOME/.local/bin/poke-colorscript\"\nfi\n"
-}

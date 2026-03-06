@@ -1,3 +1,0 @@
-{
-  "output": "Output: total 16\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 18:03 .\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 18:03 ..\n-rw-rw-r-- 1 lcarv lcarv 2007 Mar  5 18:03 config\ndrwxrwxr-x 2 lcarv lcarv 4096 Mar  5 18:03 ghostty-shaders\nProcess Group PGID: 134245"
-}

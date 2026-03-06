@@ -1,3 +1,0 @@
-{
-  "output": "Output: /home/lcarv/dots-macos/fastfetch:\n\n/home/lcarv/dots-macos/git:\nthemes\n\n/home/lcarv/dots-macos/git/themes:\nthemes.gitconfig\n\n/home/lcarv/dots-macos/lazygit:\n\n/home/lcarv/dots-macos/starship:\n\n/home/lcarv/dots-macos/zed:\nProcess Group PGID: 108194"
-}

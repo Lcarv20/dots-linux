@@ -1,3 +1,0 @@
-{
-  "output": "Output: /home/lcarv/Downloads/gruvbox-dark-hard-contrast.toml\nProcess Group PGID: 110423"
-}

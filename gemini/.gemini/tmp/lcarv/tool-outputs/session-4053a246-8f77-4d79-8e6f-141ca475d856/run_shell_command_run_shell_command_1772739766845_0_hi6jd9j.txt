@@ -1,3 +1,0 @@
-{
-  "output": "Output: Usage: ./setup [OPTIONS]\n\nA script to set up the development environment by installing packages and stowing dotfiles.\n\nOptions:\n  -l, --log    Enable logging to setup.log\n  -h, --help   Show this help message and exit\nProcess Group PGID: 161563"
-}

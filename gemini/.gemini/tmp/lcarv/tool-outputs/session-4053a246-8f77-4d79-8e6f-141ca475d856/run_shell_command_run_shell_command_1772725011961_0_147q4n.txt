@@ -1,3 +1,0 @@
-{
-  "output": "Output: CONTRIBUTING.md  LICENSE  README.md  src  zsh-completions-howto.org  zsh-completions.plugin.zsh\nProcess Group PGID: 104409"
-}

@@ -1,3 +1,0 @@
-{
-  "output": "Successfully modified file: /home/lcarv/dots-linux/mvim/.config/mvim/lua/config/options.lua (1 replacements). Here is the updated code:\nlocal fns = require(\"utils.fns\")\n\nvim.g.mapleader = \" \"\nvim.g.maplocalleader = \" \"\n\n-- vim.opt.winborder = \"rounded\"\nvim.g.have_nerd_font = true\nvim.opt.relativenumber = true -- set relative numbered lines\nvim.opt.numberwidth = 2 -- set number column width to 2 {default 4}\nvim.opt.showtabline = 1\nvim.opt.showcmd = true\n..."
-}

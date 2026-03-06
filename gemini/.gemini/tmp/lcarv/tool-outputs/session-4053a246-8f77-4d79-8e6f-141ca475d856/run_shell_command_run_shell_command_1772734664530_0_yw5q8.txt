@@ -1,3 +1,0 @@
-{
-  "output": "Output: fastfetch@2.59.0 extract fastfetch-linux-amd64.tar.gz                                                                                                   ✔\nmise ~/.config/mise/config.toml tools: fastfetch@2.59.0\nbash: line 1: fastfetch: command not found\nExit Code: 127\nProcess Group PGID: 135378"
-}

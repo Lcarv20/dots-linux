@@ -1,3 +1,0 @@
-{
-  "output": "Output: total 36\ndrwxrwxr-x  2 lcarv lcarv  4096 Mar  5 16:40 .\ndrwxrwxr-x 16 lcarv lcarv  4096 Mar  5 16:40 ..\n-rwxrwxr-x  1 lcarv lcarv   846 Mar  5 16:40 colorscript\n-rwxrwxr-x  1 lcarv lcarv 10698 Mar  5 16:40 poke-colorscript\n-rw-rw-r--  1 lcarv lcarv    33 Mar  5 16:40 .stow-local-ignore\n-rw-rw-r--  1 lcarv lcarv  5031 Mar  5 16:40 .zshrc\ntotal 12\ndrwxrwxr-x  3 lcarv lcarv 4096 Mar  5 16:40 .\ndrwxrwxr-x 16 lcarv lcarv 4096 Mar  5 16:40 ..\ndrwxrwxr-x  3 lcarv lcarv 4096 Mar  5 16:40 .config\ntotal 12\ndrwxrwxr-x  2 lcarv lcarv 4096 Mar  5 16:40 .\ndrwxrwxr-x 16 lcarv lcarv 4096 Mar  5 16:40 ..\n-rw-rw-r--  1 lcarv lcarv   13 Mar  5 16:40 .stow-global-ignore\nProcess Group PGID: 106897"
-}

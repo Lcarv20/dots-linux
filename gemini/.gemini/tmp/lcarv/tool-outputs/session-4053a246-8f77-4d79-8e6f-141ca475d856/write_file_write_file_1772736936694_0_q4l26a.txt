@@ -1,3 +1,0 @@
-{
-  "output": "Successfully overwrote file: /home/lcarv/dots-linux/zsh/.zshrc. Here is the updated code:\n...\n  zle -K viins\n  echo -ne \"\\e[5 q\"\n}\nzle -N zle-line-init\n\n# 7. Poke-colorscript (if stowed)\nif [ -f \"$HOME/.local/bin/poke-colorscript\" ]; then\n    \"$HOME/.local/bin/poke-colorscript\"\nfi\n\n# 8. Zellij\nalias z=\"zellij\"\nalias za=\"zellij attach\"\nalias zl=\"zellij list-sessions\"\n"
-}

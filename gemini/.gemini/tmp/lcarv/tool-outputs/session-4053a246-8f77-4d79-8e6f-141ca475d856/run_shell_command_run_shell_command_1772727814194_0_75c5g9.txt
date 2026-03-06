@@ -1,3 +1,0 @@
-{
-  "output": "Output: total 12\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 17:08 .\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 17:07 ..\ndrwxrwxr-x 2 lcarv lcarv 4096 Mar  5 17:08 lazygit\ntotal 12\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 17:08 .\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 17:07 ..\ndrwxrwxr-x 2 lcarv lcarv 4096 Mar  5 17:08 lsd\nProcess Group PGID: 111046"
-}

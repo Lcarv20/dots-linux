@@ -1,3 +1,0 @@
-{
-  "output": "Successfully overwrote file: /home/lcarv/.zsh_plugins.txt. Here is the updated code:\nzsh-users/zsh-completions\nzsh-users/zsh-autosuggestions\nAloxaf/fzf-tab\nzap-zsh/supercharge\npaulirish/git-open\nLcarv20/web-search\nwintermi/zsh-starship\nwintermi/zsh-mise\nzsh-users/zsh-syntax-highlighting\n"
-}

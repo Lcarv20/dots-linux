@@ -1,0 +1,11 @@
+# Gemini transient/app-generated files
+gemini/.gemini/*
+!gemini/.gemini/settings.json
+!gemini/.gemini/GEMINI.md
+
+# Logs
+*.log
+setup.log
+
+# System
+.DS_Store

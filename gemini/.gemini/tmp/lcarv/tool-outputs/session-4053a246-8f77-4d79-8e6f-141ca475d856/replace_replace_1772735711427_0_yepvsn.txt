@@ -1,3 +1,0 @@
-{
-  "output": "Successfully modified file: /home/lcarv/dots-linux/README.md (1 replacements). Here is the updated code:\n...\n| Tool | Config Path |\n|------|-------------|\n| **Alacritty** | `~/.config/alacritty` |\n| **Ghostty** | `~/.config/ghostty` |\n| **Zsh** | `~/.zshrc`, `~/.zsh_plugins.txt` |\n| **Neovim** | `~/.config/nvim` |\n| **Zed** | `~/.config/zed` |\n| **Starship** | `~/.config/starship.toml` |\n| **Fastfetch** | `~/.config/fastfetch` |\n| **Lazygit** | `~/.config/lazygit` |\n| **LSD** | `~/.config/lsd` |\n..."
-}

@@ -1,3 +1,0 @@
-{
-  "output": "zsh-users/zsh-autosuggestions\nzap-zsh/supercharge\nzsh-users/zsh-syntax-highlighting\npaulirish/git-open\nAloxaf/fzf-tab\nFreed-Wu/fzf-tab-source\nLcarv20/web-search\nwintermi/zsh-starship\nwintermi/zsh-mise\n"
-}

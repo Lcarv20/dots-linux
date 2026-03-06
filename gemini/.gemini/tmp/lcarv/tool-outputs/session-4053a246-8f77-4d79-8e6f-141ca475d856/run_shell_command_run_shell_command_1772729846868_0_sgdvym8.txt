@@ -1,3 +1,0 @@
-{
-  "output": "Output: Sorting... Done\nFull Text Search... Done\nGhostty not found in apt or mise\nProcess Group PGID: 131383"
-}
