@@ -95,6 +95,7 @@ return {
 			})
 
 			require("utils.fns").diagnostics_config()
+			require("utils.fns").lsp_popover_borders()
 
 			local capabilities = {
 				textDocument = {

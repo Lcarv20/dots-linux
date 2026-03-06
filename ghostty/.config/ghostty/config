@@ -4,11 +4,8 @@ cursor-style = block
 shell-integration-features = no-cursor
 # cursor-style-blink = false
 cursor-click-to-move = true
-cursor-text = #181818
-cursor-color = #e86d6d
-# cursor-invert-fg-bg
-# cursor-color = cyan
-# cursor-opacity = 0.7
+# cursor-text = #181818
+# cursor-color = #e86d6d
 
 # Theme
 # -------------

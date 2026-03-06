@@ -180,7 +180,7 @@ done
 
 # 6. Install Runtimes
 msg "Installing Runtimes with mise"
-RUNTIMES=(bun node go rust pnpm)
+RUNTIMES=(bun node go rust pnpm lua)
 for runtime in "${RUNTIMES[@]}"; do
     run_with_spinner "Mise: Installing $runtime" mise use -g "$runtime@latest"
 done

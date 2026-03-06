@@ -26,7 +26,7 @@ M.diagnostics_config = function(border)
 			{ name = "diagnosticsignerror", text = " " },
 			{ name = "diagnosticsignwarn", text = " " },
 			{ name = "diagnosticsigninfo", text = " " },
-			{ name = "diagnosticsignhint", text = "" },
+			{ name = "diagnosticsignhint", text = " " },
 		}
 
 		for _, sign in ipairs(popup_signs) do
@@ -39,7 +39,7 @@ M.diagnostics_config = function(border)
 				text = diagnostic_signs,
 			},
 			virtual_text = {
-				prefix = "⏺",
+				prefix = "",
 			},
 			virtual_lines = false,
 			update_in_insert = false,

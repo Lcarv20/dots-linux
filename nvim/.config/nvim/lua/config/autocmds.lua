@@ -36,21 +36,6 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 	end,
 })
 
--- vim.api.nvim_create_autocmd({ "BufEnter" }, {
--- 	pattern = { "*" },
--- 	callback = function()
--- 		local buftype = vim.bo.buftype
---
--- 		if buftype == "help" then
--- 			vim.cmd([[
--- 		    nnoremap <silent> <buffer> q :close<CR>
--- 		    nnoremap <silent> <buffer> <esc> :close<CR>
--- 		    set nobuflisted
--- 		  ]])
--- 		end
--- 	end,
--- })
-
 -- autocmd to set wrap and spell in text filetypes
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "gitcommit", "markdown", "NeogitCommitMessage" },

@@ -61,7 +61,7 @@ return {
 					-- end
 					return ctx.mode ~= "cmdline" or not vim.tbl_contains({ "/", "?", ":%" }, vim.fn.getcmdtype())
 				end,
-				border = "none",
+				border = "rounded",
 			},
 			list = {
 				selection = {

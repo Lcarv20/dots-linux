@@ -1,4 +1,5 @@
--- local hex_bg = vim.fn.synIDattr(vim.fn.synIDtrans(vim.fn.hlID("Normal")), "bg", "gui")
--- vim.api.nvim_set_hl(0, "Separator", { bg = hex_bg })
-
 vim.api.nvim_set_hl(0, "WinSeparator", { link = "FloatBorder" })
+vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "none", fg = "#EAE6E1" })
+vim.api.nvim_set_hl(0, "BlinkCmpDoc", { bg = "none", fg = "#EAE6E1" })
+vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { bg = "none", fg = "#B7B1F2" })
+vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { bg = "none", fg = "#B7B1F2" })

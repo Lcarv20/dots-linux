@@ -62,7 +62,7 @@
         ]
       }
     },
-    "theme": "Dracula",
+    "theme": "Default",
     "footer": {
       "hideContextPercentage": false
     },
