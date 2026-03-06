@@ -9,18 +9,8 @@ cursor-click-to-move = true
 
 # Theme
 # -------------
-theme = Operator Mono Dark
-
-# Cell
-# -------------
-
-# # Quick terminal
-# keybind = global:cmd+shift+escape=toggle_quick_terminal
-# quick-terminal-position = center
-# # quick-terminal-size = 20%,20%
-
-
-# open new tab on dotfiles
+theme = Gruvbox Dark Hard
+# theme = Operator Mono Dark
 
 # open new tab on home
 #--------------
@@ -39,7 +29,8 @@ font-size = 11
 # -------------
 window-width = 150
 window-height = 50
-window-decoration = server
+window-decoration = none
+window-theme = ghostty
 #--------------
 
 # cmd+backspace to delete the entire line
