@@ -1,0 +1,188 @@
+#!/bin/bash
+
+# Exit immediately if a command exits with a non-zero status.
+set -euo pipefail
+
+# --- Configuration ---
+LOG_FILE="setup.log"
+LOGGING=false
+
+# Function to show a help message
+show_help() {
+    echo "Usage: ./setup [OPTIONS]"
+    echo ""
+    echo "A script to set up the Linux development environment (Ubuntu/Pop!_OS)."
+    echo ""
+    echo "Options:"
+    echo "  -l, --log    Enable logging to setup.log"
+    echo "  -h, --help   Show this help message and exit"
+    exit 0
+}
+
+# Parse command-line arguments
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -l|--log) LOGGING=true; shift ;;
+        -h|--help) show_help ;;
+        *) echo "Unknown option: $1" >&2; exit 1 ;;
+    esac
+done
+
+# --- Logging Setup ---
+if [ "$LOGGING" = true ]; then true > "$LOG_FILE"; fi
+
+log_command_output() {
+    if [ "$LOGGING" = true ]; then
+        echo "--- Log for: $1 ---" >> "$LOG_FILE"
+        cat "$2" >> "$LOG_FILE"
+        echo "--- End Log ---" >> "$LOG_FILE"
+        echo "" >> "$LOG_FILE"
+    fi
+}
+
+# --- Helper Functions ---
+msg() { echo -e "\033[35m▶ $1\033[0m"; }
+
+command_exists() { command -v "$1" &> /dev/null; }
+
+install_package() {
+    local pkg=$1
+    shift
+    local install_command=("$@")
+    local message="    Installing $pkg"
+    local temp_log_file=$(mktemp)
+    local spin='⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏'
+    local i=0
+    local term_width=$(tput cols 2>/dev/null || echo 80)
+
+    "${install_command[@]}" "$pkg" >"$temp_log_file" 2>&1 &
+    local pid=$!
+
+    printf "%s %s" "${spin:0:1}" "$message"
+    while kill -0 "$pid" 2>/dev/null; do
+        i=$(( (i+1) % ${#spin} ))
+        printf "\r%s %s" "${spin:$i:1}" "$message"
+        sleep 0.1
+    done
+
+    wait "$pid" || true
+    local exit_code=$?
+    printf "\r%*s\r" "$term_width" ""
+    log_command_output "${install_command[*]} $pkg" "$temp_log_file"
+
+    if [ $exit_code -eq 0 ]; then
+        printf "\033[32m    ✔ %s installed\033[0m\n" "$pkg"
+    else
+        printf "\033[31m    ✖ Failed to install %s\033[0m\n" "$pkg"
+        rm -f "$temp_log_file"; exit 1
+    fi
+    rm -f "$temp_log_file"
+}
+
+run_with_spinner() {
+    local message="$1"
+    shift
+    local command_to_run=("$@")
+    local temp_log_file=$(mktemp)
+    local spin='⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏'
+    local i=0
+    local term_width=$(tput cols 2>/dev/null || echo 80)
+
+    "${command_to_run[@]}" >"$temp_log_file" 2>&1 &
+    local pid=$!
+
+    printf "%s %s" "${spin:0:1}" "    $message"
+    while kill -0 "$pid" 2>/dev/null; do
+        i=$(( (i+1) % ${#spin} ))
+        printf "\r%s %s" "${spin:$i:1}" "    $message"
+        sleep 0.1
+    done
+
+    wait "$pid" || true
+    local exit_code=$?
+    printf "\r%*s\r" "$term_width" ""
+    log_command_output "${command_to_run[*]}" "$temp_log_file"
+
+    if [ $exit_code -eq 0 ]; then
+        printf "\033[32m    ✔ %s\033[0m\n" "$message"
+    else
+        printf "\033[31m    ✖ %s\033[0m\n" "$message"
+        rm -f "$temp_log_file"; exit "$exit_code"
+    fi
+    rm -f "$temp_log_file"
+}
+
+# --- Main Script ---
+msg "Starting Linux Setup..."
+
+# 1. Update Apt
+msg "Updating package lists"
+sudo apt update -y
+
+# 2. Setup WezTerm Repo (if not installed)
+if ! command_exists wezterm; then
+    msg "Setting up WezTerm repository"
+    curl -fsSL https://apt.fury.io/wez/gpg.key | sudo gpg --yes --dearmor -o /usr/share/keyrings/wezterm-fury.gpg
+    echo 'deb [signed-by=/usr/share/keyrings/wezterm-fury.gpg] https://apt.fury.io/wez/ * *' | sudo tee /etc/apt/sources.list.d/wezterm.list
+    sudo apt update
+fi
+
+# 3. Setup Ghostty (if not installed)
+if ! command_exists ghostty; then
+    msg "Installing Ghostty via community script"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+fi
+
+# 4. Packages to Install
+msg "Preparing to install tools"
+APT_PACKAGES=(stow git curl build-essential wezterm ncurses-term ghostty)
+MISE_TOOLS=(lsd lazygit fzf starship zoxide bat fastfetch direnv neovim)
+
+echo "The following will be installed:"
+echo ""
+printf "\033[36m%-30s %s\033[0m\n" "APT PACKAGES" "MISE TOOLS"
+printf "%-30s %s\n" "------------------------------" "------------------------------"
+max_rows=${#APT_PACKAGES[@]}
+[ ${#MISE_TOOLS[@]} -gt $max_rows ] && max_rows=${#MISE_TOOLS[@]}
+
+for ((i=0; i<max_rows; i++)); do
+    apt_item="${APT_PACKAGES[i]:-}"
+    mise_item="${MISE_TOOLS[i]:-}"
+    [ -n "$apt_item" ] && apt_item="     - $apt_item"
+    [ -n "$mise_item" ] && mise_item="     - $mise_item"
+    printf "%-30s %s\n" "$apt_item" "$mise_item"
+done
+
+echo ""
+echo -n "Do you want to proceed? (y/n): "
+read -r response
+[[ ! "$response" =~ ^[Yy]$ ]] && exit 0
+
+# 4. Install Packages
+msg "Installing Apt packages"
+for pkg in "${APT_PACKAGES[@]}"; do
+    install_package "$pkg" sudo apt install -y
+done
+
+msg "Installing Mise tools"
+for tool in "${MISE_TOOLS[@]}"; do
+    run_with_spinner "Mise: Installing $tool" mise use -g "$tool@latest"
+done
+
+# 5. Stow Dotfiles
+msg "Stowing dotfiles"
+DOTS_DIR="$HOME/dots-linux"
+cd "$DOTS_DIR"
+PACKAGES=(fastfetch gemini git lazygit lsd nvim opencode starship vibe wezterm zsh ghostty)
+for pkg in "${PACKAGES[@]}"; do
+    run_with_spinner "Stowing $pkg" stow "$pkg"
+done
+
+# 6. Install Runtimes
+msg "Installing Runtimes with mise"
+RUNTIMES=(bun node go rust pnpm)
+for runtime in "${RUNTIMES[@]}"; do
+    run_with_spinner "Mise: Installing $runtime" mise use -g "$runtime@latest"
+done
+
+msg "Setup complete! ✨"

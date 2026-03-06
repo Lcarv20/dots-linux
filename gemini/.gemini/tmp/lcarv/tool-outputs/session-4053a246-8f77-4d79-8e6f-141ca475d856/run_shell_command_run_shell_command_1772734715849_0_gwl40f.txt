@@ -1,0 +1,3 @@
+{
+  "output": "Output: -rw-rw-r-- 1 lcarv lcarv 2007 Mar  5 18:03 /home/lcarv/.config/ghostty/config\n\n/home/lcarv/.gemini/:\ntotal 20\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 18:03 .\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 18:03 ..\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 18:03 commands\n-rw-rw-r-- 1 lcarv lcarv 2368 Mar  5 18:03 GEMINI.md\n-rw-rw-r-- 1 lcarv lcarv 1789 Mar  5 18:03 settings.json\nbash: line 1: fastfetch: command not found\nExit Code: 127\nProcess Group PGID: 135543"
+}

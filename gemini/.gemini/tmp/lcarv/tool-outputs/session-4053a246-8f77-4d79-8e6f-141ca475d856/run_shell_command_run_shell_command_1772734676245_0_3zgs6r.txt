@@ -1,0 +1,3 @@
+{
+  "output": "Output: fastfetch 2.59.0 (x86_64)\n/home/lcarv/.local/share/mise/installs/fastfetch/2.59.0/fastfetch-linux-amd64/usr/bin/fastfetch\nProcess Group PGID: 135500"
+}

@@ -1,0 +1,3 @@
+{
+  "output": "Output: MonaspiceKr Nerd Font,MonaspiceKr NF\nMonaspiceKr Nerd Font,MonaspiceKr NF,MonaspiceKr NF Light\nMonaspiceKr Nerd Font,MonaspiceKr NF,MonaspiceKr NF Medium\nMonaspiceKr Nerd Font Mono,MonaspiceKr NFM\nMonaspiceKr Nerd Font Mono,MonaspiceKr NFM,MonaspiceKr NFM Light\nMonaspiceKr Nerd Font Mono,MonaspiceKr NFM,MonaspiceKr NFM Medium\nMonaspiceKr Nerd Font Propo,MonaspiceKr NFP\nMonaspiceKr Nerd Font Propo,MonaspiceKr NFP,MonaspiceKr NFP Light\nMonaspiceKr Nerd Font Propo,MonaspiceKr NFP,MonaspiceKr NFP Medium\nProcess Group PGID: 140999"
+}

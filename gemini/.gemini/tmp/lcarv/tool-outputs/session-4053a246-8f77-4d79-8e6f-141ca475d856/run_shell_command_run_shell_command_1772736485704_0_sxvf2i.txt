@@ -1,0 +1,3 @@
+{
+  "output": "Output: lrwxrwxrwx 1 lcarv lcarv 31 Mar  5 19:33 /home/lcarv/.config/nvim -> ../dots-linux/nvim/.config/nvim\nProcess Group PGID: 154059"
+}

@@ -1,0 +1,3 @@
+{
+  "output": "Successfully modified file: /home/lcarv/dots-linux/plan.md (1 replacements). Here is the updated code:\n...\n- [x] **Keymap Polish**: Verified Alacritty bindings (no tab-related shortcuts needed).\n\n## Phase 5: Deployment & Validation ✅\n- [x] **Stow Everything**: All packages linked from `~/dots-linux` to `$HOME`.\n- [x] **Alacritty Theme**: Updated to **Gruvbox Dark** (Hard Contrast).\n- [x] **Tools Installed**: `lazygit`, `lsd`, `fzf`, `zoxide`, `bat`, `eza` installed via `mise`.\n- [x] **Verify**: Symbolic links confirmed for Zsh, Alacritty, Zed, Starship, Git, Lazygit, and LSD.\n\n---\n\n### Keymap Translation Reference\n| Mac Key | Linux Equivalent |\n..."
+}

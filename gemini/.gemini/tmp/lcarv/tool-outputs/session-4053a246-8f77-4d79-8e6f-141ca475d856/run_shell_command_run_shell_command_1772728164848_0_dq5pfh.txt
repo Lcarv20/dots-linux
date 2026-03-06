@@ -1,0 +1,3 @@
+{
+  "output": "Output: -rw-rw-r-- 1 lcarv lcarv 183 Mar  5 17:26 /home/lcarv/.config/mvim/init.lua\nProcess Group PGID: 112555"
+}

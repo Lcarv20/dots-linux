@@ -1,0 +1,1367 @@
+Output: [LuaSnip]         fetch | Running task fetch
+[SchemaStore.nvim] fetch | Running task fetch
+[bg.nvim]         fetch | Running task fetch
+[blink-cmp-avante] fetch | Running task fetch
+[blink.cmp]       fetch | Running task fetch
+[catppuccin]      fetch | Running task fetch
+[classic_monokai.nvim] fetch | Running task fetch
+[colorbuddy.nvim] fetch | Running task fetch
+[conform.nvim]    fetch | Running task fetch
+[diffview.nvim]   fetch | Running task fetch
+[eyeliner.nvim]   fetch | Running task fetch
+[friendly-snippets] fetch | Running task fetch
+[gitsigns.nvim]   fetch | Running task fetch
+[gruber-darker.nvim] fetch | Running task fetch
+[harpoon]         fetch | Running task fetch
+[lazy.nvim]       fetch | Running task fetch
+[lazydev.nvim]    fetch | Running task fetch
+[lualine.nvim]    fetch | Running task fetch
+[mason-lspconfig.nvim] fetch | Running task fetch
+[mason-tool-installer.nvim] fetch | Running task fetch
+[mason.nvim]      fetch | Running task fetch
+[mdx.nvim]        fetch | Running task fetch
+[mini.nvim]       fetch | Running task fetch
+[neogit]          fetch | Running task fetch
+[nvim-autopairs]  fetch | Running task fetch
+[nvim-colorizer.lua] fetch | Running task fetch
+[nvim-lint]       fetch | Running task fetch
+[nvim-lspconfig]  fetch | Running task fetch
+[nvim-treesitter] fetch | Running task fetch
+[nvim-treesitter-textobjects] fetch | Running task fetch
+[nvim-ts-autotag] fetch | Running task fetch
+[nvim-ts-context-commentstring] fetch | Running task fetch
+[nvim-ufo]        fetch | Running task fetch
+[nvim-web-devicons] fetch | Running task fetch
+[obscure.nvim]    fetch | Running task fetch
+[oil.nvim]        fetch | Running task fetch
+[oldtale.nvim]    fetch | Running task fetch
+[onedark.nvim]    fetch | Running task fetch
+[persistence.nvim] fetch | Running task fetch
+[pkl-neovim]      fetch | Running task fetch
+[plenary.nvim]    fetch | Running task fetch
+[promise-async]   fetch | Running task fetch
+[smartcolumn.nvim] fetch | Running task fetch
+[snacks.nvim]     fetch | Running task fetch
+[sugoi.nvim]      fetch | Running task fetch
+[supermaven-nvim] fetch | Running task fetch
+[tabby.nvim]      fetch | Running task fetch
+[telescope.nvim]  fetch | Running task fetch
+[todo-comments.nvim] fetch | Running task fetch
+[tokyonight.nvim] fetch | Running task fetch
+[trouble.nvim]    fetch | Running task fetch
+[typr]            fetch | Running task fetch
+[volt]            fetch | Running task fetch
+[which-key.nvim]  fetch | Running task fetch
+[SchemaStore.nvim] fetch | Finished task fetch in 594ms
+[blink-cmp-avante] fetch | Finished task fetch in 593ms
+[SchemaStore.nvim] status | Running task status
+[blink-cmp-avante] status | Running task status
+[conform.nvim]    fetch | Finished task fetch in 650ms
+[eyeliner.nvim]   fetch | Finished task fetch in 650ms
+[conform.nvim]   status | Running task status
+[eyeliner.nvim]  status | Running task status
+[SchemaStore.nvim] status | Finished task status in 59ms
+[LuaSnip]         fetch | Fetching submodule deps/jsregexp
+[bg.nvim]         fetch | Finished task fetch in 702ms
+[SchemaStore.nvim] checkout | Running task checkout
+[SchemaStore.nvim] checkout | Finished task checkout in 11ms
+[bg.nvim]        status | Running task status
+[colorbuddy.nvim] fetch | Finished task fetch in 712ms
+[harpoon]         fetch | Finished task fetch in 711ms
+[blink-cmp-avante] status | Finished task status in 120ms
+[blink.cmp]       fetch | Finished task fetch in 728ms
+[lazydev.nvim]    fetch | Finished task fetch in 726ms
+[blink-cmp-avante] checkout | Running task checkout
+[blink-cmp-avante] checkout | Finished task checkout in 3ms
+[blink.cmp]      status | Running task status
+[colorbuddy.nvim] status | Running task status
+[harpoon]        status | Running task status
+[lazydev.nvim]   status | Running task status
+[catppuccin]      fetch | Finished task fetch in 731ms
+[classic_monokai.nvim] fetch | Finished task fetch in 731ms
+[friendly-snippets] fetch | Finished task fetch in 730ms
+[mason-lspconfig.nvim] fetch | Finished task fetch in 729ms
+[eyeliner.nvim]  status | Finished task status in 80ms
+[lazy.nvim]       fetch | Finished task fetch in 772ms
+[conform.nvim]   status | Finished task status in 122ms
+[catppuccin]     status | Running task status
+[classic_monokai.nvim] status | Running task status
+[conform.nvim] checkout | Running task checkout
+[conform.nvim] checkout | Finished task checkout in 9ms
+[eyeliner.nvim] checkout | Running task checkout
+[eyeliner.nvim] checkout | Finished task checkout in 9ms
+[friendly-snippets] status | Running task status
+[lazy.nvim]      status | Running task status
+[mason-lspconfig.nvim] status | Running task status
+[gruber-darker.nvim] fetch | Finished task fetch in 782ms
+[lualine.nvim]    fetch | Finished task fetch in 781ms
+[bg.nvim]        status | Finished task status in 81ms
+[gitsigns.nvim]   fetch | Finished task fetch in 828ms
+[blink.cmp]      status | Finished task status in 101ms
+[colorbuddy.nvim] status | Finished task status in 101ms
+[bg.nvim]      checkout | Running task checkout
+[bg.nvim]      checkout | Finished task checkout in 8ms
+[blink.cmp]    checkout | Running task checkout
+[colorbuddy.nvim] checkout | Running task checkout
+[colorbuddy.nvim] checkout | Finished task checkout in 9ms
+[gitsigns.nvim]  status | Running task status
+[gruber-darker.nvim] status | Running task status
+[lualine.nvim]   status | Running task status
+[diffview.nvim]   fetch | Finished task fetch in 838ms
+[mdx.nvim]        fetch | Finished task fetch in 837ms
+[mini.nvim]       fetch | Finished task fetch in 836ms
+[nvim-lint]       fetch | Finished task fetch in 836ms
+[harpoon]        status | Finished task status in 111ms
+[lazydev.nvim]   status | Finished task status in 111ms
+[catppuccin]     status | Finished task status in 66ms
+[mason-tool-installer.nvim] fetch | Finished task fetch in 855ms
+[catppuccin]   checkout | Running task checkout
+[catppuccin]   checkout | Finished task checkout in 1ms
+[diffview.nvim]  status | Running task status
+[harpoon]      checkout | Running task checkout
+[harpoon]      checkout | Finished task checkout in 1ms
+[lazydev.nvim] checkout | Running task checkout
+[lazydev.nvim] checkout | Finished task checkout in 1ms
+[mason-tool-installer.nvim] status | Running task status
+[mdx.nvim]       status | Running task status
+[mini.nvim]      status | Running task status
+[nvim-lint]      status | Running task status
+[mason.nvim]      fetch | Finished task fetch in 857ms
+[lazy.nvim]      status | Finished task status in 85ms
+[nvim-lspconfig]  fetch | Finished task fetch in 889ms
+[classic_monokai.nvim] status | Finished task status in 119ms
+[mason-lspconfig.nvim] status | Finished task status in 119ms
+[classic_monokai.nvim] checkout | Running task checkout
+[classic_monokai.nvim] checkout | Finished task checkout in 1ms
+[lazy.nvim]    checkout | Running task checkout
+[mason-lspconfig.nvim] checkout | Running task checkout
+[mason-lspconfig.nvim] checkout | Finished task checkout in 1ms
+[mason.nvim]     status | Running task status
+[nvim-lspconfig] status | Running task status
+[friendly-snippets] status | Finished task status in 121ms
+[gitsigns.nvim]  status | Finished task status in 65ms
+[gruber-darker.nvim] status | Finished task status in 65ms
+[lualine.nvim]   status | Finished task status in 65ms
+[mason-tool-installer.nvim] status | Finished task status in 37ms
+[lazy.nvim]    checkout | HEAD is now at 306a055 chore(build): auto-generate rockspec mappings
+[nvim-autopairs]  fetch | Finished task fetch in 906ms
+[diffview.nvim]  status | Finished task status in 52ms
+[blink.cmp]    checkout | HEAD is now at 4b18c32 chore: bump version to 1.9.1
+[diffview.nvim] checkout | Running task checkout
+[diffview.nvim] checkout | Finished task checkout in 4ms
+[friendly-snippets] checkout | Running task checkout
+[friendly-snippets] checkout | Finished task checkout in 4ms
+[gitsigns.nvim] checkout | Running task checkout
+[gitsigns.nvim] checkout | Finished task checkout in 4ms
+[gruber-darker.nvim] checkout | Running task checkout
+[gruber-darker.nvim] checkout | Finished task checkout in 4ms
+[lualine.nvim] checkout | Running task checkout
+[lualine.nvim] checkout | Finished task checkout in 4ms
+[mason-tool-installer.nvim] checkout | Running task checkout
+[mason-tool-installer.nvim] checkout | Finished task checkout in 4ms
+[nvim-autopairs] status | Running task status
+[nvim-treesitter] fetch | Finished task fetch in 911ms
+[mdx.nvim]       status | Finished task status in 56ms
+[nvim-lint]      status | Finished task status in 56ms
+[lazy.nvim]    checkout | Finished task checkout in 26ms
+[mdx.nvim]     checkout | Running task checkout
+[mdx.nvim]     checkout | Finished task checkout in 0ms
+[nvim-lint]    checkout | Running task checkout
+[nvim-lint]    checkout | Finished task checkout in 1ms
+[nvim-treesitter] status | Running task status
+[mason.nvim]     status | Finished task status in 34ms
+[nvim-lspconfig] status | Finished task status in 34ms
+[blink.cmp]    checkout | Finished task checkout in 98ms
+[mason.nvim]   checkout | Running task checkout
+[mason.nvim]   checkout | Finished task checkout in 0ms
+[nvim-lspconfig] checkout | Running task checkout
+[nvim-lspconfig] checkout | Finished task checkout in 1ms
+[mini.nvim]      status | Finished task status in 73ms
+[nvim-autopairs] status | Finished task status in 21ms
+[mini.nvim]    checkout | Running task checkout
+[mini.nvim]    checkout | Finished task checkout in 0ms
+[nvim-autopairs] checkout | Running task checkout
+[nvim-autopairs] checkout | Finished task checkout in 0ms
+[nvim-colorizer.lua] fetch | Finished task fetch in 929ms
+[nvim-colorizer.lua] status | Running task status
+[neogit]          fetch | Finished task fetch in 943ms
+[neogit]         status | Running task status
+[nvim-treesitter] status | Finished task status in 35ms
+[nvim-treesitter] checkout | Running task checkout
+[nvim-treesitter] checkout | Finished task checkout in 0ms
+[nvim-colorizer.lua] status | Finished task status in 16ms
+[nvim-colorizer.lua] checkout | Running task checkout
+[nvim-colorizer.lua] checkout | Finished task checkout in 0ms
+[nvim-ts-autotag] fetch | Finished task fetch in 959ms
+[nvim-ts-autotag] status | Running task status
+[neogit]         status | Finished task status in 15ms
+[neogit]       checkout | Running task checkout
+[neogit]       checkout | Finished task checkout in 0ms
+[nvim-ts-context-commentstring] fetch | Finished task fetch in 967ms
+[nvim-ts-context-commentstring] status | Running task status
+[nvim-ts-autotag] status | Finished task status in 18ms
+[nvim-ts-autotag] checkout | Running task checkout
+[nvim-ts-autotag] checkout | Finished task checkout in 0ms
+[nvim-ts-context-commentstring] status | Finished task status in 20ms
+[nvim-ts-context-commentstring] checkout | Running task checkout
+[nvim-ts-context-commentstring] checkout | Finished task checkout in 0ms
+[nvim-ufo]        fetch | Finished task fetch in 1021ms
+[nvim-ufo]       status | Running task status
+[onedark.nvim]    fetch | Finished task fetch in 1042ms
+[onedark.nvim]   status | Running task status
+[nvim-ufo]       status | Finished task status in 24ms
+[nvim-ufo]     checkout | Running task checkout
+[nvim-ufo]     checkout | Finished task checkout in 0ms
+[oil.nvim]        fetch | Finished task fetch in 1057ms
+[oil.nvim]       status | Running task status
+[onedark.nvim]   status | Finished task status in 16ms
+[onedark.nvim] checkout | Running task checkout
+[onedark.nvim] checkout | Finished task checkout in 0ms
+[nvim-treesitter-textobjects] fetch | Finished task fetch in 1066ms
+[nvim-treesitter-textobjects] status | Running task status
+[promise-async]   fetch | Finished task fetch in 1068ms
+[promise-async]  status | Running task status
+[pkl-neovim]      fetch | Finished task fetch in 1074ms
+[oldtale.nvim]    fetch | Finished task fetch in 1077ms
+[oldtale.nvim]   status | Running task status
+[pkl-neovim]     status | Running task status
+[oil.nvim]       status | Finished task status in 26ms
+[plenary.nvim]    fetch | Finished task fetch in 1085ms
+[nvim-treesitter-textobjects] status | Finished task status in 17ms
+[nvim-treesitter-textobjects] checkout | Running task checkout
+[nvim-treesitter-textobjects] checkout | Finished task checkout in 2ms
+[oil.nvim]     checkout | Running task checkout
+[oil.nvim]     checkout | Finished task checkout in 2ms
+[plenary.nvim]   status | Running task status
+[promise-async]  status | Finished task status in 19ms
+[promise-async] checkout | Running task checkout
+[promise-async] checkout | Finished task checkout in 1ms
+[nvim-web-devicons] fetch | Finished task fetch in 1093ms
+[nvim-web-devicons] status | Running task status
+[oldtale.nvim]   status | Finished task status in 19ms
+[pkl-neovim]     status | Finished task status in 20ms
+[oldtale.nvim] checkout | Running task checkout
+[oldtale.nvim] checkout | Finished task checkout in 2ms
+[pkl-neovim]   checkout | Running task checkout
+[pkl-neovim]   checkout | Finished task checkout in 2ms
+[plenary.nvim]   status | Finished task status in 14ms
+[plenary.nvim] checkout | Running task checkout
+[plenary.nvim] checkout | Finished task checkout in 1ms
+[nvim-web-devicons] status | Finished task status in 14ms
+[nvim-web-devicons] checkout | Running task checkout
+[nvim-web-devicons] checkout | Finished task checkout in 0ms
+[persistence.nvim] fetch | Finished task fetch in 1112ms
+[persistence.nvim] status | Running task status
+[sugoi.nvim]      fetch | Finished task fetch in 1126ms
+[sugoi.nvim]     status | Running task status
+[persistence.nvim] status | Finished task status in 16ms
+[persistence.nvim] checkout | Running task checkout
+[persistence.nvim] checkout | Finished task checkout in 0ms
+[smartcolumn.nvim] fetch | Finished task fetch in 1136ms
+[smartcolumn.nvim] status | Running task status
+[sugoi.nvim]     status | Finished task status in 13ms
+[snacks.nvim]     fetch | Finished task fetch in 1143ms
+[snacks.nvim]    status | Running task status
+[sugoi.nvim]   checkout | Running task checkout
+[sugoi.nvim]   checkout | Finished task checkout in 3ms
+[smartcolumn.nvim] status | Finished task status in 11ms
+[smartcolumn.nvim] checkout | Running task checkout
+[smartcolumn.nvim] checkout | Finished task checkout in 1ms
+[volt]            fetch | Finished task fetch in 1149ms
+[volt]           status | Running task status
+[tabby.nvim]      fetch | Finished task fetch in 1165ms
+[tabby.nvim]     status | Running task status
+[volt]           status | Finished task status in 21ms
+[obscure.nvim]    fetch | Finished task fetch in 1173ms
+[obscure.nvim]   status | Running task status
+[volt]         checkout | Running task checkout
+[volt]         checkout | Finished task checkout in 4ms
+[tabby.nvim]     status | Finished task status in 13ms
+[tabby.nvim]   checkout | Running task checkout
+[tabby.nvim]   checkout | Finished task checkout in 5ms
+[telescope.nvim]  fetch | Finished task fetch in 1187ms
+[telescope.nvim] status | Running task status
+[obscure.nvim]   status | Finished task status in 24ms
+[obscure.nvim] checkout | Running task checkout
+[obscure.nvim] checkout | Finished task checkout in 0ms
+[tokyonight.nvim] fetch | Finished task fetch in 1201ms
+[tokyonight.nvim] status | Running task status
+[telescope.nvim] status | Finished task status in 24ms
+[telescope.nvim] checkout | Running task checkout
+[telescope.nvim] checkout | Finished task checkout in 1ms
+[supermaven-nvim] fetch | Finished task fetch in 1217ms
+[supermaven-nvim] status | Running task status
+[which-key.nvim]  fetch | Finished task fetch in 1222ms
+[which-key.nvim] status | Running task status
+[todo-comments.nvim] fetch | Finished task fetch in 1226ms
+[tokyonight.nvim] status | Finished task status in 30ms
+[todo-comments.nvim] status | Running task status
+[tokyonight.nvim] checkout | Running task checkout
+[tokyonight.nvim] checkout | Finished task checkout in 0ms
+[supermaven-nvim] status | Finished task status in 18ms
+[supermaven-nvim] checkout | Running task checkout
+[supermaven-nvim] checkout | Finished task checkout in 0ms
+[trouble.nvim]    fetch | Finished task fetch in 1240ms
+[typr]            fetch | Finished task fetch in 1240ms
+[snacks.nvim]    status | Finished task status in 98ms
+[snacks.nvim]  checkout | Running task checkout
+[snacks.nvim]  checkout | Finished task checkout in 1ms
+[trouble.nvim]   status | Running task status
+[typr]           status | Running task status
+[which-key.nvim] status | Finished task status in 17ms
+[which-key.nvim] checkout | Running task checkout
+[which-key.nvim] checkout | Finished task checkout in 2ms
+[todo-comments.nvim] status | Finished task status in 14ms
+[todo-comments.nvim] checkout | Running task checkout
+[todo-comments.nvim] checkout | Finished task checkout in 0ms
+[trouble.nvim]   status | Finished task status in 8ms
+[trouble.nvim] checkout | Running task checkout
+[trouble.nvim] checkout | Finished task checkout in 2ms
+[typr]           status | Finished task status in 10ms
+[LuaSnip]         fetch | Fetching submodule deps/jsregexp005
+[typr]         checkout | Running task checkout
+[typr]         checkout | Finished task checkout in 9ms
+[LuaSnip]         fetch | Fetching submodule deps/jsregexp006
+[LuaSnip]         fetch | Finished task fetch in 1929ms
+[LuaSnip]        status | Running task status
+[LuaSnip]        status | Finished task status in 22ms
+[LuaSnip]      checkout | Running task checkout
+[LuaSnip]      checkout | HEAD is now at 5a1e392 Format with stylua
+[LuaSnip]      checkout | Finished task checkout in 51ms
+Running healthchecks..."health_final_ULTIMATE.log" "health_final_ULTIMATE.log" [New] 1037L, 35918B
+==============================================================================
+blink.cmp:                                                                1 ⚠️
+
+System ~
+- ✅ OK curl is installed
+- ✅ OK git is installed
+- ✅ OK Your system is supported by pre-built binaries (x86_64-unknown-linux-gnu)
+- ✅ OK blink_cmp_fuzzy lib is downloaded/built
+
+Sources ~
+- ⚠️ WARNING Some providers may show up as "disabled" but are enabled dynamically (e.g. cmdline)
+
+Default sources ~
+- lsp (blink.cmp.sources.lsp)
+- path (blink.cmp.sources.path)
+- snippets (blink.cmp.sources.snippets)
+- buffer (blink.cmp.sources.buffer)
+
+Cmdline sources ~
+- buffer (blink.cmp.sources.buffer)
+- cmdline (blink.cmp.sources.cmdline)
+
+Disabled sources ~
+- omni (blink.cmp.sources.complete_func)
+
+==============================================================================
+lazy:                                                               2 ⚠️  1 ❌
+
+lazy.nvim ~
+- {lazy.nvim} version `11.17.5`
+- ✅ OK {git} `version 2.43.0`
+- ✅ OK no existing packages found by other package managers
+- ✅ OK packer_compiled.lua not found
+
+luarocks ~
+- checking `hererocks` installation
+- ✅ OK no plugins require `luarocks`, so you can ignore any warnings below
+- ✅ OK {python3} `Python 3.12.3`
+- ❌ ERROR {/home/lcarv/.local/share/nvim/lazy-rocks/hererocks/bin/luarocks} not installed
+- ⚠️ WARNING {/home/lcarv/.local/share/nvim/lazy-rocks/hererocks/bin/lua} version `5.1` not installed
+- ⚠️ WARNING Lazy won't be able to install plugins that require `luarocks`.
+  Here's what you can do:
+   - fix your `luarocks` installation
+   - disable *hererocks* with `opts.rocks.hererocks = false`
+   - disable `luarocks` support completely with `opts.rocks.enabled = false`
+
+==============================================================================
+lspconfig:                                                                  ✅
+
+- Skipped. This healthcheck is redundant with `:checkhealth vim.lsp`.
+
+==============================================================================
+luasnip:                                                                  1 ⚠️
+
+luasnip ~
+- ⚠️ WARNING For Variable/Placeholder-transformations, luasnip requires
+      the jsregexp library. See `:help |luasnip-lsp-snippets-transformations`| for advice
+  
+
+==============================================================================
+mason:                                                                   10 ⚠️
+
+mason.nvim ~
+- ✅ OK mason.nvim version v2.2.1
+- ✅ OK PATH: prepend
+- ✅ OK Providers: 
+    mason.providers.registry-api
+    mason.providers.client
+- ✅ OK neovim version >= 0.10.0
+
+mason.nvim [Registries] ~
+- ✅ OK Registry `github.com/mason-org/mason-registry version: 2026-03-05-french-judo` is installed.
+- ✅ OK Registry `SynthesizedRegistrySource` is installed.
+
+mason.nvim [Core utils] ~
+- ✅ OK unzip: `UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.`
+- ✅ OK wget: `GNU Wget 1.21.4, a non-interactive network retriever.`
+- ✅ OK curl: `curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10`
+- ✅ OK gzip: `gzip 1.12`
+- ✅ OK tar: `tar (GNU tar) 1.35`
+- ✅ OK bash: `GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)`
+
+mason.nvim [Languages] ~
+- ⚠️ WARNING cargo: not available
+  - ADVICE:
+    - spawn: cargo failed with exit code - and signal -. Could not find executable "cargo" in PATH.
+
+- ⚠️ WARNING luarocks: not available
+  - ADVICE:
+    - spawn: luarocks failed with exit code - and signal -. Could not find executable "luarocks" in PATH.
+
+- ⚠️ WARNING Ruby: not available
+  - ADVICE:
+    - spawn: ruby failed with exit code - and signal -. Could not find executable "ruby" in PATH.
+
+- ⚠️ WARNING RubyGem: not available
+  - ADVICE:
+    - spawn: gem failed with exit code - and signal -. Could not find executable "gem" in PATH.
+
+- ⚠️ WARNING Composer: not available
+  - ADVICE:
+    - spawn: composer failed with exit code - and signal -. Could not find executable "composer" in PATH.
+
+- ⚠️ WARNING PHP: not available
+  - ADVICE:
+    - spawn: php failed with exit code - and signal -. Could not find executable "php" in PATH.
+
+- ⚠️ WARNING javac: not available
+  - ADVICE:
+    - spawn: javac failed with exit code - and signal -. Could not find executable "javac" in PATH.
+
+- ⚠️ WARNING java: not available
+  - ADVICE:
+    - spawn: java failed with exit code - and signal -. Could not find executable "java" in PATH.
+
+- ⚠️ WARNING julia: not available
+  - ADVICE:
+    - spawn: julia failed with exit code - and signal -. Could not find executable "julia" in PATH.
+
+- ✅ OK node: `v25.7.0`
+- ✅ OK Go: `go version go1.26.0 linux/amd64`
+- ✅ OK python: `Python 3.12.3`
+- ⚠️ WARNING pip: not available
+  - ADVICE:
+    - spawn: python3 failed with exit code 1 and signal 0. /usr/bin/python3: No module named pip
+
+- ✅ OK python venv: `Ok`
+- ✅ OK npm: `11.10.1`
+
+==============================================================================
+mason-lspconfig:                                                            ✅
+
+mason-lspconfig.nvim ~
+- ✅ OK Neovim v0.11
+- ✅ OK mason.nvim v2
+
+==============================================================================
+nvim-treesitter:                                                          1 ❌
+
+Requirements ~
+- ✅ OK Neovim was compiled with tree-sitter runtime ABI version 15 (required >=13).
+- ❌ ERROR tree-sitter-cli not found
+- ✅ OK tar 1.35.0 (/usr/bin/tar)
+- ✅ OK curl 8.5.0 (/usr/bin/curl)
+  curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0 OpenSSL/3.0.13 zlib/1.3 brotli/1.1.0 zstd/1.5.5 libidn2/2.3.7 libpsl/0.21.2 (+libidn2/2.3.7) libssh/0.10.6/openssl/zlib nghttp2/1.59.0 librtmp/2.3 OpenLDAP/2.6.10
+  Release-Date: 2023-12-06, security patched: 8.5.0-2ubuntu10.7
+  Protocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mqtt pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp
+  Features: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM PSL SPNEGO SSL threadsafe TLS-SRP UnixSockets zstd
+
+OS Info ~
+- version: #202601231045~1769703228~24.04~cb87b5b SMP PREEMPT_DYNAMIC Thu J
+- machine: x86_64
+- sysname: Linux
+- release: 6.18.7-76061807-generic
+
+Install directory for parsers and queries ~
+- /home/lcarv/.local/share/nvim/site/
+- ✅ OK is writable.
+- ✅ OK is in runtimepath.
+
+Installed languages     H L F I J ~
+
+  Legend: [H]ighlights, [L]ocals, [F]olds, [I]ndents, In[J]ections ~
+
+==============================================================================
+snacks:                                                             8 ⚠️ 10 ❌
+
+Snacks ~
+- ✅ OK setup called
+
+Snacks.bigfile ~
+- ✅ OK setup {enabled}
+
+Snacks.dashboard ~
+- ✅ OK setup {enabled}
+- ❌ ERROR setup did not run
+
+Snacks.explorer ~
+- ✅ OK setup {enabled}
+- ✅ OK 'gio' `2.80.0`
+- ✅ OK System trash command found
+
+Snacks.image ~
+- ⚠️ WARNING setup {disabled}
+- ✅ OK 'wezterm' `wezterm 20240203-110809-5046fc22`
+- ❌ ERROR None of the tools found: 'magick', 'convert'
+- ❌ ERROR `magick` is required to convert images. Only PNG files will be displayed.
+- ✅ OK Terminal Dimensions:
+  - {size}: `0` x `0` pixels
+  - {scale}: `1.00`
+  - {cell}: `0` x `0` pixels
+- ✅ OK Available Treesitter languages:
+    `markdown_inline`, `markdown`
+- ⚠️ WARNING Missing Treesitter languages:
+    `css`, `html`, `javascript`, `latex`, `norg`, `scss`, `svelte`, `tsx`, `typst`, `vue`
+- ⚠️ WARNING Image rendering in docs with missing treesitter parsers won't work
+- ✅ OK 'gs' `10.02.1`
+- ✅ OK PDF files are supported
+- ❌ ERROR None of the tools found: 'tectonic', 'pdflatex'
+- ⚠️ WARNING `tectonic` or `pdflatex` is required to render LaTeX math expressions
+- ❌ ERROR Tool not found: 'mmdc'
+- ⚠️ WARNING `mmdc` is required to render Mermaid diagrams
+- ❌ ERROR your terminal does not support the kitty graphics protocol
+- supported terminals: `kitty`, `wezterm`, `ghostty`
+
+Snacks.input ~
+- ✅ OK setup {enabled}
+- ❌ ERROR `vim.ui.input` is not set to `Snacks.input`
+
+Snacks.lazygit ~
+- ❌ ERROR {lazygit} not installed
+
+Snacks.notifier ~
+- ✅ OK setup {enabled}
+- ✅ OK is ready
+
+Snacks.picker ~
+- ✅ OK setup {enabled}
+- ✅ OK `vim.ui.select` is set to `Snacks.picker.select`
+- ⚠️ WARNING Missing Treesitter languages:
+    `regex`
+- ✅ OK 'git' `git version 2.43.0`
+- ❌ ERROR Tool not found: 'rg'
+- ❌ ERROR 'rg' is required for `Snacks.picker.grep()`
+- ✅ OK 'fdfind' `fdfind 9.0.0`
+- ✅ OK `Snacks.picker.files()` is available
+- ✅ OK `Snacks.picker.explorer()` is available
+- ⚠️ WARNING `SQLite3` is not available. Frecency and history will be stored in a file instead.
+
+Snacks.quickfile ~
+- ✅ OK setup {enabled}
+
+Snacks.scope ~
+- ✅ OK setup {enabled}
+
+Snacks.scroll ~
+- ⚠️ WARNING setup {disabled}
+
+Snacks.statuscolumn ~
+- ✅ OK setup {enabled}
+
+Snacks.terminal ~
+- ✅ OK shell configured
+  - `vim.o.shell`: /usr/bin/zsh
+  - `parsed`: { "/usr/bin/zsh" }
+
+Snacks.toggle ~
+- ✅ OK {which-key} is installed
+
+Snacks.words ~
+- ✅ OK setup {enabled}
+
+==============================================================================
+telescope:                                                                1 ❌
+
+Checking for required plugins ~
+- ✅ OK plenary installed.
+
+Checking external dependencies ~
+- ❌ ERROR rg: not found. `live-grep` finder will not function without [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep) installed.
+- ✅ OK fd: found fdfind 9.0.0
+
+===== Installed extensions ===== ~
+
+==============================================================================
+vim.deprecated:                                                             ✅
+
+- ✅ OK No deprecated functions detected
+
+==============================================================================
+vim.health:                                                               1 ⚠️
+
+Configuration ~
+- ✅ OK no issues found
+
+Runtime ~
+- ✅ OK $VIMRUNTIME: /home/lcarv/.local/share/mise/installs/neovim/0.11.6/share/nvim/runtime
+
+Performance ~
+- ✅ OK Build type: Release
+
+Remote Plugins ~
+- ✅ OK Up to date
+
+terminal ~
+- key_backspace (kbs) terminfo entry: `key_backspace=\177`
+- key_dc (kdch1) terminfo entry: `key_dc=\E[3~`
+- $COLORTERM="truecolor"
+
+External Tools ~
+- ⚠️ WARNING ripgrep not available
+
+==============================================================================
+vim.lsp:                                                                 39 ⚠️
+
+- LSP log level : WARN
+- Log path: /home/lcarv/.local/state/nvim/lsp.log
+- Log size: 0 KB
+
+vim.lsp: Active Clients ~
+- No active clients
+
+vim.lsp: Enabled Configurations ~
+- ⚠️ WARNING 'astro-ls' is not executable. Configuration will not be used.
+- astro:
+  - before_init: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/astro.lua:56>
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      }
+    }
+  - cmd: { "astro-ls", "--stdio" }
+  - filetypes: astro
+  - init_options: {
+      typescript = {}
+    }
+  - root_markers: { "package.json", "tsconfig.json", "jsconfig.json", ".git" }
+
+- biome:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      }
+    }
+  - cmd: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/biome.lua:18>
+  - filetypes: astro, css, graphql, html, javascript, javascriptreact, json, jsonc, svelte, typescript, typescriptreact, vue
+  - root_dir: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/biome.lua:41>
+  - workspace_required: true
+
+- ⚠️ WARNING 'vscode-css-language-server' is not executable. Configuration will not be used.
+- cssls:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      }
+    }
+  - cmd: { "vscode-css-language-server", "--stdio" }
+  - filetypes: css, scss, less
+  - init_options: {
+      provideFormatter = true
+    }
+  - root_markers: { "package.json", ".git" }
+  - settings: {
+      css = {
+        lint = {
+          unknownAtRules = "ignore"
+        },
+        validate = true
+      },
+      less = {
+        lint = {
+          unknownAtRules = "ignore"
+        },
+        validate = true
+      },
+      scss = {
+        lint = {
+          unknownAtRules = "ignore"
+        },
+        validate = true
+      }
+    }
+
+- ⚠️ WARNING 'gopls' is not executable. Configuration will not be used.
+- ⚠️ WARNING Unknown filetype 'gowork'.
+- ⚠️ WARNING Unknown filetype 'gotmpl'.
+- gopls:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      }
+    }
+  - cmd: { "gopls" }
+  - filetypes: go, gomod, gowork, gotmpl
+  - root_dir: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/gopls.lua:92>
+
+- ⚠️ WARNING 'vscode-json-language-server' is not executable. Configuration will not be used.
+- jsonls:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      }
+    }
+  - cmd: { "vscode-json-language-server", "--stdio" }
+  - filetypes: json, jsonc
+  - init_options: {
+      provideFormatter = true
+    }
+  - on_new_config: <function @/home/lcarv/.config/nvim/lua/plugins/lsp.lua:115>
+  - root_markers: { ".git" }
+  - settings: {
+      json = {
+        format = {
+          enable = true
+        },
+        validate = {
+          enable = true
+        }
+      }
+    }
+
+- ⚠️ WARNING 'lua-language-server' is not executable. Configuration will not be used.
+- lua_ls:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      }
+    }
+  - cmd: { "lua-language-server" }
+  - filetypes: lua
+  - root_markers: { { ".emmyrc.json", ".luarc.json", ".luarc.jsonc" }, { ".luacheckrc", ".stylua.toml", "stylua.toml", "selene.toml", "selene.yml" }, { ".git" } }
+  - settings: {
+      Lua = {
+        codeLens = {
+          enable = true
+        },
+        completion = {
+          callSnippet = "Replace"
+        },
+        diagnostics = {
+          disable = { "missing-fields" }
+        },
+        hint = {
+          enable = true,
+          semicolon = "Disable"
+        }
+      }
+    }
+
+- ⚠️ WARNING 'pyright-langserver' is not executable. Configuration will not be used.
+- pyright:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      }
+    }
+  - cmd: { "pyright-langserver", "--stdio" }
+  - filetypes: python
+  - on_attach: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/pyright.lua:46>
+  - root_markers: { "pyrightconfig.json", "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", ".git" }
+  - settings: {
+      python = {
+        analysis = {
+          autoSearchPaths = true,
+          diagnosticMode = "openFilesOnly",
+          useLibraryCodeForTypes = true
+        }
+      }
+    }
+
+- ⚠️ WARNING 'rust-analyzer' is not executable. Configuration will not be used.
+- rust_analyzer:
+  - before_init: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/rust_analyzer.lua:134>
+  - capabilities: {
+      experimental = {
+        commands = {
+          commands = { "rust-analyzer.showReferences", "rust-analyzer.runSingle", "rust-analyzer.debugSingle" }
+        },
+        serverStatusNotification = true
+      },
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      }
+    }
+  - cmd: { "rust-analyzer" }
+  - filetypes: rust
+  - on_attach: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/rust_analyzer.lua:158>
+  - root_dir: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/rust_analyzer.lua:59>
+  - settings: {
+      ["rust-analyzer"] = {
+        lens = {
+          debug = {
+            enable = true
+          },
+          enable = true,
+          implementations = {
+            enable = true
+          },
+          references = {
+            adt = {
+              enable = true
+            },
+            enumVariant = {
+              enable = true
+            },
+            method = {
+              enable = true
+            },
+            trait = {
+              enable = true
+            }
+          },
+          run = {
+            enable = true
+          },
+          updateTest = {
+            enable = true
+          }
+        }
+      }
+    }
+
+- ⚠️ WARNING 'sourcekit-lsp' is not executable. Configuration will not be used.
+- sourcekit:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        diagnostic = {
+          dynamicRegistration = true,
+          relatedDocumentSupport = true
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      },
+      workspace = {
+        didChangeWatchedFiles = {
+          dynamicRegistration = true
+        }
+      },
+      worspace = {
+        didchangewatchedfiles = {
+          dynamicregistration = true
+        }
+      }
+    }
+  - cmd: { "sourcekit-lsp" }
+  - filetypes: swift, objc, objcpp, c, cpp
+  - get_language_id: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/sourcekit.lua:23>
+  - root_dir: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/sourcekit.lua:13>
+  - single_file_support: true
+
+- ⚠️ WARNING 'stylua' is not executable. Configuration will not be used.
+- stylua:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        }
+      }
+    }
+  - cmd: { "stylua", "--lsp" }
+  - filetypes: lua
+  - root_markers: { ".stylua.toml", "stylua.toml", ".editorconfig" }
+
+- ⚠️ WARNING 'tailwindcss-language-server' is not executable. Configuration will not be used.
+- ⚠️ WARNING Unknown filetype 'aspnetcorerazor'.
+- ⚠️ WARNING Unknown filetype 'astro-markdown'.
+- ⚠️ WARNING Unknown filetype 'blade'.
+- ⚠️ WARNING Unknown filetype 'django-html'.
+- ⚠️ WARNING Unknown filetype 'edge'.
+- ⚠️ WARNING Unknown filetype 'eelixir'.
+- ⚠️ WARNING Unknown filetype 'ejs'.
+- ⚠️ WARNING Unknown filetype 'erb'.
+- ⚠️ WARNING Unknown filetype 'gohtml'.
+- ⚠️ WARNING Unknown filetype 'gohtmltmpl'.
+- ⚠️ WARNING Unknown filetype 'handlebars'.
+- ⚠️ WARNING Unknown filetype 'hbs'.
+- ⚠️ WARNING Unknown filetype 'html-eex'.
+- ⚠️ WARNING Unknown filetype 'jade'.
+- ⚠️ WARNING Unknown filetype 'leaf'.
+- ⚠️ WARNING Unknown filetype 'mdx'.
+- ⚠️ WARNING Unknown filetype 'mustache'.
+- ⚠️ WARNING Unknown filetype 'njk'.
+- ⚠️ WARNING Unknown filetype 'nunjucks'.
+- ⚠️ WARNING Unknown filetype 'razor'.
+- ⚠️ WARNING Unknown filetype 'slim'.
+- ⚠️ WARNING Unknown filetype 'twig'.
+- ⚠️ WARNING Unknown filetype 'postcss'.
+- ⚠️ WARNING Unknown filetype 'sugarss'.
+- ⚠️ WARNING Unknown filetype 'reason'.
+- ⚠️ WARNING Unknown filetype 'templ'.
+- tailwindcss:
+  - before_init: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/tailwindcss.lua:105>
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      },
+      workspace = {
+        didChangeWatchedFiles = {
+          dynamicRegistration = true
+        }
+      }
+    }
+  - cmd: { "tailwindcss-language-server", "--stdio" }
+  - filetype_exclude: { "markdown" }
+  - filetypes: aspnetcorerazor, astro, astro-markdown, blade, clojure, django-html, htmldjango, edge, eelixir, elixir, ejs, erb, eruby, gohtml, gohtmltmpl, haml, handlebars, hbs, html, htmlangular, html-eex, heex, jade, leaf, liquid, markdown, mdx, mustache, njk, nunjucks, php, razor, slim, twig, css, less, postcss, sass, scss, stylus, sugarss, javascript, javascriptreact, reason, rescript, typescript, typescriptreact, vue, svelte, templ
+  - root_dir: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/tailwindcss.lua:117>
+  - settings: {
+      tailwindCSS = {
+        classAttributes = { "class", "className" },
+        classFunctions = { "cva", "cx" },
+        experimental = {
+          classRegex = { "class=['\"][^'\"]*['\"]", "className=['\"][^'\"]*['\"]", "\\b\\w*[Ss]tyles\\s*=\\s*['\"]([^'\"]*)['\"]", "\\b(?:const|let|var)\\s+\\w*[Ss]tyles\\s*=\\s*['\"]([^'\"]*)['\"]", "\\b\\w*[Ss]tyles\\s*=\\s*`([^`]*)`" }
+        },
+        includeLanguages = {
+          eelixir = "html-eex",
+          elixir = "phoenix-heex",
+          eruby = "erb",
+          heex = "phoenix-heex",
+          htmlangular = "html",
+          templ = "html"
+        },
+        lint = {
+          cssConflict = "warning",
+          invalidApply = "error",
+          invalidConfigPath = "error",
+          invalidScreen = "error",
+          invalidTailwindDirective = "error",
+          invalidVariant = "error",
+          recommendedVariantOrder = "warning"
+        },
+        validate = true
+      }
+    }
+  - workspace_required: true
+
+- ⚠️ WARNING 'vtsls' is not executable. Configuration will not be used.
+- vtsls:
+  - capabilities: {
+      textDocument = {
+        completion = {
+          completionItem = {
+            commitCharactersSupport = false,
+            deprecatedSupport = true,
+            documentationFormat = { "markdown", "plaintext" },
+            insertReplaceSupport = true,
+            insertTextModeSupport = {
+              valueSet = { 1 }
+            },
+            labelDetailsSupport = true,
+            preselectSupport = false,
+            resolveSupport = {
+              properties = { "documentation", "detail", "additionalTextEdits", "command", "data" }
+            },
+            snippetSupport = true,
+            tagSupport = {
+              valueSet = { 1 }
+            }
+          },
+          completionList = {
+            itemDefaults = { "commitCharacters", "editRange", "insertTextFormat", "insertTextMode", "data" }
+          },
+          contextSupport = true,
+          insertTextMode = 1
+        },
+        foldingRange = {
+          dynamicRegistration = false,
+          lineFoldingOnly = true
+        }
+      }
+    }
+  - cmd: { "vtsls", "--stdio" }
+  - filetypes: javascript, javascriptreact, typescript, typescriptreact
+  - init_options: {
+      hostInfo = "neovim"
+    }
+  - root_dir: <function @/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig/lsp/vtsls.lua:82>
+
+
+vim.lsp: File Watcher ~
+- file watching "(workspace/didChangeWatchedFiles)" disabled on all clients
+
+vim.lsp: Position Encodings ~
+- No active clients
+
+==============================================================================
+vim.provider:                                                             4 ⚠️
+
+Clipboard (optional) ~
+- ✅ OK Clipboard tool found: xclip
+
+Node.js provider (optional) ~
+- Node.js: v25.7.0
+
+- Nvim node.js host: /home/lcarv/.local/share/pnpm/global/5/node_modules/neovim/bin/cli.js
+- ✅ OK Latest "neovim" npm/yarn/pnpm package is installed: 5.4.0
+
+
+Perl provider (optional) ~
+- ⚠️ WARNING "Neovim::Ext" cpan module is not installed
+  - ADVICE:
+    - See :help |provider-perl| for more information.
+    - You can disable this provider (and warning) by adding `let g:loaded_perl_provider = 0` to your init.vim
+- ⚠️ WARNING No usable perl executable found
+
+Python 3 provider (optional) ~
+- `g:python3_host_prog` is not set. Searching for python3 in the environment.
+- Executable: /usr/bin/python3
+- Python version: 3.12.3
+- pynvim version: 0.5.0 (outdated; from /usr/lib/python3/dist-packages/neovim)
+- ⚠️ WARNING Latest pynvim is NOT installed: 0.6.0
+
+Python virtualenv ~
+- ✅ OK no $VIRTUAL_ENV
+
+Ruby provider (optional) ~
+- ⚠️ WARNING `ruby` and `gem` must be in $PATH.
+  - ADVICE:
+    - Install Ruby and verify that `ruby` and `gem` commands work.
+
+==============================================================================
+vim.treesitter:                                                             ✅
+
+Treesitter features ~
+- Treesitter ABI support: min 13, max 15
+- WASM parser support: false
+
+Treesitter parsers ~
+- ✅ OK Parser: c                         ABI: 15, path: /home/lcarv/.local/share/mise/installs/neovim/0.11.6/lib/nvim/parser/c.so
+- ✅ OK Parser: lua                       ABI: 15, path: /home/lcarv/.local/share/mise/installs/neovim/0.11.6/lib/nvim/parser/lua.so
+- ✅ OK Parser: markdown                  ABI: 15, path: /home/lcarv/.local/share/mise/installs/neovim/0.11.6/lib/nvim/parser/markdown.so
+- ✅ OK Parser: markdown_inline           ABI: 15, path: /home/lcarv/.local/share/mise/installs/neovim/0.11.6/lib/nvim/parser/markdown_inline.so
+- ✅ OK Parser: query                     ABI: 15, path: /home/lcarv/.local/share/mise/installs/neovim/0.11.6/lib/nvim/parser/query.so
+- ✅ OK Parser: vim                       ABI: 15, path: /home/lcarv/.local/share/mise/installs/neovim/0.11.6/lib/nvim/parser/vim.so
+- ✅ OK Parser: vimdoc                    ABI: 15, path: /home/lcarv/.local/share/mise/installs/neovim/0.11.6/lib/nvim/parser/vimdoc.so
+
+==============================================================================
+which-key:                                                                  ✅
+
+- ✅ OK Most of these checks are for informational purposes only.
+  WARNINGS should be treated as a warning, and don't necessarily indicate a problem with your config.
+  Please |DON'T| report these warnings as an issue.
+
+Checking your config ~
+- ✅ OK |mini.icons| is installed
+- ✅ OK |nvim-web-devicons| is installed
+
+Checking for issues with your mappings ~
+- ✅ OK No issues reported
+
+checking for overlapping keymaps ~
+- ✅ OK No overlapping keymaps found
+
+Checking for duplicate mappings ~
+- ✅ OK No duplicate mappings found
+Process Group PGID: 172407

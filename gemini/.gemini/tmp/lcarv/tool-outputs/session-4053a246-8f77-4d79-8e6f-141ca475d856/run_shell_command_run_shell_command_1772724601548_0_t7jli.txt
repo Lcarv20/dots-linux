@@ -1,0 +1,3 @@
+{
+  "output": "Output: alacritty 0.13.2\nConfig directory not found\nProcess Group PGID: 102390"
+}

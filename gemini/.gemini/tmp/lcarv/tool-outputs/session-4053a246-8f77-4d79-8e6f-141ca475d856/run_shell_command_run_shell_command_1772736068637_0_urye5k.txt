@@ -1,0 +1,3 @@
+{
+  "output": "Output: -rw-rw-r-- 1 lcarv lcarv 952 Mar  5 19:41 /home/lcarv/.config/rio/config.toml\n-rw-rw-r-- 1 lcarv lcarv 653 Mar  5 19:40 /home/lcarv/.config/wezterm/wezterm.lua\nProcess Group PGID: 150458"
+}

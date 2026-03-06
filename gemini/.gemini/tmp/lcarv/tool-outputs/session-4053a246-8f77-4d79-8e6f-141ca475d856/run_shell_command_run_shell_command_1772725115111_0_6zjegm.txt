@@ -1,0 +1,3 @@
+{
+  "output": "Output: /home/lcarv/.local/share/mise/installs/fzf/:\n0  0.70  0.70.0  latest\n\n/home/lcarv/.local/share/mise/installs/fzf/0.70.0:\nfzf\n/home/lcarv/.local/share/mise/installs/zoxide/:\n0  0.9  0.9.9  latest\n\n/home/lcarv/.local/share/mise/installs/zoxide/0.9.9:\nCHANGELOG.md  completions  LICENSE  man  README.md  zoxide\n\n/home/lcarv/.local/share/mise/installs/zoxide/0.9.9/completions:\nREADME.md  _zoxide  zoxide.bash  zoxide.elv  zoxide.fish  zoxide.nu  _zoxide.ps1  zoxide.ts\n\n/home/lcarv/.local/share/mise/installs/zoxide/0.9.9/man:\nman1\n\n/home/lcarv/.local/share/mise/installs/zoxide/0.9.9/man/man1:\nzoxide.1  zoxide-add.1  zoxide-import.1  zoxide-init.1  zoxide-query.1  zoxide-remove.1\nProcess Group PGID: 105921"
+}

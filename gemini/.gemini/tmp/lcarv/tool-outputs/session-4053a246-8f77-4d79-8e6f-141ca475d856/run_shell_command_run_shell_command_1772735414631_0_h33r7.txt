@@ -1,0 +1,3 @@
+{
+  "output": "Output: -rw-rw-r-- 1 lcarv lcarv 3034 Mar  5 19:29 /home/lcarv/.config/mvim/lua/plugins/tree-sitter.lua\nreturn {\n        {\n                \"nvim-treesitter/nvim-treesitter\",\n    commit = \"6404982ba918343ebfd5565147a42a26580579482\",\n                event = { \"BufReadPost\", \"BufNewFile\" },\n                dependencies = {\n                        { \"OXY2DEV/markview.nvim\" },\n                        { \"nvim-treesitter/nvim-treesitter-textobjects\", event = \"VeryLazy\" },\n                        {\n                                \"nvim-treesitter/nvim-treesitter-context\",\nProcess Group PGID: 140909"
+}

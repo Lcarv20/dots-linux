@@ -1,0 +1,9 @@
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+Aloxaf/fzf-tab
+zap-zsh/supercharge
+paulirish/git-open
+Lcarv20/web-search
+wintermi/zsh-starship
+wintermi/zsh-mise
+zsh-users/zsh-syntax-highlighting

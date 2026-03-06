@@ -1,0 +1,3 @@
+{
+  "output": "Output: /home/lcarv/dots-macos/ghostty/:\ntotal 16\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 16:40 .\ndrwxrwxr-x 3 lcarv lcarv 4096 Mar  5 16:40 ..\n-rw-rw-r-- 1 lcarv lcarv 2007 Mar  5 16:40 config\ndrwxrwxr-x 2 lcarv lcarv 4096 Mar  5 16:40 ghostty-shaders\nProcess Group PGID: 131474"
+}

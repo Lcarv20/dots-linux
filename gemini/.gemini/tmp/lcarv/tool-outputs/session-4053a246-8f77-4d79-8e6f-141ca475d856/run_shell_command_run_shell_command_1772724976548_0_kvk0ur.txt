@@ -1,0 +1,3 @@
+{
+  "output": "Output: antidote:source:3: no such file or directory: /usr/bin/antidote.zsh\nantidote:5: command not found: antidote-main\nExit Code: 127\nProcess Group PGID: 104382"
+}

@@ -1,0 +1,3 @@
+{
+  "output": "Output: -rw-rw-r-- 1 lcarv lcarv 705 Mar  5 17:22 /home/lcarv/.config/alacritty/alacritty.toml\nlrwxrwxrwx 1 lcarv lcarv  21 Mar  5 17:22 /home/lcarv/.zshrc -> dots-linux/zsh/.zshrc\nProcess Group PGID: 110429"
+}

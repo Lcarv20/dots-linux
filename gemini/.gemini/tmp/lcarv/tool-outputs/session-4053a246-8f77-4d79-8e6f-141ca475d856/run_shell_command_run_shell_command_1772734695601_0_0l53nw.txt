@@ -1,0 +1,3 @@
+{
+  "output": "Output: -rwxrwxr-x 1 lcarv lcarv 5005 Mar  5 19:18 /home/lcarv/dots-linux/setup\nProcess Group PGID: 135531"
+}

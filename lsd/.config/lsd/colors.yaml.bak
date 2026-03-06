@@ -1,0 +1,103 @@
+# user: '#839496'  # Solarized base0
+# group: '#268bd2' # Solarized blue
+#
+# permission:
+#   read: '#859900'    # Solarized green
+#   write: '#b58900'   # Solarized yellow
+#   exec: '#dc322f'    # Solarized red
+#   exec-sticky: '#dc322f' # Solarized red
+#   no-access: '#657b83'  # Solarized base01
+#   octal: '#cb4b16'      # Solarized orange
+#   acl: '#6c71c4'        # Solarized violet
+#   context: '#6c71c4'    # Solarized violet
+#
+# date:
+#   hour-old: '#859900'  # Solarized green
+#   day-old: '#268bd2'   # Solarized blue
+#   older: '#cb4b16'    # Solarized orange
+#
+# size:
+#   none: '#657b83'    # Solarized base01
+#   small: '#859900'   # Solarized green
+#   medium: '#b58900'  # Solarized yellow
+#   large: '#dc322f'   # Solarized red
+#
+# inode:
+#   valid: '#268bd2'   # Solarized blue
+#   invalid: '#657b83'  # Solarized base01
+#
+# links:
+#   valid: '#268bd2'   # Solarized blue
+#   invalid: '#657b83'  # Solarized base01
+#
+# tree-edge: '#657b83'   # Solarized base01
+
+# user: '#4DBFBF'  # Accent - lighter teal for visibility
+# group: '#007373' # Accent - primary Neovim teal
+#
+# permission:
+#   read: '#6A9955'    # Greenish for read permissions
+#   write: '#DCAA5F'   # Warm yellow for write
+#   exec: '#F44747'    # Bright red for execute
+#   exec-sticky: '#FF6C6C' # Slightly lighter red for sticky
+#   no-access: '#525865'  # Dimmed base (gray)
+#   octal: '#D19A66'      # Soft orange for octal permissions
+#   acl: '#C678DD'        # Light violet for ACL
+#   context: '#C678DD'    # Same light violet for context
+#
+# date:
+#   hour-old: '#6A9955'  # Greenish for recent changes
+#   day-old: '#4DBFBF'   # Accent teal for day-old files
+#   older: '#D19A66'    # Orange for older files
+#
+# size:
+#   none: '#525865'    # Dimmed base (gray)
+#   small: '#6A9955'   # Greenish for small files
+#   medium: '#DCAA5F'  # Warm yellow for medium files
+#   large: '#F44747'   # Bright red for large files
+#
+# inode:
+#   valid: '#4DBFBF'   # Accent teal for valid inodes
+#   invalid: '#525865' # Dimmed base (gray)
+#
+# links:
+#   valid: '#4DBFBF'   # Accent teal for valid links
+#   invalid: '#525865' # Dimmed base (gray)
+#
+# tree-edge: '#525865'   # Dimmed base (gray)
+#
+
+user: '#007676'  # Cyan
+group: '#005078' # Blue
+
+permission:
+  read: '#015825'        # Green
+  write: '#6e5600'       # Yellow
+  exec: '#5e0009'        # Red
+  exec-sticky: '#5e0009' # Same as exec
+  no-access: '#4f5258'   # Grey4
+  octal: '#6e5600'       # Yellow
+  acl: '#4c0049'         # Magenta
+  context: '#4c0049'     # Same as ACL
+
+date:
+  hour-old: '#007676'  # Cyan
+  day-old: '#005078'   # Blue
+  older: '#6e5600'     # Yellow
+
+size:
+  none: '#4f5258'    # Grey4
+  small: '#015825'   # Green
+  medium: '#6e5600'  # Yellow
+  large: '#5e0009'   # Red
+
+inode:
+  valid: '#005078'   # Blue
+  invalid: '#4f5258' # Grey4
+
+links:
+  valid: '#007676'   # Cyan
+  invalid: '#4f5258' # Grey4
+
+tree-edge: '#4f5258' # Grey4
+

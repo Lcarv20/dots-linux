@@ -1,0 +1,3 @@
+{
+  "output": "Output: /home/lcarv/dots-linux/mvim/.config/mvim/lua/plugins/tree-sitter.lua:                   require(\"nvim-treesitter.configs\").setup({\nProcess Group PGID: 140921"
+}

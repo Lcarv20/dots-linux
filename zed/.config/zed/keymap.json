@@ -1,0 +1,119 @@
+[
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      "ctrl-u": ["workspace::SendKeystrokes", "1 5 k z z"],
+      "ctrl-d": ["workspace::SendKeystrokes", "1 5 j z z"],
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "space u t": "editor::ToggleTabBar",
+      "space a t": "editor::ToggleEditPrediction",
+      "ctrl-shift-enter": "editor::OpenExcerpts"
+    }
+  },
+  {
+    "context": "TabSwitcher",
+    "bindings": {
+      "k": "menu::SelectPrevious",
+      "j": "menu::SelectNext",
+      "d d": "tab_switcher::CloseSelectedItem",
+      "G": "menu::SelectLast",
+      "g g": "menu::SelectFirst"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-q": "pane::CloseActiveItem",
+      "ctrl-shift-pageup": "pane::SwapItemLeft",
+      "ctrl-shift-pagedown": "pane::SwapItemRight"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": ["vim::PushAddSurrounds", {}]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && vim_operator == none && !VimWaiting",
+    "bindings": {
+      "space w": "workspace::Save",
+      "space e": "workspace::ToggleLeftDock",
+      "space t": "workspace::ToggleBottomDock",
+      "space f f": "file_finder::Toggle",
+      "space f b": "tab_switcher::Toggle",
+      "space c f": "editor::Format",
+      "space c d": "diagnostics::Deploy",
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "space l o": "outline::Toggle",
+      "g r": "editor::FindAllReferences",
+      "m a": "pane::TogglePinTab",
+      "space g d": "git::Diff"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-n": "workspace::NewTerminal",
+      "ctrl-q": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      "space s g": "pane::DeploySearch"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+      // e.g.
+      "j k": "vim::NormalBefore" // remap jj in insert mode to escape.
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w j": "workspace::ActivatePaneDown"
+      // ... or other keybindings
+    }
+  },
+  // Explorer
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "h": "project_panel::CollapseSelectedEntry",
+      "l": "project_panel::ExpandSelectedEntry",
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious",
+      "enter": "project_panel::Open",
+      "o": ["workspace::SendKeystrokes", "enter q"],
+      "r": "project_panel::Rename",
+      "shift-o": "project_panel::RevealInFileManager",
+      "q": "workspace::ToggleLeftDock",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "d": "project_panel::Delete",
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "y y": "workspace::CopyRelativePath",
+      "shift-y": "workspace::CopyPath"
+    }
+  }
+]

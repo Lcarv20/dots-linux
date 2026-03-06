@@ -1,0 +1,3 @@
+{
+  "output": "# Source antidote from the apt installation path\nsource /usr/share/zsh-antidote/antidote.zsh\n\n# Initialize your plugin list\nantidote load\n\n# Eval Mise\neval \"$(mise activate zsh)\"\n\n# Starship\neval \"$(starship init zsh)\"\n\n\n# pnpm\nexport PNPM_HOME=\"/home/lcarv/.local/share/pnpm\"\ncase \":$PATH:\" in\n  *\":$PNPM_HOME:\"*) ;;\n  *) export PATH=\"$PNPM_HOME:$PATH\" ;;\nesac\n# pnpm end\n"
+}

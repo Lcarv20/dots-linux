@@ -1,0 +1,186 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "zai-coding-plan": {
+      "options": {
+        "apiKey": "49d611af84f241b68a819718eaea55e9.Bi9qXtXsqhjBtEuV"
+      }
+    }
+  },
+  "permission": {
+    "edit": "ask",
+    "write": "ask",
+    "bash": {
+      "*": "ask",
+      "ls*": "allow",
+      "pwd": "allow",
+      "date": "allow",
+      "fd*": "allow",
+      "rg*": "allow",
+      "cat*": "allow",
+      "head*": "allow",
+      "tail*": "allow",
+      "grep*": "allow",
+      "find*": "allow",
+      "echo*": "allow",
+      "stat*": "allow",
+      "which*": "allow",
+      "git status": "allow",
+      "git diff*": "allow",
+      "git branch": "allow",
+      "git log": "allow"
+    }
+  },
+  "tools": {
+    "webfetch": true
+  },
+  "plugin": [
+    "opencode-gemini-auth@latest"
+  ],
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+      },
+      "enabled": true
+    },
+    "mgrep": {
+      "type": "local",
+      "command": [
+        "mgrep",
+        "mcp"
+      ],
+      "enabled": false
+    },
+    "zai-mcp-server": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@z_ai/mcp-server"
+      ],
+      "environment": {
+        "Z_AI_MODE": "ZAI",
+        "Z_AI_API_KEY": "49d611af84f241b68a819718eaea55e9.Bi9qXtXsqhjBtEuV"
+      }
+    },
+    "web-search-prime": {
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/web_search_prime/mcp",
+      "headers": {
+        "Authorization": "Bearer 49d611af84f241b68a819718eaea55e9.Bi9qXtXsqhjBtEuV"
+      }
+    },
+    "web-reader": {
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/web_reader/mcp",
+      "headers": {
+        "Authorization": "Bearer 49d611af84f241b68a819718eaea55e9.Bi9qXtXsqhjBtEuV"
+      }
+    },
+    "zread": {
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/zread/mcp",
+      "headers": {
+        "Authorization": "Bearer 49d611af84f241b68a819718eaea55e9.Bi9qXtXsqhjBtEuV"
+      },
+      "enabled": false
+    }
+  },
+  "mode": {
+    "build": {
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true,
+        "read": true,
+        "grep": true,
+        "glob": true
+      },
+      "permission": {
+        "edit": "ask",
+        "write": "ask",
+        "bash": {
+          "*": "ask",
+          "ls*": "allow",
+          "pwd": "allow",
+          "date": "allow",
+          "fd*": "allow",
+          "rg*": "allow",
+          "cat*": "allow",
+          "head*": "allow",
+          "tail*": "allow",
+          "grep*": "allow",
+          "find*": "allow",
+          "echo*": "allow",
+          "stat*": "allow",
+          "which*": "allow",
+          "git status": "allow",
+          "git diff*": "allow",
+          "git branch": "allow",
+          "git log": "allow"
+        }
+      }
+    },
+    "plan": {
+      "tools": {
+        "write": false,
+        "edit": false,
+        "patch": false,
+        "bash": false,
+        "read": true,
+        "grep": true,
+        "glob": true
+      },
+      "permission": {
+        "edit": "ask",
+        "write": "ask",
+        "bash": "ask"
+      }
+    },
+    "autoaccept": {
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true,
+        "read": true,
+        "grep": true,
+        "glob": true
+      },
+      "permission": {
+        "edit": "allow",
+        "write": "allow",
+        "bash": {
+          "*": "ask",
+          "ls*": "allow",
+          "pwd": "allow",
+          "date": "allow",
+          "fd*": "allow",
+          "rg*": "allow",
+          "cat*": "allow",
+          "head*": "allow",
+          "tail*": "allow",
+          "grep*": "allow",
+          "find*": "allow",
+          "echo*": "allow",
+          "stat*": "allow",
+          "which*": "allow",
+          "git status": "allow",
+          "git diff*": "allow",
+          "git branch": "allow",
+          "git log": "allow"
+        }
+      }
+    }
+  },
+  "command": {
+    "planmd": {
+      "description": "Create a plan.md file with implementation plan",
+      "agent": "plan",
+      "subtask": true,
+      "template": "Create a comprehensive implementation plan based on the following user request: $ARGUMENTS\n\n## Planning Guidelines\n\n1. **Explore the Codebase**\n   - Use subagents to explore relevant parts of the codebase\n   - Identify existing patterns, conventions, and architecture\n   - Understand the current state and constraints\n\n2. **Think Thoroughly**\n   - Consider multiple approaches and trade-offs\n   - Identify potential challenges and edge cases\n   - Plan for testing and validation\n\n3. **Create plan.md**\n   - Write the plan to `plan.md` in the project root\n   - Include: Overview, Goals, Approach, Implementation Steps, Testing Strategy\n   - Reference specific files and locations\n\n4. **Be Specific**\n   - Use file paths and line numbers when relevant\n   - Suggest concrete code changes with examples\n   - Consider dependencies and impacts\n\nStart by exploring the codebase to understand the context, then create a detailed plan.md file."
+    }
+  }
+}

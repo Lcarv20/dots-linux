@@ -1,0 +1,48 @@
+[init]
+	defaultBranch = master
+[user]
+	name = Luís Carvalho
+	email = 42584819+Lcarv20@users.noreply.github.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	editor = NVIM_APPNAME=mvim nvim
+	excludesfile = /Users/lcarv/.gitignore_global
+	pager = delta
+	trustctime = false
+	sparseCheckout = true
+[diff]
+	tool = nvimdiff
+	colorMoved = default
+[merge]
+	tool = nvimdiff
+	conflictstyle = diff3
+[commit]
+	template = /Users/lcarv/.stCommitMsg
+[interactive]
+	diffFilter = delta --color-only
+[include]
+	path = ~/dots-macos/git/themes/themes.gitconfig
+[delta]
+  ; features = woolly-mammoth
+  ; features = calochortus-lyallii
+  ; features = mantis-shrimp-lite
+  ; features = mellow-barbet
+  features = arctic-fox
+  ; features = zenburn
+  navigate = true  # use n and N to move between diff sections
+	side-by-side = true
+	line-numbers = true
+; [difftool "nvimdiff"]
+;   cmd = nvim -d \"$LOCAL\" \"$REMOTE\"
+[hub]
+	protocol = https
+[color]
+	ui = true
+[color "log"]
+	date = normal
+	graph = normal
+	author = cyan

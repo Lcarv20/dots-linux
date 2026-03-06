@@ -1,0 +1,3 @@
+{
+  "output": "Output: WARNING! stowing gemini would cause conflicts:\n  * existing target is neither a link nor a directory: .gemini/settings.json\nAll operations aborted.\nExit Code: 1\nProcess Group PGID: 135538"
+}

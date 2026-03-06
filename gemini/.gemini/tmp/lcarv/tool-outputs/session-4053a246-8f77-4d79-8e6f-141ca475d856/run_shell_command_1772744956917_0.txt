@@ -1,0 +1,1178 @@
+Output: [LuaSnip]         clone | Running task clone
+[SchemaStore.nvim] clone | Running task clone
+[bg.nvim]         clone | Running task clone
+[blink-cmp-avante] clone | Running task clone
+[blink.cmp]       clone | Running task clone
+[catppuccin]      clone | Running task clone
+[classic_monokai.nvim] clone | Running task clone
+[colorbuddy.nvim] clone | Running task clone
+[conform.nvim]    clone | Running task clone
+[diffview.nvim]   clone | Running task clone
+[eyeliner.nvim]   clone | Running task clone
+[friendly-snippets] clone | Running task clone
+[gitsigns.nvim]   clone | Running task clone
+[gruber-darker.nvim] clone | Running task clone
+[harpoon]         clone | Running task clone
+[lazydev.nvim]    clone | Running task clone
+[lualine.nvim]    clone | Running task clone
+[mason-lspconfig.nvim] clone | Running task clone
+[mason-tool-installer.nvim] clone | Running task clone
+[mason.nvim]      clone | Running task clone
+[mdx.nvim]        clone | Running task clone
+[mini.nvim]       clone | Running task clone
+[neogit]          clone | Running task clone
+[nvim-autopairs]  clone | Running task clone
+[nvim-colorizer.lua] clone | Running task clone
+[nvim-lint]       clone | Running task clone
+[nvim-lspconfig]  clone | Running task clone
+[nvim-treesitter] clone | Running task clone
+[nvim-treesitter-textobjects] clone | Running task clone
+[nvim-ts-autotag] clone | Running task clone
+[nvim-ts-context-commentstring] clone | Running task clone
+[nvim-ufo]        clone | Running task clone
+[nvim-web-devicons] clone | Running task clone
+[obscure.nvim]    clone | Running task clone
+[oil.nvim]        clone | Running task clone
+[oldtale.nvim]    clone | Running task clone
+[onedark.nvim]    clone | Running task clone
+[persistence.nvim] clone | Running task clone
+[pkl-neovim]      clone | Running task clone
+[plenary.nvim]    clone | Running task clone
+[promise-async]   clone | Running task clone
+[smartcolumn.nvim] clone | Running task clone
+[snacks.nvim]     clone | Running task clone
+[sugoi.nvim]      clone | Running task clone
+[supermaven-nvim] clone | Running task clone
+[tabby.nvim]      clone | Running task clone
+[telescope.nvim]  clone | Running task clone
+[todo-comments.nvim] clone | Running task clone
+[tokyonight.nvim] clone | Running task clone
+[trouble.nvim]    clone | Running task clone
+[typr]            clone | Running task clone
+[volt]            clone | Running task clone
+[which-key.nvim]  clone | Running task clone
+[LuaSnip]         clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/LuaSnip'...
+[SchemaStore.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/SchemaStore.nvim'...
+[bg.nvim]         clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/bg.nvim'...
+[blink-cmp-avante] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/blink-cmp-avante'...
+[blink.cmp]       clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/blink.cmp'...
+[catppuccin]      clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/catppuccin'...
+[classic_monokai.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/classic_monokai.nvim'...
+[colorbuddy.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/colorbuddy.nvim'...
+[conform.nvim]    clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/conform.nvim'...
+[diffview.nvim]   clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/diffview.nvim'...
+[eyeliner.nvim]   clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/eyeliner.nvim'...
+[friendly-snippets] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/friendly-snippets'...
+[gitsigns.nvim]   clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/gitsigns.nvim'...
+[gruber-darker.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/gruber-darker.nvim'...
+[harpoon]         clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/harpoon'...
+[lazydev.nvim]    clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/lazydev.nvim'...
+[lualine.nvim]    clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/lualine.nvim'...
+[mason-lspconfig.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/mason-lspconfig.nvim'...
+[mason-tool-installer.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/mason-tool-installer.nvim'...
+[mason.nvim]      clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/mason.nvim'...
+[mdx.nvim]        clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/mdx.nvim'...
+[mini.nvim]       clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/mini.nvim'...
+[neogit]          clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/neogit'...
+[nvim-autopairs]  clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-autopairs'...
+[nvim-colorizer.lua] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-colorizer.lua'...
+[nvim-lint]       clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-lint'...
+[nvim-lspconfig]  clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-lspconfig'...
+[nvim-treesitter] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-treesitter'...
+[nvim-treesitter-textobjects] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-treesitter-textobjects'...
+[nvim-ts-autotag] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-ts-autotag'...
+[nvim-ts-context-commentstring] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-ts-context-commentstring'...
+[nvim-ufo]        clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-ufo'...
+[nvim-web-devicons] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/nvim-web-devicons'...
+[obscure.nvim]    clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/obscure.nvim'...
+[oil.nvim]        clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/oil.nvim'...
+[oldtale.nvim]    clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/oldtale.nvim'...
+[onedark.nvim]    clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/onedark.nvim'...
+[persistence.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/persistence.nvim'...
+[pkl-neovim]      clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/pkl-neovim'...
+[plenary.nvim]    clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/plenary.nvim'...
+[promise-async]   clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/promise-async'...
+[smartcolumn.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/smartcolumn.nvim'...
+[snacks.nvim]     clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/snacks.nvim'...
+[sugoi.nvim]      clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/sugoi.nvim'...
+[supermaven-nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/supermaven-nvim'...
+[tabby.nvim]      clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/tabby.nvim'...
+[telescope.nvim]  clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/telescope.nvim'...
+[todo-comments.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/todo-comments.nvim'...
+[tokyonight.nvim] clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/tokyonight.nvim'...
+[trouble.nvim]    clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/trouble.nvim'...
+[typr]            clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/typr'...
+[volt]            clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/volt'...
+[which-key.nvim]  clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/which-key.nvim'...
+[blink.cmp]       clone | remote: Enumerating objects: 10137, done.        
+[blink.cmp]       clone | remote: Counting objects: 100% (887/887), done.        
+[blink.cmp]       clone | remote: Compressing objects: 100% (210/210), done.        
+[colorbuddy.nvim] clone | remote: Enumerating objects: 310, done.        
+[colorbuddy.nvim] clone | remote: Counting objects: 100% (3/3), done.        
+[colorbuddy.nvim] clone | remote: Compressing objects: 100% (2/2), done.        
+[colorbuddy.nvim] clone | remote: Total 310 (delta 1), reused 1 (delta 1), pack-reused 307 (from 2)        
+[colorbuddy.nvim] clone | Receiving objects: 100% (310/310), 41.50 KiB | 2.77 MiB/s, done.
+[colorbuddy.nvim] clone | Resolving deltas: 100% (131/131), done.
+[SchemaStore.nvim] clone | remote: Enumerating objects: 3727, done.        
+[SchemaStore.nvim] clone | remote: Counting objects: 100% (539/539), done.        
+[SchemaStore.nvim] clone | remote: Compressing objects: 100% (104/104), done.        
+[eyeliner.nvim]   clone | remote: Enumerating objects: 604, done.        
+[eyeliner.nvim]   clone | remote: Counting objects: 100% (62/62), done.        
+[eyeliner.nvim]   clone | remote: Compressing objects: 100% (35/35), done.        
+[eyeliner.nvim]   clone | remote: Total 604 (delta 16), reused 42 (delta 13), pack-reused 542 (from 1)        
+[eyeliner.nvim]   clone | Receiving objects: 100% (604/604), 84.87 KiB | 3.69 MiB/s, done.
+[blink-cmp-avante] clone | remote: Enumerating objects: 50, done.        
+[blink-cmp-avante] clone | remote: Counting objects: 100% (50/50), done.        
+[blink-cmp-avante] clone | remote: Compressing objects: 100% (32/32), done.        
+[blink-cmp-avante] clone | remote: Total 50 (delta 15), reused 32 (delta 9), pack-reused 0 (from 0)        
+[blink-cmp-avante] clone | Receiving objects: 100% (50/50), 12.34 KiB | 6.17 MiB/s, done.
+[blink-cmp-avante] clone | Resolving deltas: 100% (15/15), done.
+[catppuccin]      clone | remote: Enumerating objects: 7789, done.        
+[catppuccin]      clone | remote: Counting objects: 100% (852/852), done.        
+[catppuccin]      clone | remote: Compressing objects: 100% (274/274), done.        
+[LuaSnip]         clone | remote: Enumerating objects: 10883, done.        
+[LuaSnip]         clone | remote: Counting objects: 100% (260/260), done.        
+[LuaSnip]         clone | remote: Compressing objects: 100% (65/65), done.        
+[bg.nvim]         clone | remote: Enumerating objects: 77, done.        
+[bg.nvim]         clone | remote: Counting objects: 100% (37/37), done.        
+[bg.nvim]         clone | remote: Compressing objects: 100% (16/16), done.        
+[bg.nvim]         clone | remote: Total 77 (delta 27), reused 21 (delta 18), pack-reused 40 (from 1)        
+[bg.nvim]         clone | Receiving objects: 100% (77/77), 17.31 KiB | 1.33 MiB/s, done.
+[bg.nvim]         clone | Resolving deltas: 100% (27/27), done.
+[blink.cmp]       clone | remote: Total 10137 (delta 808), reused 680 (delta 676), pack-reused 9250 (from 3)        
+[blink.cmp]       clone | Receiving objects: 100% (10137/10137), 1.97 MiB | 7.14 MiB/s, done.
+[blink.cmp]       clone | Resolving deltas: 100% (4874/4874), done.
+[SchemaStore.nvim] clone | remote: Total 3727 (delta 458), reused 484 (delta 409), pack-reused 3188 (from 2)        
+[SchemaStore.nvim] clone | Receiving objects: 100% (3727/3727), 383.90 KiB | 4.26 MiB/s, done.
+[SchemaStore.nvim] clone | Resolving deltas: 100% (1272/1272), done.
+[eyeliner.nvim]   clone | Resolving deltas: 100% (144/144), done.
+[catppuccin]      clone | remote: Total 7789 (delta 718), reused 579 (delta 576), pack-reused 6937 (from 3)        
+[catppuccin]      clone | Receiving objects: 100% (7789/7789), 1.03 MiB | 2.79 MiB/s, done.
+[catppuccin]      clone | Resolving deltas: 100% (3788/3788), done.
+[LuaSnip]         clone | remote: Total 10883 (delta 221), reused 195 (delta 195), pack-reused 10623 (from 4)        
+[LuaSnip]         clone | Receiving objects: 100% (10883/10883), 1.22 MiB | 10.71 MiB/s, done.
+[LuaSnip]         clone | Resolving deltas: 100% (5272/5272), done.
+[diffview.nvim]   clone | remote: Enumerating objects: 2113, done.        
+[diffview.nvim]   clone | remote: Counting objects: 100% (580/580), done.        
+[diffview.nvim]   clone | remote: Compressing objects: 100% (230/230), done.        
+[friendly-snippets] clone | remote: Enumerating objects: 2380, done.        
+[friendly-snippets] clone | remote: Counting objects: 100% (754/754), done.        
+[friendly-snippets] clone | remote: Compressing objects: 100% (71/71), done.        
+[friendly-snippets] clone | remote: Total 2380 (delta 725), reused 683 (delta 683), pack-reused 1626 (from 2)        
+[friendly-snippets] clone | Receiving objects: 100% (2380/2380), 500.14 KiB | 3.68 MiB/s, done.
+[harpoon]         clone | remote: Enumerating objects: 1721, done.        
+[harpoon]         clone | remote: Counting objects: 100% (19/19), done.        
+[harpoon]         clone | remote: Compressing objects: 100% (8/8), done.        
+[harpoon]         clone | remote: Total 1721 (delta 13), reused 11 (delta 11), pack-reused 1702 (from 3)        
+[harpoon]         clone | Receiving objects: 100% (1721/1721), 279.23 KiB | 2.54 MiB/s, done.
+[harpoon]         clone | Resolving deltas: 100% (701/701), done.
+[gitsigns.nvim]   clone | remote: Enumerating objects: 6277, done.        
+[gitsigns.nvim]   clone | remote: Counting objects: 100% (238/238), done.        
+[gitsigns.nvim]   clone | remote: Compressing objects: 100% (132/132), done.        
+[gruber-darker.nvim] clone | remote: Enumerating objects: 33, done.        
+[gruber-darker.nvim] clone | remote: Counting objects: 100% (20/20), done.        
+[gruber-darker.nvim] clone | remote: Compressing objects: 100% (16/16), done.        
+[gruber-darker.nvim] clone | remote: Total 33 (delta 7), reused 0 (delta 0), pack-reused 13 (from 1)        
+[gruber-darker.nvim] clone | Receiving objects: 100% (33/33), 6.08 KiB | 6.08 MiB/s, done.
+[gruber-darker.nvim] clone | Resolving deltas: 100% (7/7), done.
+[classic_monokai.nvim] clone | remote: Enumerating objects: 806, done.        
+[classic_monokai.nvim] clone | remote: Counting objects: 100% (112/112), done.        
+[classic_monokai.nvim] clone | remote: Compressing objects: 100% (79/79), done.        
+[classic_monokai.nvim] clone | remote: Total 806 (delta 50), reused 74 (delta 26), pack-reused 694 (from 1)        
+[neogit]          clone | remote: Enumerating objects: 24015, done.        
+[neogit]          clone | remote: Counting objects: 100% (47/47), done.        
+[neogit]          clone | remote: Compressing objects: 100% (30/30), done.        
+[lualine.nvim]    clone | remote: Enumerating objects: 3546, done.        
+[lualine.nvim]    clone | remote: Counting objects: 100% (412/412), done.        
+[lualine.nvim]    clone | remote: Compressing objects: 100% (152/152), done.        
+[mason-tool-installer.nvim] clone | remote: Enumerating objects: 276, done.        
+[mason-tool-installer.nvim] clone | remote: Counting objects: 100% (146/146), done.        
+[mason-tool-installer.nvim] clone | remote: Compressing objects: 100% (64/64), done.        
+[mason-tool-installer.nvim] clone | remote: Total 276 (delta 73), reused 97 (delta 62), pack-reused 130 (from 1)        
+[mason-tool-installer.nvim] clone | Receiving objects: 100% (276/276), 50.19 KiB | 2.39 MiB/s, done.
+[lazydev.nvim]    clone | remote: Enumerating objects: 563, done.        
+[lazydev.nvim]    clone | remote: Counting objects: 100% (98/98), done.        
+[lazydev.nvim]    clone | remote: Compressing objects: 100% (36/36), done.        
+[lazydev.nvim]    clone | remote: Total 563 (delta 71), reused 71 (delta 58), pack-reused 465 (from 1)        
+[lazydev.nvim]    clone | Receiving objects: 100% (563/563), 137.31 KiB | 9.15 MiB/s, done.
+[nvim-ts-context-commentstring] clone | remote: Enumerating objects: 472, done.        
+[nvim-ts-context-commentstring] clone | remote: Counting objects: 100% (189/189), done.        
+[nvim-ts-context-commentstring] clone | remote: Compressing objects: 100% (131/131), done.        
+[nvim-ts-context-commentstring] clone | remote: Total 472 (delta 87), reused 115 (delta 58), pack-reused 283 (from 1)        
+[nvim-autopairs]  clone | remote: Enumerating objects: 1657, done.        
+[nvim-autopairs]  clone | remote: Counting objects: 100% (436/436), done.        
+[nvim-autopairs]  clone | remote: Compressing objects: 100% (140/140), done.        
+[conform.nvim]    clone | remote: Enumerating objects: 3466, done.        
+[conform.nvim]    clone | remote: Counting objects: 100% (1049/1049), done.        
+[conform.nvim]    clone | remote: Compressing objects: 100% (195/195), done.        
+[nvim-lint]       clone | remote: Enumerating objects: 2589, done.        
+[nvim-lint]       clone | remote: Counting objects: 100% (63/63), done.        
+[nvim-lint]       clone | remote: Compressing objects: 100% (39/39), done.        
+[nvim-lint]       clone | remote: Total 2589 (delta 46), reused 29 (delta 23), pack-reused 2526 (from 3)        
+[nvim-lint]       clone | Receiving objects: 100% (2589/2589), 452.50 KiB | 4.76 MiB/s, done.
+[nvim-treesitter-textobjects] clone | remote: Enumerating objects: 2877, done.        
+[nvim-treesitter-textobjects] clone | remote: Counting objects: 100% (861/861), done.        
+[nvim-treesitter-textobjects] clone | remote: Compressing objects: 100% (177/177), done.        
+[nvim-treesitter-textobjects] clone | remote: Total 2877 (delta 762), reused 688 (delta 681), pack-reused 2016 (from 3)        
+[nvim-lspconfig]  clone | remote: Enumerating objects: 14597, done.        
+[nvim-lspconfig]  clone | remote: Counting objects: 100% (17/17), done.        
+[nvim-lspconfig]  clone | remote: Compressing objects: 100% (11/11), done.        
+[nvim-lspconfig]  clone | remote: Total 14597 (delta 10), reused 10 (delta 6), pack-reused 14580 (from 2)        
+[nvim-lspconfig]  clone | Receiving objects: 100% (14597/14597), 2.80 MiB | 7.57 MiB/s, done.
+[mini.nvim]       clone | remote: Enumerating objects: 10277, done.        
+[mini.nvim]       clone | remote: Counting objects: 100% (373/373), done.        
+[mini.nvim]       clone | remote: Compressing objects: 100% (64/64), done.        
+[mason.nvim]      clone | remote: Enumerating objects: 11956, done.        
+[mason.nvim]      clone | remote: Counting objects: 100% (1085/1085), done.        
+[mason.nvim]      clone | remote: Compressing objects: 100% (161/161), done.        
+[mason-lspconfig.nvim] clone | remote: Enumerating objects: 2082, done.        
+[mason-lspconfig.nvim] clone | remote: Counting objects: 100% (28/28), done.        
+[mason-lspconfig.nvim] clone | remote: Compressing objects: 100% (15/15), done.        
+[mason-lspconfig.nvim] clone | remote: Total 2082 (delta 12), reused 12 (delta 6), pack-reused 2054 (from 1)        
+[mason-lspconfig.nvim] clone | Receiving objects: 100% (2082/2082), 388.00 KiB | 3.05 MiB/s, done.
+[mason-lspconfig.nvim] clone | Resolving deltas: 100% (886/886), done.
+[nvim-ufo]        clone | remote: Enumerating objects: 1648, done.        
+[nvim-ufo]        clone | remote: Counting objects: 100% (242/242), done.        
+[nvim-ufo]        clone | remote: Compressing objects: 100% (35/35), done.        
+[nvim-ufo]        clone | remote: Total 1648 (delta 223), reused 212 (delta 207), pack-reused 1406 (from 2)        
+[nvim-ufo]        clone | Receiving objects: 100% (1648/1648), 183.74 KiB | 3.06 MiB/s, done.
+[pkl-neovim]      clone | remote: Enumerating objects: 174, done.        
+[pkl-neovim]      clone | remote: Counting objects: 100% (52/52), done.        
+[pkl-neovim]      clone | remote: Compressing objects: 100% (24/24), done.        
+[pkl-neovim]      clone | remote: Total 174 (delta 37), reused 33 (delta 28), pack-reused 122 (from 2)        
+[pkl-neovim]      clone | Receiving objects: 100% (174/174), 41.71 KiB | 4.17 MiB/s, done.
+[pkl-neovim]      clone | Resolving deltas: 100% (50/50), done.
+[persistence.nvim] clone | remote: Enumerating objects: 319, done.        
+[persistence.nvim] clone | remote: Counting objects: 100% (69/69), done.        
+[persistence.nvim] clone | remote: Compressing objects: 100% (20/20), done.        
+[persistence.nvim] clone | remote: Total 319 (delta 56), reused 50 (delta 48), pack-reused 250 (from 1)        
+[persistence.nvim] clone | Receiving objects: 100% (319/319), 79.29 KiB | 2.20 MiB/s, done.
+[plenary.nvim]    clone | remote: Enumerating objects: 2040, done.        
+[plenary.nvim]    clone | remote: Counting objects: 100% (503/503), done.        
+[plenary.nvim]    clone | remote: Compressing objects: 100% (80/80), done.        
+[plenary.nvim]    clone | remote: Total 2040 (delta 478), reused 423 (delta 423), pack-reused 1537 (from 3)        
+[nvim-colorizer.lua] clone | remote: Enumerating objects: 859, done.        
+[nvim-colorizer.lua] clone | remote: Counting objects: 100% (288/288), done.        
+[nvim-colorizer.lua] clone | remote: Compressing objects: 100% (129/129), done.        
+[nvim-colorizer.lua] clone | remote: Total 859 (delta 215), reused 183 (delta 159), pack-reused 571 (from 2)        
+[nvim-treesitter] clone | remote: Enumerating objects: 26435, done.        
+[nvim-treesitter] clone | remote: Counting objects: 100% (442/442), done.        
+[nvim-treesitter] clone | remote: Compressing objects: 100% (191/191), done.        
+[nvim-web-devicons] clone | remote: Enumerating objects: 1294, done.        
+[nvim-web-devicons] clone | remote: Counting objects: 100% (70/70), done.        
+[nvim-web-devicons] clone | remote: Compressing objects: 100% (50/50), done.        
+[nvim-web-devicons] clone | remote: Total 1294 (delta 58), reused 24 (delta 20), pack-reused 1224 (from 3)        
+[nvim-web-devicons] clone | Receiving objects: 100% (1294/1294), 298.38 KiB | 9.04 MiB/s, done.
+[typr]            clone | remote: Enumerating objects: 458, done.        
+[typr]            clone | remote: Counting objects: 100% (44/44), done.        
+[typr]            clone | remote: Compressing objects: 100% (29/29), done.        
+[typr]            clone | remote: Total 458 (delta 19), reused 23 (delta 9), pack-reused 414 (from 1)        
+[typr]            clone | Receiving objects: 100% (458/458), 58.00 KiB | 2.64 MiB/s, done.
+[oil.nvim]        clone | remote: Enumerating objects: 2348, done.        
+[oil.nvim]        clone | remote: Counting objects: 100% (128/128), done.        
+[oil.nvim]        clone | remote: Compressing objects: 100% (62/62), done.        
+[oil.nvim]        clone | remote: Total 2348 (delta 105), reused 66 (delta 66), pack-reused 2220 (from 2)        
+[oil.nvim]        clone | Receiving objects: 100% (2348/2348), 350.47 KiB | 6.49 MiB/s, done.
+[mdx.nvim]        clone | remote: Enumerating objects: 36, done.        
+[mdx.nvim]        clone | remote: Counting objects: 100% (36/36), done.        
+[mdx.nvim]        clone | remote: Compressing objects: 100% (17/17), done.        
+[mdx.nvim]        clone | remote: Total 36 (delta 8), reused 30 (delta 4), pack-reused 0 (from 0)        
+[mdx.nvim]        clone | Receiving objects: 100% (36/36), 5.29 KiB | 5.29 MiB/s, done.
+[mdx.nvim]        clone | Resolving deltas: 100% (8/8), done.
+[volt]            clone | remote: Enumerating objects: 208, done.        
+[volt]            clone | remote: Counting objects: 100% (86/86), done.        
+[volt]            clone | remote: Compressing objects: 100% (20/20), done.        
+[volt]            clone | remote: Total 208 (delta 76), reused 66 (delta 66), pack-reused 122 (from 1)        
+[volt]            clone | Receiving objects: 100% (208/208), 24.27 KiB | 1.52 MiB/s, done.
+[oldtale.nvim]    clone | remote: Enumerating objects: 248, done.        
+[oldtale.nvim]    clone | remote: Counting objects: 100% (63/63), done.        
+[oldtale.nvim]    clone | remote: Compressing objects: 100% (48/48), done.        
+[oldtale.nvim]    clone | remote: Total 248 (delta 26), reused 47 (delta 15), pack-reused 185 (from 1)        
+[oldtale.nvim]    clone | Receiving objects: 100% (248/248), 27.55 KiB | 2.50 MiB/s, done.
+[smartcolumn.nvim] clone | remote: Enumerating objects: 136, done.        
+[smartcolumn.nvim] clone | remote: Counting objects: 100% (23/23), done.        
+[smartcolumn.nvim] clone | remote: Compressing objects: 100% (21/21), done.        
+[smartcolumn.nvim] clone | remote: Total 136 (delta 0), reused 2 (delta 0), pack-reused 113 (from 1)        
+[smartcolumn.nvim] clone | Receiving objects: 100% (136/136), 27.06 KiB | 1.50 MiB/s, done.
+[smartcolumn.nvim] clone | Resolving deltas: 100% (19/19), done.
+[blink.cmp]       clone | Updating files: 100% (186/186), done.
+[catppuccin]      clone | Updating files: 100% (156/156), done.
+[LuaSnip]         clone | Updating files: 100% (176/176), done.
+[LuaSnip]         clone | Submodule 'deps/jsregexp' (https://github.com/kmarius/jsregexp) registered for path 'deps/jsregexp'
+[LuaSnip]         clone | Submodule 'deps/jsregexp005' (https://github.com/kmarius/jsregexp) registered for path 'deps/jsregexp005'
+[LuaSnip]         clone | Submodule 'deps/jsregexp006' (https://github.com/kmarius/jsregexp) registered for path 'deps/jsregexp006'
+[LuaSnip]         clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/LuaSnip/deps/jsregexp'...
+[LuaSnip]         clone | remote: Enumerating objects: 756, done.        
+[LuaSnip]         clone | remote: Counting objects: 100% (176/176), done.        
+[diffview.nvim]   clone | remote: Total 2113 (delta 425), reused 350 (delta 350), pack-reused 1533 (from 2)        
+[diffview.nvim]   clone | Receiving objects: 100% (2113/2113), 271.91 KiB | 621.00 KiB/s, done.
+[diffview.nvim]   clone | Resolving deltas: 100% (850/850), done.
+[diffview.nvim]   clone | Updating files: 100% (92/92), done.
+[friendly-snippets] clone | Resolving deltas: 100% (1311/1311), done.
+[harpoon]         clone | Updating files: 100% (37/37), done.
+[gitsigns.nvim]   clone | remote: Total 6277 (delta 144), reused 106 (delta 106), pack-reused 6039 (from 4)        
+[gitsigns.nvim]   clone | Receiving objects: 100% (6277/6277), 778.62 KiB | 1.63 MiB/s, done.
+[gitsigns.nvim]   clone | Resolving deltas: 100% (3038/3038), done.
+[classic_monokai.nvim] clone | Receiving objects: 100% (806/806), 84.38 KiB | 220.00 KiB/s, done.
+[classic_monokai.nvim] clone | Resolving deltas: 100% (360/360), done.
+[classic_monokai.nvim] clone | Updating files: 100% (85/85), done.
+[neogit]          clone | remote: Total 24015 (delta 23), reused 19 (delta 16), pack-reused 23968 (from 2)        
+[neogit]          clone | Receiving objects: 100% (24015/24015), 3.08 MiB | 5.58 MiB/s, done.
+[neogit]          clone | Resolving deltas: 100% (12772/12772), done.
+[lualine.nvim]    clone | remote: Total 3546 (delta 375), reused 260 (delta 260), pack-reused 3134 (from 2)        
+[lualine.nvim]    clone | Receiving objects: 100% (3546/3546), 552.94 KiB | 1.19 MiB/s, done.
+[lualine.nvim]    clone | Resolving deltas: 100% (1755/1755), done.
+[lualine.nvim]    clone | Updating files: 100% (138/138), done.
+[mason-tool-installer.nvim] clone | Resolving deltas: 100% (73/73), done.
+[lazydev.nvim]    clone | Resolving deltas: 100% (250/250), done.
+[lazydev.nvim]    clone | Updating files: 100% (34/34), done.
+[nvim-ts-context-commentstring] clone | Receiving objects: 100% (472/472), 90.10 KiB | 221.00 KiB/s, done.
+[nvim-ts-context-commentstring] clone | Resolving deltas: 100% (176/176), done.
+[nvim-ts-context-commentstring] clone | Updating files: 100% (16/16), done.
+[nvim-autopairs]  clone | remote: Total 1657 (delta 333), reused 296 (delta 296), pack-reused 1221 (from 1)        
+[nvim-autopairs]  clone | Receiving objects: 100% (1657/1657), 228.83 KiB | 588.00 KiB/s, done.
+[nvim-autopairs]  clone | Resolving deltas: 100% (746/746), done.
+[nvim-autopairs]  clone | Updating files: 100% (51/51), done.
+[conform.nvim]    clone | remote: Total 3466 (delta 1031), reused 854 (delta 853), pack-reused 2417 (from 5)        
+[conform.nvim]    clone | Receiving objects: 100% (3466/3466), 578.25 KiB | 1.36 MiB/s, done.
+[conform.nvim]    clone | Resolving deltas: 100% (1939/1939), done.
+[conform.nvim]    clone | Updating files: 100% (322/322), done.
+[nvim-lint]       clone | Resolving deltas: 100% (1019/1019), done.
+[nvim-lint]       clone | Updating files: 100% (253/253), done.
+[nvim-treesitter-textobjects] clone | Receiving objects: 100% (2877/2877), 419.58 KiB | 987.00 KiB/s, done.
+[nvim-treesitter-textobjects] clone | Resolving deltas: 100% (1273/1273), done.
+[nvim-treesitter-textobjects] clone | Updating files: 100% (115/115), done.
+[nvim-lspconfig]  clone | Resolving deltas: 100% (8253/8253), done.
+[nvim-lspconfig]  clone | Updating files: 100% (789/789), done.
+[mini.nvim]       clone | remote: Total 10277 (delta 353), reused 309 (delta 309), pack-reused 9904 (from 4)        
+[mini.nvim]       clone | Receiving objects: 100% (10277/10277), 3.05 MiB | 3.04 MiB/s, done.
+[mini.nvim]       clone | Resolving deltas: 100% (5967/5967), done.
+[mason.nvim]      clone | remote: Total 11956 (delta 1018), reused 924 (delta 924), pack-reused 10871 (from 3)        
+[mason.nvim]      clone | Receiving objects: 100% (11956/11956), 1.55 MiB | 3.52 MiB/s, done.
+[mason.nvim]      clone | Resolving deltas: 100% (6058/6058), done.
+[mason-lspconfig.nvim] clone | Updating files: 100% (66/66), done.
+[nvim-ufo]        clone | Resolving deltas: 100% (791/791), done.
+[pkl-neovim]      clone | Updating files: 100% (50/50), done.
+[persistence.nvim] clone | Resolving deltas: 100% (103/103), done.
+[persistence.nvim] clone | Updating files: 100% (22/22), done.
+[plenary.nvim]    clone | Receiving objects: 100% (2040/2040), 355.45 KiB | 1.12 MiB/s, done.
+[plenary.nvim]    clone | Resolving deltas: 100% (1008/1008), done.
+[plenary.nvim]    clone | Updating files: 100% (132/132), done.
+[nvim-colorizer.lua] clone | Receiving objects: 100% (859/859), 170.58 KiB | 510.00 KiB/s, done.
+[nvim-colorizer.lua] clone | Resolving deltas: 100% (356/356), done.
+[nvim-colorizer.lua] clone | Updating files: 100% (161/161), done.
+[nvim-treesitter] clone | remote: Total 26435 (delta 356), reused 251 (delta 243), pack-reused 25993 (from 3)        
+[nvim-treesitter] clone | Receiving objects: 100% (26435/26435), 3.51 MiB | 3.18 MiB/s, done.
+[nvim-treesitter] clone | Resolving deltas: 100% (14532/14532), done.
+[nvim-web-devicons] clone | Resolving deltas: 100% (430/430), done.
+[typr]            clone | Resolving deltas: 100% (111/111), done.
+[oil.nvim]        clone | Resolving deltas: 100% (1092/1092), done.
+[oil.nvim]        clone | Updating files: 100% (85/85), done.
+[mdx.nvim]        clone | Updating files: 100% (13/13), done.
+[volt]            clone | Resolving deltas: 100% (98/98), done.
+[oldtale.nvim]    clone | Resolving deltas: 100% (89/89), done.
+[smartcolumn.nvim] clone | Updating files: 100% (4/4), done.
+[snacks.nvim]     clone | remote: Enumerating objects: 13204, done.        
+[snacks.nvim]     clone | remote: Counting objects: 100% (19/19), done.        
+[snacks.nvim]     clone | remote: Compressing objects: 100% (13/13), done.        
+[snacks.nvim]     clone | remote: Total 13204 (delta 11), reused 7 (delta 6), pack-reused 13185 (from 2)        
+[snacks.nvim]     clone | Receiving objects: 100% (13204/13204), 2.66 MiB | 3.26 MiB/s, done.
+[snacks.nvim]     clone | Resolving deltas: 100% (7856/7856), done.
+[sugoi.nvim]      clone | remote: Enumerating objects: 68, done.        
+[sugoi.nvim]      clone | remote: Counting objects: 100% (68/68), done.        
+[sugoi.nvim]      clone | remote: Compressing objects: 100% (26/26), done.        
+[sugoi.nvim]      clone | remote: Total 68 (delta 24), reused 68 (delta 24), pack-reused 0 (from 0)        
+[sugoi.nvim]      clone | Receiving objects: 100% (68/68), 7.37 KiB | 7.38 MiB/s, done.
+[sugoi.nvim]      clone | Resolving deltas: 100% (24/24), done.
+[tabby.nvim]      clone | remote: Enumerating objects: 1098, done.        
+[tabby.nvim]      clone | remote: Counting objects: 100% (222/222), done.        
+[tabby.nvim]      clone | remote: Compressing objects: 100% (68/68), done.        
+[tabby.nvim]      clone | remote: Total 1098 (delta 176), reused 160 (delta 149), pack-reused 876 (from 2)        
+[tabby.nvim]      clone | Receiving objects: 100% (1098/1098), 233.32 KiB | 4.17 MiB/s, done.
+[trouble.nvim]    clone | remote: Enumerating objects: 2940, done.        
+[trouble.nvim]    clone | remote: Counting objects: 100% (42/42), done.        
+[trouble.nvim]    clone | remote: Compressing objects: 100% (25/25), done.        
+[trouble.nvim]    clone | remote: Total 2940 (delta 28), reused 20 (delta 16), pack-reused 2898 (from 3)        
+[trouble.nvim]    clone | Receiving objects: 100% (2940/2940), 642.93 KiB | 3.17 MiB/s, done.
+[trouble.nvim]    clone | Resolving deltas: 100% (1335/1335), done.
+[supermaven-nvim] clone | remote: Enumerating objects: 548, done.        
+[supermaven-nvim] clone | remote: Counting objects: 100% (153/153), done.        
+[supermaven-nvim] clone | remote: Compressing objects: 100% (59/59), done.        
+[supermaven-nvim] clone | remote: Total 548 (delta 107), reused 94 (delta 94), pack-reused 395 (from 1)        
+[supermaven-nvim] clone | Receiving objects: 100% (548/548), 90.55 KiB | 1.74 MiB/s, done.
+[promise-async]   clone | remote: Enumerating objects: 192, done.        
+[promise-async]   clone | remote: Counting objects: 100% (177/177), done.        
+[promise-async]   clone | remote: Compressing objects: 100% (101/101), done.        
+[promise-async]   clone | remote: Total 192 (delta 78), reused 175 (delta 76), pack-reused 15 (from 1)        
+[onedark.nvim]    clone | remote: Enumerating objects: 838, done.        
+[onedark.nvim]    clone | remote: Counting objects: 100% (216/216), done.        
+[onedark.nvim]    clone | remote: Compressing objects: 100% (105/105), done.        
+[onedark.nvim]    clone | remote: Total 838 (delta 179), reused 111 (delta 111), pack-reused 622 (from 2)        
+[which-key.nvim]  clone | remote: Enumerating objects: 2847, done.        
+[which-key.nvim]  clone | remote: Counting objects: 100% (665/665), done.        
+[which-key.nvim]  clone | remote: Compressing objects: 100% (113/113), done.        
+[obscure.nvim]    clone | remote: Enumerating objects: 580, done.        
+[obscure.nvim]    clone | remote: Counting objects: 100% (26/26), done.        
+[obscure.nvim]    clone | remote: Compressing objects: 100% (18/18), done.        
+[obscure.nvim]    clone | remote: Total 580 (delta 16), reused 8 (delta 8), pack-reused 554 (from 2)        
+[obscure.nvim]    clone | Receiving objects: 100% (580/580), 95.29 KiB | 1.44 MiB/s, done.
+[obscure.nvim]    clone | Resolving deltas: 100% (248/248), done.
+[tokyonight.nvim] clone | remote: Enumerating objects: 4101, done.        
+[tokyonight.nvim] clone | remote: Total 4101 (delta 0), reused 0 (delta 0), pack-reused 4101 (from 1)        
+[tokyonight.nvim] clone | Receiving objects: 100% (4101/4101), 795.94 KiB | 1.98 MiB/s, done.
+[tokyonight.nvim] clone | Resolving deltas: 100% (2416/2416), done.
+[nvim-ts-autotag] clone | remote: Enumerating objects: 625, done.        
+[nvim-ts-autotag] clone | remote: Counting objects: 100% (132/132), done.        
+[nvim-ts-autotag] clone | remote: Compressing objects: 100% (83/83), done.        
+[nvim-ts-autotag] clone | remote: Total 625 (delta 56), reused 51 (delta 49), pack-reused 493 (from 2)        
+[todo-comments.nvim] clone | remote: Enumerating objects: 769, done.        
+[todo-comments.nvim] clone | remote: Counting objects: 100% (142/142), done.        
+[todo-comments.nvim] clone | remote: Compressing objects: 100% (35/35), done.        
+[todo-comments.nvim] clone | remote: Total 769 (delta 118), reused 115 (delta 107), pack-reused 627 (from 3)        
+[todo-comments.nvim] clone | Receiving objects: 100% (769/769), 164.52 KiB | 1.83 MiB/s, done.
+[telescope.nvim]  clone | remote: Enumerating objects: 8246, done.        
+[telescope.nvim]  clone | remote: Counting objects: 100% (117/117), done.        
+[telescope.nvim]  clone | remote: Compressing objects: 100% (62/62), done.        
+[telescope.nvim]  clone | remote: Total 8246 (delta 87), reused 55 (delta 55), pack-reused 8129 (from 2)        
+[telescope.nvim]  clone | Receiving objects: 100% (8246/8246), 1.43 MiB | 2.44 MiB/s, done.
+[LuaSnip]         clone | remote: Compressing objects: 100% (88/88), done.        
+[LuaSnip]         clone | remote: Total 756 (delta 107), reused 104 (delta 86), pack-reused 580 (from 2)        
+[LuaSnip]         clone | Receiving objects: 100% (756/756), 427.30 KiB | 4.36 MiB/s, done.
+[LuaSnip]         clone | Resolving deltas: 100% (433/433), done.
+[LuaSnip]         clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/LuaSnip/deps/jsregexp005'...
+[nvim-web-devicons] clone | Updating files: 100% (38/38), done.
+[volt]            clone | Updating files: 100% (20/20), done.
+[tabby.nvim]      clone | Resolving deltas: 100% (493/493), done.
+[trouble.nvim]    clone | Updating files: 100% (66/66), done.
+[supermaven-nvim] clone | Resolving deltas: 100% (229/229), done.
+[promise-async]   clone | Receiving objects: 100% (192/192), 22.79 KiB | 13.00 KiB/s, done.
+[promise-async]   clone | Resolving deltas: 100% (79/79), done.
+[onedark.nvim]    clone | Receiving objects: 100% (838/838), 161.92 KiB | 96.00 KiB/s, done.
+[onedark.nvim]    clone | Resolving deltas: 100% (279/279), done.
+[which-key.nvim]  clone | remote: Total 2847 (delta 577), reused 552 (delta 552), pack-reused 2182 (from 3)        
+[which-key.nvim]  clone | Receiving objects: 100% (2847/2847), 596.55 KiB | 356.00 KiB/s, done.
+[which-key.nvim]  clone | Resolving deltas: 100% (1288/1288), done.
+[obscure.nvim]    clone | Updating files: 100% (53/53), done.
+[nvim-ts-autotag] clone | Receiving objects: 100% (625/625), 91.94 KiB | 55.00 KiB/s, done.
+[nvim-ts-autotag] clone | Resolving deltas: 100% (210/210), done.
+[todo-comments.nvim] clone | Resolving deltas: 100% (290/290), done.
+[telescope.nvim]  clone | Resolving deltas: 100% (4219/4219), done.
+[SchemaStore.nvim] clone | Finished task clone in 3404ms
+[bg.nvim]         clone | Finished task clone in 3404ms
+[blink-cmp-avante] clone | Finished task clone in 3404ms
+[blink.cmp]       clone | Finished task clone in 3404ms
+[catppuccin]      clone | Finished task clone in 3403ms
+[classic_monokai.nvim] clone | Finished task clone in 3403ms
+[colorbuddy.nvim] clone | Finished task clone in 3403ms
+[conform.nvim]    clone | Finished task clone in 3403ms
+[diffview.nvim]   clone | Finished task clone in 3403ms
+[eyeliner.nvim]   clone | Finished task clone in 3403ms
+[friendly-snippets] clone | Finished task clone in 3403ms
+[gitsigns.nvim]   clone | Finished task clone in 3403ms
+[gruber-darker.nvim] clone | Finished task clone in 3402ms
+[harpoon]         clone | Finished task clone in 3402ms
+[lazydev.nvim]    clone | Finished task clone in 3402ms
+[lualine.nvim]    clone | Finished task clone in 3402ms
+[mason-lspconfig.nvim] clone | Finished task clone in 3402ms
+[mason-tool-installer.nvim] clone | Finished task clone in 3402ms
+[mason.nvim]      clone | Finished task clone in 3402ms
+[mdx.nvim]        clone | Finished task clone in 3402ms
+[neogit]          clone | Finished task clone in 3402ms
+[nvim-autopairs]  clone | Finished task clone in 3402ms
+[nvim-colorizer.lua] clone | Finished task clone in 3402ms
+[nvim-lint]       clone | Finished task clone in 3401ms
+[nvim-lspconfig]  clone | Finished task clone in 3401ms
+[nvim-treesitter-textobjects] clone | Finished task clone in 3401ms
+[nvim-ts-context-commentstring] clone | Finished task clone in 3401ms
+[nvim-ufo]        clone | Finished task clone in 3401ms
+[oil.nvim]        clone | Finished task clone in 3401ms
+[oldtale.nvim]    clone | Finished task clone in 3401ms
+[persistence.nvim] clone | Finished task clone in 3401ms
+[pkl-neovim]      clone | Finished task clone in 3401ms
+[plenary.nvim]    clone | Finished task clone in 3401ms
+[smartcolumn.nvim] clone | Finished task clone in 3401ms
+[sugoi.nvim]      clone | Finished task clone in 3401ms
+[tokyonight.nvim] clone | Finished task clone in 3400ms
+[typr]            clone | Finished task clone in 3400ms
+[nvim-web-devicons] clone | Finished task clone in 3411ms
+[obscure.nvim]    clone | Finished task clone in 3411ms
+[trouble.nvim]    clone | Finished task clone in 3411ms
+[volt]            clone | Finished task clone in 3410ms
+[SchemaStore.nvim] checkout | Running task checkout
+[SchemaStore.nvim] checkout | Finished task checkout in 1ms
+[bg.nvim]      checkout | Running task checkout
+[bg.nvim]      checkout | Finished task checkout in 1ms
+[blink-cmp-avante] checkout | Running task checkout
+[blink-cmp-avante] checkout | Finished task checkout in 1ms
+[blink.cmp]    checkout | Running task checkout
+[catppuccin]   checkout | Running task checkout
+[catppuccin]   checkout | Finished task checkout in 2ms
+[classic_monokai.nvim] checkout | Running task checkout
+[classic_monokai.nvim] checkout | Finished task checkout in 2ms
+[colorbuddy.nvim] checkout | Running task checkout
+[colorbuddy.nvim] checkout | Finished task checkout in 2ms
+[conform.nvim] checkout | Running task checkout
+[conform.nvim] checkout | Finished task checkout in 2ms
+[diffview.nvim] checkout | Running task checkout
+[diffview.nvim] checkout | Finished task checkout in 2ms
+[eyeliner.nvim] checkout | Running task checkout
+[eyeliner.nvim] checkout | Finished task checkout in 2ms
+[friendly-snippets] checkout | Running task checkout
+[friendly-snippets] checkout | Finished task checkout in 2ms
+[gitsigns.nvim] checkout | Running task checkout
+[gitsigns.nvim] checkout | Finished task checkout in 2ms
+[gruber-darker.nvim] checkout | Running task checkout
+[gruber-darker.nvim] checkout | Finished task checkout in 2ms
+[harpoon]      checkout | Running task checkout
+[harpoon]      checkout | Finished task checkout in 2ms
+[lazydev.nvim] checkout | Running task checkout
+[lazydev.nvim] checkout | Finished task checkout in 3ms
+[lualine.nvim] checkout | Running task checkout
+[lualine.nvim] checkout | Finished task checkout in 3ms
+[mason-lspconfig.nvim] checkout | Running task checkout
+[mason-lspconfig.nvim] checkout | Finished task checkout in 3ms
+[mason-tool-installer.nvim] checkout | Running task checkout
+[mason-tool-installer.nvim] checkout | Finished task checkout in 3ms
+[mason.nvim]   checkout | Running task checkout
+[mason.nvim]   checkout | Finished task checkout in 3ms
+[mdx.nvim]     checkout | Running task checkout
+[mdx.nvim]     checkout | Finished task checkout in 3ms
+[neogit]       checkout | Running task checkout
+[neogit]       checkout | Finished task checkout in 3ms
+[nvim-autopairs] checkout | Running task checkout
+[nvim-autopairs] checkout | Finished task checkout in 3ms
+[nvim-colorizer.lua] checkout | Running task checkout
+[nvim-colorizer.lua] checkout | Finished task checkout in 3ms
+[nvim-lint]    checkout | Running task checkout
+[nvim-lint]    checkout | Finished task checkout in 3ms
+[nvim-lspconfig] checkout | Running task checkout
+[nvim-lspconfig] checkout | Finished task checkout in 3ms
+[nvim-treesitter-textobjects] checkout | Running task checkout
+[nvim-treesitter-textobjects] checkout | Finished task checkout in 3ms
+[nvim-ts-context-commentstring] checkout | Running task checkout
+[nvim-ts-context-commentstring] checkout | Finished task checkout in 3ms
+[nvim-ufo]     checkout | Running task checkout
+[nvim-ufo]     checkout | Finished task checkout in 4ms
+[oil.nvim]     checkout | Running task checkout
+[oil.nvim]     checkout | Finished task checkout in 4ms
+[oldtale.nvim] checkout | Running task checkout
+[oldtale.nvim] checkout | Finished task checkout in 4ms
+[persistence.nvim] checkout | Running task checkout
+[persistence.nvim] checkout | Finished task checkout in 4ms
+[pkl-neovim]   checkout | Running task checkout
+[pkl-neovim]   checkout | Finished task checkout in 4ms
+[plenary.nvim] checkout | Running task checkout
+[plenary.nvim] checkout | Finished task checkout in 4ms
+[smartcolumn.nvim] checkout | Running task checkout
+[smartcolumn.nvim] checkout | Finished task checkout in 4ms
+[sugoi.nvim]   checkout | Running task checkout
+[sugoi.nvim]   checkout | Finished task checkout in 4ms
+[tokyonight.nvim] checkout | Running task checkout
+[tokyonight.nvim] checkout | Finished task checkout in 4ms
+[typr]         checkout | Running task checkout
+[typr]         checkout | Finished task checkout in 4ms
+[SchemaStore.nvim] docs | Running task docs
+[SchemaStore.nvim] docs | 
+[SchemaStore.nvim] docs | Finished task docs in 8ms
+[bg.nvim]          docs | Running task docs
+[bg.nvim]          docs | Finished task docs in 9ms
+[blink-cmp-avante] docs | Running task docs
+[blink-cmp-avante] docs | Finished task docs in 9ms
+[catppuccin]       docs | Running task docs
+[catppuccin]       docs | 
+[catppuccin]       docs | Finished task docs in 9ms
+[classic_monokai.nvim] docs | Running task docs
+[classic_monokai.nvim] docs | 
+[classic_monokai.nvim] docs | Finished task docs in 9ms
+[colorbuddy.nvim]  docs | Running task docs
+[colorbuddy.nvim]  docs | Finished task docs in 9ms
+[conform.nvim]     docs | Running task docs
+[conform.nvim]     docs | 
+[conform.nvim]     docs | Finished task docs in 10ms
+[diffview.nvim]    docs | Running task docs
+[diffview.nvim]    docs | 
+[diffview.nvim]    docs | Finished task docs in 10ms
+[eyeliner.nvim]    docs | Running task docs
+[eyeliner.nvim]    docs | Finished task docs in 10ms
+[friendly-snippets] docs | Running task docs
+[friendly-snippets] docs | Finished task docs in 10ms
+[gitsigns.nvim]    docs | Running task docs
+[gitsigns.nvim]    docs | 
+[gitsigns.nvim]    docs | Finished task docs in 11ms
+[gruber-darker.nvim] docs | Running task docs
+[gruber-darker.nvim] docs | Finished task docs in 11ms
+[harpoon]          docs | Running task docs
+[harpoon]          docs | Finished task docs in 11ms
+[lazydev.nvim]     docs | Running task docs
+[lazydev.nvim]     docs | 
+[lazydev.nvim]     docs | Finished task docs in 11ms
+[lualine.nvim]     docs | Running task docs
+[lualine.nvim]     docs | 
+[lualine.nvim]     docs | Finished task docs in 12ms
+[mason-lspconfig.nvim] docs | Running task docs
+[mason-lspconfig.nvim] docs | 
+[mason-lspconfig.nvim] docs | Finished task docs in 12ms
+[mason-tool-installer.nvim] docs | Running task docs
+[mason-tool-installer.nvim] docs | Finished task docs in 12ms
+[mason.nvim]       docs | Running task docs
+[mason.nvim]       docs | 
+[mason.nvim]       docs | Finished task docs in 12ms
+[mdx.nvim]         docs | Running task docs
+[mdx.nvim]         docs | Finished task docs in 12ms
+[neogit]           docs | Running task docs
+[neogit]           docs | 
+[neogit]           docs | Finished task docs in 13ms
+[nvim-autopairs]   docs | Running task docs
+[nvim-autopairs]   docs | 
+[nvim-autopairs]   docs | Finished task docs in 13ms
+[nvim-colorizer.lua] docs | Running task docs
+[nvim-colorizer.lua] docs | 
+[nvim-colorizer.lua] docs | Finished task docs in 13ms
+[nvim-lint]        docs | Running task docs
+[nvim-lint]        docs | 
+[nvim-lint]        docs | Finished task docs in 14ms
+[nvim-lspconfig]   docs | Running task docs
+[nvim-lspconfig]   docs | 
+[nvim-lspconfig]   docs | Finished task docs in 15ms
+[nvim-treesitter-textobjects] docs | Running task docs
+[nvim-treesitter-textobjects] docs | 
+[nvim-treesitter-textobjects] docs | Finished task docs in 15ms
+[nvim-ts-context-commentstring] docs | Running task docs
+[nvim-ts-context-commentstring] docs | 
+[nvim-ts-context-commentstring] docs | Finished task docs in 15ms
+[nvim-ufo]         docs | Running task docs
+[nvim-ufo]         docs | 
+[nvim-ufo]         docs | Finished task docs in 15ms
+[nvim-web-devicons] checkout | Running task checkout
+[nvim-web-devicons] checkout | Finished task checkout in 16ms
+[obscure.nvim] checkout | Running task checkout
+[obscure.nvim] checkout | Finished task checkout in 16ms
+[oil.nvim]         docs | Running task docs
+[oil.nvim]         docs | 
+[oil.nvim]         docs | Finished task docs in 16ms
+[oldtale.nvim]     docs | Running task docs
+[oldtale.nvim]     docs | Finished task docs in 16ms
+[persistence.nvim] docs | Running task docs
+[persistence.nvim] docs | 
+[persistence.nvim] docs | Finished task docs in 16ms
+[pkl-neovim]       docs | Running task docs
+[pkl-neovim]       docs | 
+[pkl-neovim]       docs | Finished task docs in 16ms
+[plenary.nvim]     docs | Running task docs
+[plenary.nvim]     docs | 
+[plenary.nvim]     docs | Finished task docs in 17ms
+[smartcolumn.nvim] docs | Running task docs
+[smartcolumn.nvim] docs | Finished task docs in 17ms
+[sugoi.nvim]       docs | Running task docs
+[sugoi.nvim]       docs | Finished task docs in 17ms
+[tokyonight.nvim]  docs | Running task docs
+[tokyonight.nvim]  docs | 
+[tokyonight.nvim]  docs | Finished task docs in 17ms
+[trouble.nvim] checkout | Running task checkout
+[trouble.nvim] checkout | Finished task checkout in 18ms
+[typr]             docs | Running task docs
+[typr]             docs | Finished task docs in 18ms
+[volt]         checkout | Running task checkout
+[volt]         checkout | Finished task checkout in 18ms
+[nvim-web-devicons] docs | Running task docs
+[nvim-web-devicons] docs | Finished task docs in 0ms
+[obscure.nvim]     docs | Running task docs
+[obscure.nvim]     docs | 
+[obscure.nvim]     docs | Finished task docs in 0ms
+[trouble.nvim]     docs | Running task docs
+[trouble.nvim]     docs | 
+[trouble.nvim]     docs | Finished task docs in 1ms
+[volt]             docs | Running task docs
+[volt]             docs | Finished task docs in 1ms
+[supermaven-nvim] clone | Finished task clone in 3600ms)
+[supermaven-nvim] checkout | Running task checkout
+[supermaven-nvim] checkout | Finished task checkout in 0ms
+[supermaven-nvim]  docs | Running task docs
+[supermaven-nvim]  docs | Finished task docs in 0ms
+[snacks.nvim]     clone | Updating files: 100% (276/276), done.
+[todo-comments.nvim] clone | Finished task clone in 3647ms
+[todo-comments.nvim] checkout | Running task checkout
+[todo-comments.nvim] checkout | Finished task checkout in 0ms
+[todo-comments.nvim] docs | Running task docs
+[todo-comments.nvim] docs | 
+[todo-comments.nvim] docs | Finished task docs in 1ms
+[tabby.nvim]      clone | Finished task clone in 3665ms
+[tabby.nvim]   checkout | Running task checkout
+[tabby.nvim]   checkout | Finished task checkout in 1ms
+[tabby.nvim]       docs | Running task docs
+[tabby.nvim]       docs | 
+[tabby.nvim]       docs | Finished task docs in 0ms
+[snacks.nvim]     clone | Finished task clone in 3693ms
+[snacks.nvim]  checkout | Running task checkout
+[snacks.nvim]  checkout | Finished task checkout in 0ms
+[snacks.nvim]      docs | Running task docs
+[snacks.nvim]      docs | 
+[snacks.nvim]      docs | Finished task docs in 6ms
+[nvim-treesitter] clone | Finished task clone in 3712ms
+[nvim-treesitter] checkout | Running task checkout
+[nvim-treesitter] checkout | Finished task checkout in 0ms
+[nvim-treesitter]  docs | Running task docs
+[nvim-treesitter]  docs | 
+[nvim-treesitter]  docs | Finished task docs in 0ms
+[nvim-ts-autotag] clone | Finished task clone in 3737ms
+[promise-async]   clone | Finished task clone in 3737ms
+[LuaSnip]         clone | remote: Enumerating objects: 756, done.        
+[nvim-ts-autotag] checkout | Running task checkout:  86% (152/176)        
+[nvim-ts-autotag] checkout | Finished task checkout in 2ms
+[promise-async] checkout | Running task checkout
+[promise-async] checkout | Finished task checkout in 2ms
+[nvim-ts-autotag]  docs | Running task docs
+[nvim-ts-autotag]  docs | Finished task docs in 0ms
+[promise-async]    docs | Running task docs
+[promise-async]    docs | Finished task docs in 0ms
+[LuaSnip]         clone | remote: Counting objects: 100% (176/176), done.        
+[LuaSnip]         clone | remote: Compressing objects: 100% (88/88), done.        
+[LuaSnip]         clone | remote: Total 756 (delta 107), reused 104 (delta 86), pack-reused 580 (from 2)        
+[LuaSnip]         clone | Receiving objects: 100% (756/756), 423.47 KiB | 7.56 MiB/s, done.
+[onedark.nvim]    clone | Finished task clone in 3821ms3)
+[onedark.nvim] checkout | Running task checkout% (256/433)
+[onedark.nvim] checkout | Finished task checkout in 8ms
+[onedark.nvim]     docs | Running task docs  99% (429/433)
+[onedark.nvim]     docs | Finished task docs in 2ms
+[LuaSnip]         clone | Resolving deltas: 100% (433/433), done.
+[LuaSnip]         clone | Cloning into '/home/lcarv/.local/share/nvim/lazy/LuaSnip/deps/jsregexp006'...
+[telescope.nvim]  clone | Finished task clone in 3895ms
+[telescope.nvim] checkout | Running task checkout
+[telescope.nvim] checkout | Finished task checkout in 0ms
+[which-key.nvim]  clone | Finished task clone in 3896ms
+[telescope.nvim]   docs | Running task docs
+[telescope.nvim]   docs | 
+[telescope.nvim]   docs | Finished task docs in 1ms
+[which-key.nvim] checkout | Running task checkout
+[which-key.nvim] checkout | Finished task checkout in 1ms
+[which-key.nvim]   docs | Running task docs
+[which-key.nvim]   docs | 
+[which-key.nvim]   docs | Finished task docs in 0ms
+[blink.cmp]    checkout | Note: switching to '4b18c32adef2898f95cdef6192cbd5796c1a332d'.
+[blink.cmp]    checkout | 
+You are in 'detached HEAD' state. You can look around, make experimental
+[blink.cmp]    checkout | changes and commit them, and you can discard any commits you make in this
+[blink.cmp]    checkout | state without impacting any branches by switching back to a branch.
+[blink.cmp]    checkout | 
+If you want to create a new branch to retain commits you create, you may
+[blink.cmp]    checkout | do so (now or later) by using -c with the switch command. Example:
+[blink.cmp]    checkout | 
+  git switch -c <new-branch-name>
+[blink.cmp]    checkout | 
+Or undo this operation with:
+[blink.cmp]    checkout | 
+  git switch -
+[blink.cmp]    checkout | 
+Turn off this advice by setting config variable advice.detachedHead to false
+[blink.cmp]    checkout | 
+HEAD is now at 4b18c32 chore: bump version to 1.9.1
+[blink.cmp]    checkout | Finished task checkout in 539ms
+[blink.cmp]        docs | Running task docs
+[blink.cmp]        docs | 
+[blink.cmp]        docs | Finished task docs in 1ms
+[mini.nvim]       clone | Updating files: 100% (2796/2796), done.
+[mini.nvim]       clone | Finished task clone in 4295ms
+[mini.nvim]    checkout | Running task checkout
+[mini.nvim]    checkout | Finished task checkout in 0ms
+[mini.nvim]        docs | Running task docs
+[mini.nvim]        docs | 
+[mini.nvim]        docs | Finished task docs in 4ms
+[LuaSnip]         clone | remote: Enumerating objects: 756, done.        
+[LuaSnip]         clone | remote: Counting objects: 100% (176/176), done.        
+[LuaSnip]         clone | remote: Compressing objects: 100% (88/88), done.        
+[LuaSnip]         clone | remote: Total 756 (delta 107), reused 104 (delta 86), pack-reused 580 (from 2)        
+[LuaSnip]         clone | Receiving objects: 100% (756/756), 427.30 KiB | 6.89 MiB/s, done.
+[LuaSnip]         clone | Resolving deltas: 100% (433/433), done.
+[LuaSnip]         clone | Submodule path 'deps/jsregexp': checked out '558d5b567a8a6a391ec578f3e763f43fd4126abc'
+[LuaSnip]         clone | Submodule path 'deps/jsregexp005': checked out 'dd65498ae2c29b882d6c02c0a30577b08d660b94'
+[LuaSnip]         clone | Submodule path 'deps/jsregexp006': checked out 'b5a81e21d0875667ba2458ac8ae903afd5568698'
+[LuaSnip]         clone | Finished task clone in 4502ms
+[LuaSnip]      checkout | Running task checkout
+[LuaSnip]      checkout | Note: switching to '5a1e39223db9a0498024a77b8441169d260c8c25'.
+[LuaSnip]      checkout | 
+You are in 'detached HEAD' state. You can look around, make experimental
+[LuaSnip]      checkout | changes and commit them, and you can discard any commits you make in this
+[LuaSnip]      checkout | state without impacting any branches by switching back to a branch.
+[LuaSnip]      checkout | 
+If you want to create a new branch to retain commits you create, you may
+[LuaSnip]      checkout | do so (now or later) by using -c with the switch command. Example:
+[LuaSnip]      checkout | 
+  git switch -c <new-branch-name>
+[LuaSnip]      checkout | 
+Or undo this operation with:
+[LuaSnip]      checkout | 
+  git switch -
+[LuaSnip]      checkout | 
+Turn off this advice by setting config variable advice.detachedHead to false
+[LuaSnip]      checkout | 
+HEAD is now at 5a1e392 Format with stylua
+[LuaSnip]      checkout | Finished task checkout in 469ms
+[LuaSnip]          docs | Running task docs
+[LuaSnip]          docs | 
+[LuaSnip]          docs | Finished task docs in 1ms
+[nvim-treesitter] build | Running task build
+[nvim-treesitter] build | [nvim-treesitter]: All parsers are up-to-date
+[nvim-treesitter] build | Finished task build in 15ms
+Error detected while processing /home/lcarv/dots-linux/nvim/.config/nvim/init.lua:
+Failed to run `config` for nvim-treesitter
+
+/home/lcarv/.config/nvim/lua/plugins/tree-sitter.lua:37: module 'nvim-treesitter.configs' not found:
+        no field package.preload['nvim-treesitter.configs']
+        cache_loader: module 'nvim-treesitter.configs' not found
+        cache_loader_lib: module 'nvim-treesitter.configs' not found
+        no file './nvim-treesitter/configs.lua'
+        no file '/home/runner/work/neovim/neovim/.deps/usr/share/luajit-2.1/nvim-treesitter/configs.lua'
+        no file '/usr/local/share/lua/5.1/nvim-treesitter/configs.lua'
+        no file '/usr/local/share/lua/5.1/nvim-treesitter/configs/init.lua'
+        no file '/home/runner/work/neovim/neovim/.deps/usr/share/lua/5.1/nvim-treesitter/configs.lua'
+        no file '/home/runner/work/neovim/neovim/.deps/usr/share/lua/5.1/nvim-treesitter/configs/init.lua'
+        no file './nvim-treesitter/configs.so'
+        no file '/usr/local/lib/lua/5.1/nvim-treesitter/configs.so'
+        no file '/home/runner/work/neovim/neovim/.deps/usr/lib/lua/5.1/nvim-treesitter/configs.so'
+        no file '/usr/local/lib/lua/5.1/loadall.so'
+        no file './nvim-treesitter.so'
+        no file '/usr/local/lib/lua/5.1/nvim-treesitter.so'
+        no file '/home/runner/work/neovim/neovim/.deps/usr/lib/lua/5.1/nvim-treesitter.so'
+        no file '/usr/local/lib/lua/5.1/loadall.so'
+
+# stacktrace:
+  - .config/nvim/lua/plugins/tree-sitter.lua:37 _in_ **config**[LuaSnip]         fetch | Running task fetch
+[SchemaStore.nvim] fetch | Running task fetch
+[bg.nvim]         fetch | Running task fetch
+[blink-cmp-avante] fetch | Running task fetch
+[blink.cmp]       fetch | Running task fetch
+[catppuccin]      fetch | Running task fetch
+[classic_monokai.nvim] fetch | Running task fetch
+[colorbuddy.nvim] fetch | Running task fetch
+[conform.nvim]    fetch | Running task fetch
+[diffview.nvim]   fetch | Running task fetch
+[eyeliner.nvim]   fetch | Running task fetch
+[friendly-snippets] fetch | Running task fetch
+[gitsigns.nvim]   fetch | Running task fetch
+[gruber-darker.nvim] fetch | Running task fetch
+[harpoon]         fetch | Running task fetch
+[lazy.nvim]       fetch | Running task fetch
+[lazydev.nvim]    fetch | Running task fetch
+[lualine.nvim]    fetch | Running task fetch
+[mason-lspconfig.nvim] fetch | Running task fetch
+[mason-tool-installer.nvim] fetch | Running task fetch
+[mason.nvim]      fetch | Running task fetch
+[mdx.nvim]        fetch | Running task fetch
+[mini.nvim]       fetch | Running task fetch
+[neogit]          fetch | Running task fetch
+[nvim-autopairs]  fetch | Running task fetch
+[nvim-colorizer.lua] fetch | Running task fetch
+[nvim-lint]       fetch | Running task fetch
+[nvim-lspconfig]  fetch | Running task fetch
+[nvim-treesitter] fetch | Running task fetch
+[nvim-treesitter-textobjects] fetch | Running task fetch
+[nvim-ts-autotag] fetch | Running task fetch
+[nvim-ts-context-commentstring] fetch | Running task fetch
+[nvim-ufo]        fetch | Running task fetch
+[nvim-web-devicons] fetch | Running task fetch
+[obscure.nvim]    fetch | Running task fetch
+[oil.nvim]        fetch | Running task fetch
+[oldtale.nvim]    fetch | Running task fetch
+[onedark.nvim]    fetch | Running task fetch
+[persistence.nvim] fetch | Running task fetch
+[pkl-neovim]      fetch | Running task fetch
+[plenary.nvim]    fetch | Running task fetch
+[promise-async]   fetch | Running task fetch
+[smartcolumn.nvim] fetch | Running task fetch
+[snacks.nvim]     fetch | Running task fetch
+[sugoi.nvim]      fetch | Running task fetch
+[supermaven-nvim] fetch | Running task fetch
+[tabby.nvim]      fetch | Running task fetch
+[telescope.nvim]  fetch | Running task fetch
+[todo-comments.nvim] fetch | Running task fetch
+[tokyonight.nvim] fetch | Running task fetch
+[trouble.nvim]    fetch | Running task fetch
+[typr]            fetch | Running task fetch
+[volt]            fetch | Running task fetch
+[which-key.nvim]  fetch | Running task fetch
+[colorbuddy.nvim] fetch | Finished task fetch in 601ms
+[colorbuddy.nvim] status | Running task status
+[bg.nvim]         fetch | Finished task fetch in 645ms
+[colorbuddy.nvim] status | Finished task status in 43ms
+[bg.nvim]        status | Running task status
+[colorbuddy.nvim] checkout | Running task checkout
+[colorbuddy.nvim] checkout | Finished task checkout in 17ms
+[SchemaStore.nvim] fetch | Finished task fetch in 684ms
+[conform.nvim]    fetch | Finished task fetch in 683ms
+[SchemaStore.nvim] status | Running task status
+[conform.nvim]   status | Running task status
+[bg.nvim]        status | Finished task status in 93ms
+[blink-cmp-avante] fetch | Finished task fetch in 738ms
+[classic_monokai.nvim] fetch | Finished task fetch in 738ms
+[lazy.nvim]       fetch | Finished task fetch in 737ms
+[SchemaStore.nvim] status | Finished task status in 52ms
+[bg.nvim]      checkout | Running task checkout
+[bg.nvim]      checkout | Finished task checkout in 10ms
+[blink-cmp-avante] status | Running task status
+[classic_monokai.nvim] status | Running task status
+[lazy.nvim]      status | Running task status
+[SchemaStore.nvim] checkout | Running task checkout
+[SchemaStore.nvim] checkout | Finished task checkout in 138ms
+[blink.cmp]       fetch | Finished task fetch in 889ms
+[catppuccin]      fetch | Finished task fetch in 889ms
+[eyeliner.nvim]   fetch | Finished task fetch in 888ms
+[friendly-snippets] fetch | Finished task fetch in 888ms
+[gitsigns.nvim]   fetch | Finished task fetch in 888ms
+[gruber-darker.nvim] fetch | Finished task fetch in 888ms
+[harpoon]         fetch | Finished task fetch in 888ms
+[lazydev.nvim]    fetch | Finished task fetch in 888ms
+[lualine.nvim]    fetch | Finished task fetch in 887ms
+[mason.nvim]      fetch | Finished task fetch in 887ms
+[mini.nvim]       fetch | Finished task fetch in 887ms
+[conform.nvim]   status | Finished task status in 203ms
+[blink.cmp]      status | Running task status
+[catppuccin]     status | Running task status
+[conform.nvim] checkout | Running task checkout
+[conform.nvim] checkout | Finished task checkout in 1ms
+[eyeliner.nvim]  status | Running task status
+[friendly-snippets] status | Running task status
+[gitsigns.nvim]  status | Running task status
+[gruber-darker.nvim] status | Running task status
+[harpoon]        status | Running task status
+[lazydev.nvim]   status | Running task status
+[lualine.nvim]   status | Running task status
+[mason.nvim]     status | Running task status
+[mini.nvim]      status | Running task status
+[diffview.nvim]   fetch | Finished task fetch in 890ms
+[mason-lspconfig.nvim] fetch | Finished task fetch in 889ms
+[neogit]          fetch | Finished task fetch in 889ms
+[nvim-treesitter] fetch | Finished task fetch in 889ms
+[blink-cmp-avante] status | Finished task status in 153ms
+[LuaSnip]         fetch | Fetching submodule deps/jsregexp
+[blink-cmp-avante] checkout | Running task checkout
+[blink-cmp-avante] checkout | Finished task checkout in 2ms
+[diffview.nvim]  status | Running task status
+[mason-lspconfig.nvim] status | Running task status
+[neogit]         status | Running task status
+[nvim-treesitter] status | Running task status
+[mason-tool-installer.nvim] fetch | Finished task fetch in 945ms
+[mdx.nvim]        fetch | Finished task fetch in 945ms
+[nvim-ts-autotag] fetch | Finished task fetch in 945ms
+[classic_monokai.nvim] status | Finished task status in 209ms
+[lazy.nvim]      status | Finished task status in 209ms
+[blink.cmp]      status | Finished task status in 58ms
+[catppuccin]     status | Finished task status in 58ms
+[eyeliner.nvim]  status | Finished task status in 58ms
+[friendly-snippets] status | Finished task status in 58ms
+[gitsigns.nvim]  status | Finished task status in 58ms
+[gruber-darker.nvim] status | Finished task status in 58ms
+[lazydev.nvim]   status | Finished task status in 72ms
+[blink.cmp]    checkout | Running task checkout
+[catppuccin]   checkout | Running task checkout
+[catppuccin]   checkout | Finished task checkout in 9ms
+[classic_monokai.nvim] checkout | Running task checkout
+[classic_monokai.nvim] checkout | Finished task checkout in 9ms
+[eyeliner.nvim] checkout | Running task checkout
+[eyeliner.nvim] checkout | Finished task checkout in 10ms
+[friendly-snippets] checkout | Running task checkout
+[friendly-snippets] checkout | Finished task checkout in 10ms
+[gitsigns.nvim] checkout | Running task checkout
+[gitsigns.nvim] checkout | Finished task checkout in 10ms
+[gruber-darker.nvim] checkout | Running task checkout
+[gruber-darker.nvim] checkout | Finished task checkout in 10ms
+[lazy.nvim]    checkout | Running task checkout
+[lazydev.nvim] checkout | Running task checkout
+[lazydev.nvim] checkout | Finished task checkout in 11ms
+[mason-tool-installer.nvim] status | Running task status
+[mdx.nvim]       status | Running task status
+[nvim-ts-autotag] status | Running task status
+[lualine.nvim]   status | Finished task status in 85ms
+[nvim-lspconfig]  fetch | Finished task fetch in 994ms
+[harpoon]        status | Finished task status in 108ms
+[mason.nvim]     status | Finished task status in 108ms
+[mason-lspconfig.nvim] status | Finished task status in 52ms
+[harpoon]      checkout | Running task checkout
+[harpoon]      checkout | Finished task checkout in 3ms
+[lualine.nvim] checkout | Running task checkout
+[lualine.nvim] checkout | Finished task checkout in 3ms
+[mason-lspconfig.nvim] checkout | Running task checkout
+[mason-lspconfig.nvim] checkout | Finished task checkout in 3ms
+[mason.nvim]   checkout | Running task checkout
+[mason.nvim]   checkout | Finished task checkout in 4ms
+[nvim-lspconfig] status | Running task status
+[nvim-ts-context-commentstring] fetch | Finished task fetch in 1000ms
+[nvim-ufo]        fetch | Finished task fetch in 1000ms
+[diffview.nvim]  status | Finished task status in 58ms
+[neogit]         status | Finished task status in 58ms
+[mini.nvim]      status | Finished task status in 120ms
+[mason-tool-installer.nvim] status | Finished task status in 46ms
+[diffview.nvim] checkout | Running task checkout
+[diffview.nvim] checkout | Finished task checkout in 4ms
+[mason-tool-installer.nvim] checkout | Running task checkout
+[mason-tool-installer.nvim] checkout | Finished task checkout in 5ms
+[mini.nvim]    checkout | Running task checkout
+[mini.nvim]    checkout | Finished task checkout in 5ms
+[neogit]       checkout | Running task checkout
+[neogit]       checkout | Finished task checkout in 6ms
+[nvim-ts-context-commentstring] status | Running task status
+[nvim-ufo]       status | Running task status
+[plenary.nvim]    fetch | Finished task fetch in 1020ms
+[nvim-ts-autotag] status | Finished task status in 62ms
+[blink.cmp]    checkout | HEAD is now at 4b18c32 chore: bump version to 1.9.1
+[nvim-ts-autotag] checkout | Running task checkout
+[nvim-ts-autotag] checkout | Finished task checkout in 1ms
+[plenary.nvim]   status | Running task status
+[nvim-treesitter] status | Finished task status in 81ms
+[mdx.nvim]       status | Finished task status in 66ms
+[mdx.nvim]     checkout | Running task checkout
+[mdx.nvim]     checkout | Finished task checkout in 0ms
+[nvim-treesitter] checkout | Running task checkout
+[nvim-treesitter] checkout | Finished task checkout in 1ms
+[nvim-lspconfig] status | Finished task status in 31ms
+[blink.cmp]    checkout | Finished task checkout in 68ms
+[nvim-ts-context-commentstring] status | Finished task status in 20ms
+[nvim-ufo]       status | Finished task status in 20ms
+[nvim-lspconfig] checkout | Running task checkout
+[nvim-lspconfig] checkout | Finished task checkout in 4ms
+[nvim-ts-context-commentstring] checkout | Running task checkout
+[nvim-ts-context-commentstring] checkout | Finished task checkout in 5ms
+[nvim-ufo]     checkout | Running task checkout
+[nvim-ufo]     checkout | Finished task checkout in 5ms
+[nvim-colorizer.lua] fetch | Finished task fetch in 1033ms
+[nvim-colorizer.lua] status | Running task status
+[plenary.nvim]   status | Finished task status in 16ms
+[plenary.nvim] checkout | Running task checkout
+[plenary.nvim] checkout | Finished task checkout in 3ms
+[nvim-lint]       fetch | Finished task fetch in 1043ms
+[nvim-lint]      status | Running task status
+[oldtale.nvim]    fetch | Finished task fetch in 1047ms
+[oldtale.nvim]   status | Running task status
+[nvim-colorizer.lua] status | Finished task status in 20ms
+[nvim-colorizer.lua] checkout | Running task checkout
+[nvim-colorizer.lua] checkout | Finished task checkout in 1ms
+[nvim-autopairs]  fetch | Finished task fetch in 1065ms
+[nvim-lint]      status | Finished task status in 21ms
+[nvim-autopairs] status | Running task status
+[nvim-lint]    checkout | Running task checkout
+[nvim-lint]    checkout | Finished task checkout in 1ms
+[sugoi.nvim]      fetch | Finished task fetch in 1065ms
+[oldtale.nvim]   status | Finished task status in 17ms
+[oldtale.nvim] checkout | Running task checkout
+[oldtale.nvim] checkout | Finished task checkout in 3ms
+[sugoi.nvim]     status | Running task status
+[nvim-autopairs] status | Finished task status in 13ms
+[nvim-autopairs] checkout | Running task checkout
+[nvim-autopairs] checkout | Finished task checkout in 0ms
+[sugoi.nvim]     status | Finished task status in 14ms
+[tabby.nvim]      fetch | Finished task fetch in 1082ms
+[sugoi.nvim]   checkout | Running task checkout
+[sugoi.nvim]   checkout | Finished task checkout in 6ms
+[tabby.nvim]     status | Running task status
+[nvim-treesitter-textobjects] fetch | Finished task fetch in 1092ms
+[nvim-treesitter-textobjects] status | Running task status
+[smartcolumn.nvim] fetch | Finished task fetch in 1102ms
+[tabby.nvim]     status | Finished task status in 19ms
+[nvim-web-devicons] fetch | Finished task fetch in 1103ms
+[nvim-web-devicons] status | Running task status
+[smartcolumn.nvim] status | Running task status
+[tabby.nvim]   checkout | Running task checkout
+[tabby.nvim]   checkout | Finished task checkout in 0ms
+[nvim-treesitter-textobjects] status | Finished task status in 22ms
+[nvim-treesitter-textobjects] checkout | Running task checkout
+[nvim-treesitter-textobjects] checkout | Finished task checkout in 0ms
+[supermaven-nvim] fetch | Finished task fetch in 1114ms
+[which-key.nvim]  fetch | Finished task fetch in 1114ms
+[nvim-web-devicons] status | Finished task status in 13ms
+[nvim-web-devicons] checkout | Running task checkout
+[nvim-web-devicons] checkout | Finished task checkout in 0ms
+[supermaven-nvim] status | Running task status
+[which-key.nvim] status | Running task status
+[smartcolumn.nvim] status | Finished task status in 22ms
+[smartcolumn.nvim] checkout | Running task checkout
+[smartcolumn.nvim] checkout | Finished task checkout in 0ms
+[snacks.nvim]     fetch | Finished task fetch in 1125ms
+[supermaven-nvim] status | Finished task status in 10ms
+[snacks.nvim]    status | Running task status
+[supermaven-nvim] checkout | Running task checkout
+[supermaven-nvim] checkout | Finished task checkout in 1ms
+[tokyonight.nvim] fetch | Finished task fetch in 1128ms
+[tokyonight.nvim] status | Running task status
+[which-key.nvim] status | Finished task status in 37ms
+[which-key.nvim] checkout | Running task checkout
+[which-key.nvim] checkout | Finished task checkout in 3ms
+[obscure.nvim]    fetch | Finished task fetch in 1158ms
+[onedark.nvim]    fetch | Finished task fetch in 1158ms
+[persistence.nvim] fetch | Finished task fetch in 1158ms
+[obscure.nvim]   status | Running task status
+[onedark.nvim]   status | Running task status
+[persistence.nvim] status | Running task status
+[pkl-neovim]      fetch | Finished task fetch in 1164ms
+[trouble.nvim]    fetch | Finished task fetch in 1174ms
+[pkl-neovim]     status | Running task status
+[trouble.nvim]   status | Running task status
+[tokyonight.nvim] status | Finished task status in 46ms
+[onedark.nvim]   status | Finished task status in 27ms
+[onedark.nvim] checkout | Running task checkout
+[onedark.nvim] checkout | Finished task checkout in 0ms
+[tokyonight.nvim] checkout | Running task checkout
+[tokyonight.nvim] checkout | Finished task checkout in 1ms
+[todo-comments.nvim] fetch | Finished task fetch in 1189ms
+[todo-comments.nvim] status | Running task status
+[promise-async]   fetch | Finished task fetch in 1190ms
+[obscure.nvim]   status | Finished task status in 32ms
+[persistence.nvim] status | Finished task status in 32ms
+[obscure.nvim] checkout | Running task checkout
+[obscure.nvim] checkout | Finished task checkout in 1ms
+[persistence.nvim] checkout | Running task checkout
+[persistence.nvim] checkout | Finished task checkout in 1ms
+[promise-async]  status | Running task status
+[oil.nvim]        fetch | Finished task fetch in 1196ms
+[pkl-neovim]     status | Finished task status in 20ms
+[oil.nvim]       status | Running task status
+[pkl-neovim]   checkout | Running task checkout
+[pkl-neovim]   checkout | Finished task checkout in 1ms
+[telescope.nvim]  fetch | Finished task fetch in 1200ms
+[trouble.nvim]   status | Finished task status in 27ms
+[telescope.nvim] status | Running task status
+[trouble.nvim] checkout | Running task checkout
+[trouble.nvim] checkout | Finished task checkout in 0ms
+[todo-comments.nvim] status | Finished task status in 17ms
+[todo-comments.nvim] checkout | Running task checkout
+[todo-comments.nvim] checkout | Finished task checkout in 0ms
+[promise-async]  status | Finished task status in 22ms
+[promise-async] checkout | Running task checkout
+[promise-async] checkout | Finished task checkout in 0ms
+[oil.nvim]       status | Finished task status in 26ms
+[oil.nvim]     checkout | Running task checkout
+[oil.nvim]     checkout | Finished task checkout in 1ms
+[telescope.nvim] status | Finished task status in 24ms
+[telescope.nvim] checkout | Running task checkout
+[telescope.nvim] checkout | Finished task checkout in 0ms
+[snacks.nvim]    status | Finished task status in 112ms
+[snacks.nvim]  checkout | Running task checkout
+[snacks.nvim]  checkout | Finished task checkout in 1ms
+[typr]            fetch | Finished task fetch in 1241ms
+[typr]           status | Running task status
+[volt]            fetch | Finished task fetch in 1258ms
+[volt]           status | Running task status
+[typr]           status | Finished task status in 22ms
+[typr]         checkout | Running task checkout
+[typr]         checkout | Finished task checkout in 3ms
+[volt]           status | Finished task status in 12ms
+[volt]         checkout | Running task checkout
+[volt]         checkout | Finished task checkout in 0ms
+[LuaSnip]         fetch | Fetching submodule deps/jsregexp005
+[lazy.nvim]    checkout | Previous HEAD position was 85c7ff3 chore(main): release 11.17.5 (#2087)
+[lazy.nvim]    checkout | HEAD is now at 306a055 chore(build): auto-generate rockspec mappings
+[lazy.nvim]    checkout | Finished task checkout in 410ms
+[lazy.nvim]        docs | Running task docs
+[lazy.nvim]        docs | 
+[lazy.nvim]        docs | Finished task docs in 11ms
+[LuaSnip]         fetch | Fetching submodule deps/jsregexp006
+[LuaSnip]         fetch | Finished task fetch in 1875ms
+[LuaSnip]        status | Running task status
+[LuaSnip]        status | Finished task status in 21ms
+[LuaSnip]      checkout | Running task checkout
+[LuaSnip]      checkout | HEAD is now at 5a1e392 Format with stylua
+[LuaSnip]      checkout | Finished task checkout in 63ms
+[lazy.nvim]         log | Running task log
+[lazy.nvim]         log | 306a055 chore(build): auto-generate rockspec mappings (3 months ago)
+[lazy.nvim]         log | 073727e build(deps): bump actions/checkout from 4 to 6 (3 months ago)
+[lazy.nvim]         log | 0f7c798 build(deps): bump stefanzweifel/git-auto-commit-action from 5 to 7 (3 months ago)
+[lazy.nvim]         log | 7930f2d build(deps): bump actions/cache from 4 to 5 (3 months ago)[lazy.nvim]         log | Finished task log in 22ms
+Process Group PGID: 167087

@@ -1,0 +1,7 @@
+description = "Clears the project's PLAN.md file to reset the context."
+
+# The prompt definition that the CLI sends to the Gemini API
+prompt = """
+!{echo -n "" > PLAN.md}
+The `PLAN.md` file has been cleared.
+"""

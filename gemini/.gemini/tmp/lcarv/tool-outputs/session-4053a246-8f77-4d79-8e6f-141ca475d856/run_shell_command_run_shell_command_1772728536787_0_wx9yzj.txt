@@ -1,0 +1,3 @@
+{
+  "output": "Output: Error detected while processing /home/lcarv/dots-linux/mvim/.config/mvim/init.lua:\nE5113: Error while calling lua chunk: vim/_options.lua:33: Invalid option (not found): 'smoothscroll'\nstack traceback:\n        [C]: in function 'nvim_get_option_info'\n        vim/_options.lua:33: in function '__index'\n        vim/_options.lua:471: in function 'make_option'\n        vim/_options.lua:536: in function '__newindex'\n        /home/lcarv/.config/mvim/lua/config/options.lua:26: in main chunk\n        [C]: in function 'require'\n        /home/lcarv/dots-linux/mvim/.config/mvim/init.lua:1: in main chunk\nProcess Group PGID: 113380"
+}

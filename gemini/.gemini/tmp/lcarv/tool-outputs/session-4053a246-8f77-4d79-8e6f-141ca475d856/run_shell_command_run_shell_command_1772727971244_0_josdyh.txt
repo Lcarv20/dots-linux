@@ -1,0 +1,3 @@
+{
+  "output": "Output: NVIM v0.9.5\nBuild type: Release\nLuaJIT 2.1.1703358377\n\n   system vimrc file: \"$VIM/sysinit.vim\"\n  fall-back for $VIM: \"/usr/share/nvim\"\n\nRun :checkhealth for more info\nmvim not stowed\nProcess Group PGID: 111449"
+}

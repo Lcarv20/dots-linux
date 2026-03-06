@@ -1,0 +1,69 @@
+gui:
+  nerdFontsVersion: "3"
+  showFileIcons: true
+  mouseEvents: true
+  scrollPastBottom: true
+  scrollOffMargin: 3
+  portraitMode: "auto"
+  mainPanelSplitMode: "flexible"
+  animateExplosion: true
+  # theme:
+  #   activeBorderColor:
+  #     - '#005078' # Blue
+  #     - bold
+  #   inactiveBorderColor:
+  #     - '#4f5258' # Grey4
+  #   optionsTextColor:
+  #     - '#007676' # Cyan
+  #   selectedLineBgColor:
+  #     - '#2c2e33' # Grey3
+  #   cherryPickedCommitBgColor:
+  #     - '#4f5258'
+  #   cherryPickedCommitFgColor:
+  #     - '#005078'
+  #   unstagedChangesColor:
+  #     - '#6e5600' # Yellow
+  #   defaultFgColor:
+  #     - '#c5c8ce' # Neutral Light Gray
+  #   searchingActiveBorderColor:
+  #     - '#6e5600' # Yellow
+  #   markedBaseCommitBgColor:
+  #     - '#005078'
+  #   markedBaseCommitFgColor:
+  #     - '#1c1d23' # Grey2
+  #   inactiveViewSelectedLineBgColor:
+  #     - '#2c2e33' # Grey3
+  #
+  # branchColors:
+  #   'feature': '#007676' # Cyan
+  #   'bugfix': '#6e5600' # Yellow
+  #   'release': '#005078' # Blue
+  #   'hotfix': '#5e0009' # Red
+  #   'development': '#015825' # Green
+  showFileTree: true
+  showListFooter: true
+  showRandomTip: true
+  showBottomLine: true
+  expandFocusedSidePanel: true
+  skipStashWarning: true
+  skipDiscardChangeWarning: true
+git:
+  log:
+    showGraph: "always"
+    showWholeGraph: true
+  pagers:
+    - colorArg: always
+      pager: delta --paging=never
+  commit:
+    autoWrapCommitMessage: true
+    autoWrapWidth: 72
+  commitPrefix:
+    - pattern: "^(feature|bugfix|hotfix)/(\\w+-\\w+).*"
+      replace: "[$2] "
+  autoFetch: true
+  autoRefresh: true
+  fetchAll: true
+  autoStageResolvedConflicts: true
+refresher:
+  refreshInterval: 5 # Check for file changes every 5 seconds
+  fetchInterval: 60 # Fetch from remote every minute

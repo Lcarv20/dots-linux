@@ -1,0 +1,3 @@
+{
+  "output": "Output: fastfetch/  gemini/  ghostty/  git/  lazygit/  lsd/  mvim/  opencode/  README.md  setup*  starship/  stow/  vibe/  zed/  zsh/\nProcess Group PGID: 106685"
+}

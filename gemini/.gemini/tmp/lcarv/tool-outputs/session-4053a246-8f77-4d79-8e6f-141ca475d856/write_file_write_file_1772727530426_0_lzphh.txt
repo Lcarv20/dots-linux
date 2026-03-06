@@ -1,0 +1,3 @@
+{
+  "output": "Successfully overwrote file: /home/lcarv/dots-linux/alacritty/.config/alacritty/alacritty.toml. Here is the updated code:\n...\nyellow = \"#ffffaf\"\nblue = \"#87afd7\"\nmagenta = \"#8787af\"\ncyan = \"#5fafaf\"\nwhite = \"#ffffff\"\n\n[[keyboard.bindings]]\nchars = \"\\u0011\"\nkey = \"Q\"\nmods = \"Control\"\n"
+}
