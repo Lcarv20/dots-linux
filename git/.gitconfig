@@ -9,8 +9,8 @@
 	process = git-lfs filter-process
 	required = true
 [core]
-	editor = NVIM_APPNAME=mvim nvim
-	excludesfile = /Users/lcarv/.gitignore_global
+	editor = nvim
+	excludesfile = ~/.gitignore_global
 	pager = delta
 	trustctime = false
 	sparseCheckout = true
@@ -21,11 +21,11 @@
 	tool = nvimdiff
 	conflictstyle = diff3
 [commit]
-	template = /Users/lcarv/.stCommitMsg
+	# template = ~/.stCommitMsg
 [interactive]
 	diffFilter = delta --color-only
 [include]
-	path = ~/dots-macos/git/themes/themes.gitconfig
+	path = ~/dots-linux/git/themes/themes.gitconfig
 [delta]
   ; features = woolly-mammoth
   ; features = calochortus-lyallii
