@@ -1,7 +1,3 @@
-alias v="/home/lcarv/.local/share/mise/installs/neovim/0.11.6/bin/nvim"
-alias vim="/home/lcarv/.local/share/mise/installs/neovim/0.11.6/bin/nvim"
-alias nvim="/home/lcarv/.local/share/mise/installs/neovim/0.11.6/bin/nvim"
-export PATH="/home/lcarv/.local/share/mise/installs/neovim/0.11.6/bin:$PATH"
 # --- DOTS-LINUX ZSHRC ---
 # Managed with GNU Stow + Antidote
 
@@ -39,6 +35,7 @@ alias lla='lsd -la'
 
 # Neovim
 alias v='nvim'
+alias vim='nvim'
 # (Using default config in ~/.config/nvim)
 
 # Better cat
@@ -81,4 +78,3 @@ zle -N zle-line-init
 if [ -f "$HOME/.local/bin/poke-colorscript" ]; then
     "$HOME/.local/bin/poke-colorscript"
 fi
-export PATH="/home/lcarv/.local/share/mise/installs/neovim/0.11.6/bin:$PATH"

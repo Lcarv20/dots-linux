@@ -7,6 +7,18 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "debugger": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "edit_predictions": {
     "mode": "subtle"
   },
@@ -38,6 +50,8 @@
     }
   },
   "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
     "inline_assistant_model": {
       "provider": "google",
       "model": "gemini-2.5-flash"
@@ -93,6 +107,7 @@
 
   // 🖼️ background settings
   "terminal": {
+    "dock": "bottom",
     "font_size": 14,
     "font_family": "MonaspiceNe Nerd Font",
     "line_height": { "custom": 1.2 },

@@ -173,7 +173,7 @@ done
 msg "Stowing dotfiles"
 DOTS_DIR="$HOME/dots-linux"
 cd "$DOTS_DIR"
-PACKAGES=(fastfetch gemini git lazygit lsd nvim opencode starship vibe wezterm zsh ghostty)
+PACKAGES=(fastfetch git lazygit lsd nvim starship wezterm zsh ghostty zed)
 for pkg in "${PACKAGES[@]}"; do
     run_with_spinner "Stowing $pkg" stow "$pkg"
 done

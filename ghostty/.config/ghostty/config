@@ -29,8 +29,13 @@ font-size = 11
 # -------------
 window-width = 150
 window-height = 50
-window-decoration = none
+# window-decoration = none
 window-theme = ghostty
+#--------------
+
+# Notifications
+# -------------
+app-notifications=no-clipboard-copy
 #--------------
 
 # cmd+backspace to delete the entire line
