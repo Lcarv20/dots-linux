@@ -9,7 +9,7 @@ cursor-click-to-move = true
 
 # Theme
 # -------------
-theme = Gruvbox Dark Hard
+theme = gruvbox-dark
 # theme = Operator Mono Dark
 
 # open new tab on home
@@ -19,7 +19,7 @@ adjust-cell-height = 40%
 
 # Font
 # -------------
-font-family = ComicShannsMono Nerd Font Propo
+font-family = ComicShannsMono Nerd Font
 # font-family = caskaydiaCove NF
 font-size = 11
 # window-title-font-family = caskaydiaCove NF

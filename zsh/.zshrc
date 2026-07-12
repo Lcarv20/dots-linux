@@ -1,3 +1,4 @@
+setopt AUTO_CD
 # --- DOTS-LINUX ZSHRC ---
 # Managed with GNU Stow + Antidote
 
@@ -5,7 +6,7 @@
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins.zsh
 zsh_plugins_txt=${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
-source /usr/share/zsh-antidote/antidote.zsh
+source ${ZDOTDIR:-$HOME}/.antidote/antidote.zsh
 
 if [[ ! $zsh_plugins -nt $zsh_plugins_txt ]]; then
   antidote bundle < $zsh_plugins_txt > $zsh_plugins
