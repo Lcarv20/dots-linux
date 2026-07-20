@@ -9,8 +9,9 @@ cursor-click-to-move = true
 
 # Theme
 # -------------
-theme = gruvbox-dark
+theme = Acid Lime
 # theme = Operator Mono Dark
+background-opacity = 0.95
 
 # open new tab on home
 #--------------
@@ -29,7 +30,7 @@ font-size = 11
 # -------------
 window-width = 150
 window-height = 50
-# window-decoration = none
+window-decoration = none
 window-theme = ghostty
 #--------------
 

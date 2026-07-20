@@ -61,7 +61,7 @@ return {
 				highlight = {
 					enable = true,
 					additional_vim_regex = false,
-					-- disable = { "markdown" }
+					disable = { "markdown", "markdown_inline" },
 				},
 				indent = { enable = true },
 				incremental_selection = {
@@ -115,8 +115,23 @@ return {
 				},
 		},
 		config = function(_, opts)
-		        require("nvim-treesitter.install").prefer_git = true
-		        require("nvim-treesitter.configs").setup(opts)
+				require("nvim-treesitter.install").prefer_git = true
+				require("nvim-treesitter.configs").setup(opts)
+
+				-- Compatibility patch for Neovim 0.12 passing TSNode[] tables to query directives
+				local query = require("vim.treesitter.query")
+				query.add_directive("set-lang-from-info-string!", function(match, _, bufnr, pred, metadata)
+					local capture_id = pred[2]
+					local node = match[capture_id]
+					if type(node) == "table" and not node.range then
+						node = node[1]
+					end
+					if not node then return end
+					local alias = vim.treesitter.get_node_text(node, bufnr):lower()
+					local lang = vim.filetype.match({ filename = "a." .. alias }) or alias
+					metadata["injection.language"] = lang
+				end, { force = true })
 		end,
 	},
 }
+

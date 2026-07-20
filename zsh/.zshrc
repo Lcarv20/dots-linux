@@ -79,3 +79,7 @@ zle -N zle-line-init
 if [ -f "$HOME/.local/bin/poke-colorscript" ]; then
     "$HOME/.local/bin/poke-colorscript"
 fi
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/lcarv/.local/bin:$PATH"

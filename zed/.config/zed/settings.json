@@ -9,129 +9,85 @@
 {
   "base_keymap": "VSCode",
   "debugger": {
-    "dock": "left"
+    "dock": "left",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "git_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "subtle",
   },
-  "icon_theme": "Bearded Icon Theme",
   "context_servers": {
     "mcp-server-context7": {
       "settings": {
-        "context7_api_key": "ctx7sk-c893041e-ba59-4eef-9cb1-18f9deaf42c0"
-      }
+        "context7_api_key": "ctx7sk-c893041e-ba59-4eef-9cb1-18f9deaf42c0",
+      },
     },
     "chrome-devtools": {
       "command": "npx",
-      "args": ["-y", "chrome-devtools-mcp@latest"]
-    }
+      "args": ["-y", "chrome-devtools-mcp@latest"],
+    },
   },
   "tab_bar": {
-    "show": true
+    "show": true,
   },
   "toolbar": {
     "breadcrumbs": false,
-    "quick_actions": false
+    "quick_actions": false,
   },
   "project_panel": {
-    "dock": "left"
-  },
-  "agent_servers": {
-    "gemini": {
-      "ignore_system_version": true
-    }
+    "dock": "left",
   },
   "agent": {
     "sidebar_side": "right",
     "dock": "right",
     "inline_assistant_model": {
       "provider": "google",
-      "model": "gemini-2.5-flash"
+      "model": "gemini-2.5-flash",
     },
-    "always_allow_tool_actions": false,
     "default_profile": "write",
-    "play_sound_when_agent_done": false,
     "default_model": {
       "provider": "mistral",
-      "model": "devstral-medium-latest"
-    }
-  },
-
-  "features": {
-    // "edit_prediction_provider": "zed",
-    // "edit_prediction_provider": "copilot",
-    "edit_prediction_provider": "codestral"
-    // "edit_prediction_provider": "supermaven"
+      "model": "devstral-medium-latest",
+    },
   },
   "telemetry": {
-    "metrics": true
+    "metrics": true,
   },
   // 🎨 theme settings
-  "theme": "Gruvbox Dark Hard",
-
-  // "experimental.theme_overrides": {
-  //   "background.appearance": "blurred",
-  //   "background": "#09090bBB",
-  //   "panel.background": "#00000000",
-  //   "editor.background": "#00000000",
-  //   "tab_bar.background": "#00000000",
-  //   "terminal.background": "#00000000",
-  //   "toolbar.background": "#00000000",
-  //   "tab.inactive_background": "#00000000",
-  //   "tab.active_background": "#3f3f4650",
-  //   "border": "#00000000",
-  //   "status_bar.background": "#09090bBB",
-  //   "title_bar.background": "#09090bBB",
-  //   "border.variant": "#00000000",
-  //   "scrollbar.track.background": "#52525b20",
-  //   "scrollbar.track.border": "#00000000",
-  //   "scrollbar.thumb.background": "#52525b30",
-  //   "scrollbar.thumb.border": "#00000000",
-  //   "elevated_surface.background": "#90",
-  //   "surface.background": "#90",
-  //   "editor.active_line_number": "#ffffffcc",
-  //   "editor.gutter.background": "#00000000",
-  //   "editor.indent_guide": "#ffffff30",
-  //   "editor.indent_guide_active": "#ffffff80",
-  //   "editor.line_number": "#ffffff80",
-  //   "editor.active_line.background": "#3f3f4620"
-  // },
-
+  "theme": "XY-Zed",
   // 🖼️ background settings
   "terminal": {
     "dock": "bottom",
     "font_size": 14,
-    "font_family": "MonaspiceNe Nerd Font",
+    "font_family": "ComicShannsMono Nerd Font",
     "line_height": { "custom": 1.2 },
-    "font_weight": 500
+    "font_weight": 500,
   },
 
   // ⚙️ vim settings
   "vim_mode": true,
   "vim": {
-    "use_system_clipboard": "never"
+    "use_system_clipboard": "never",
   },
 
   // 📈 Diagnostics
   "diagnostics": {
     "inline": {
-      "enabled": true
-    }
+      "enabled": true,
+    },
   },
 
   // 🎨 font settings
   // "ui_font_family": "CaskaydiaCove Nerd Font",
   // "buffer_line_height": { "custom": 1.4 },
-  "buffer_font_family": "MonaspiceNe Nerd Font",
+  "buffer_font_family": "ComicShannsMono Nerd Font",
   "buffer_font_size": 14.0,
 
   // disable cursor blink
@@ -144,31 +100,26 @@
   // hide the scroll bar
   "scrollbar": {
     // "show": "never"
-    "git_diff": false
+    "git_diff": false,
   },
   // allow cursor to reach edges of screen
   "vertical_scroll_margin": 0,
   "git": {
     "inline_blame": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
 
   "lsp": {
-    "biome": {
-      "settings": {
-        "require_config_file": true
-      }
-    },
     "vscode-css-language-server": {
       "settings": {
         "css": {
           "lint": {
-            "unknownAtRules": "ignore"
+            "unknownAtRules": "ignore",
             // "unknownProperties": "ignore"
-          }
-        }
-      }
-    }
-  }
+          },
+        },
+      },
+    },
+  },
 }

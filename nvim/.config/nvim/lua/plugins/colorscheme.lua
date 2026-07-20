@@ -149,7 +149,7 @@ return {
 		},
 		config = function(_, opts)
 			require("sugoi").setup(opts)
-			vim.cmd.colorscheme("sugoi") -- applies when you want
+			-- vim.cmd.colorscheme("sugoi") -- applies when you want
 		end,
 	},
 	-- Using Lazy
@@ -209,6 +209,25 @@ return {
 				noir_9 = "#323136", -- darkest, near bg_float
 			},
 		},
+	},
+
+	{
+		"kbraggins/duskhaven.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {
+			highlight_overrides = {
+				Normal = { bg = "NONE" },
+				NormalNC = { bg = "NONE" },
+				NormalFloat = { bg = "NONE" },
+				FloatBorder = { bg = "NONE" },
+				EndOfBuffer = { bg = "NONE" },
+			},
+		},
+		config = function(_, opts)
+			require("duskhaven").setup(opts)
+			vim.cmd.colorscheme("duskhaven")
+		end,
 	},
 
 	--- Utilities ---
