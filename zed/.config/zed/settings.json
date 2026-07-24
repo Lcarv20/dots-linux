@@ -61,7 +61,7 @@
     "metrics": true,
   },
   // 🎨 theme settings
-  "theme": "XY-Zed",
+  "theme": "Gruvbox Dark Hard",
   // 🖼️ background settings
   "terminal": {
     "dock": "bottom",

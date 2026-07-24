@@ -75,10 +75,17 @@ zle-line-init() {
 }
 zle -N zle-line-init
 
-# 7. Poke-colorscript (if stowed)
-if [ -f "$HOME/.local/bin/poke-colorscript" ]; then
-    "$HOME/.local/bin/poke-colorscript"
-fi
+# 7. Aesthetic Color Banner
+_show_color_banner() {
+  local esc=$'\e'
+  local rf="${esc}[31m" gf="${esc}[32m" yf="${esc}[33m" bf="${esc}[34m" reset="${esc}[0m"
+  cat << EOF
+${rf}    ${reset}   ${gf}    ${reset}   ${yf}    ${reset}   ${bf}    ${reset}
+${rf}o.o ${reset}   ${gf} o.o${reset}   ${yf}o.o ${reset}   ${bf} o.o${reset}
+EOF
+}
+_show_color_banner
+
 
 
 # Added by Antigravity CLI installer

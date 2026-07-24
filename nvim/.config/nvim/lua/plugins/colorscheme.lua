@@ -14,6 +14,37 @@ return {
 		end,
 	},
 	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = function()
+			-- Default options:
+			require("gruvbox").setup({
+				terminal_colors = true, -- add neovim terminal colors
+				undercurl = true,
+				underline = true,
+				bold = true,
+				italic = {
+					strings = true,
+					emphasis = true,
+					comments = true,
+					operators = false,
+					folds = true,
+				},
+				strikethrough = true,
+				invert_selection = false,
+				invert_signs = false,
+				invert_tabline = false,
+				inverse = true, -- invert background for search, diffs, statuslines and errors
+				contrast = "", -- can be "hard", "soft" or empty string
+				palette_overrides = {},
+				overrides = {},
+				dim_inactive = false,
+				transparent_mode = true,
+			})
+			vim.cmd.colorscheme("gruvbox")
+		end,
+	},
+	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
@@ -72,9 +103,9 @@ return {
 			style = "dark", -- "dark" | "light"
 
 			-- Background style for dark mode: "default" (classic), "dark" (darker), "transparent", or a hex color (e.g. "#1a1a1a")
-			dark_style_background = "dark", -- "default" | "dark" | "transparent" | "#RRGGBB"
+			dark_style_background = "transparent", -- "default" | "dark" | "transparent" | "#RRGGBB"
 			-- Background style for light mode: "default" (classic), "dark" (darker), "transparent", or a hex color
-			light_style_background = "default", -- "default" | "dark" | "transparent" | "#RRGGBB"
+			light_style_background = "transparent", -- "default" | "dark" | "transparent" | "#RRGGBB"
 
 			hl_styles = {
 				-- Enable/disable italic for comments
@@ -86,9 +117,9 @@ return {
 				-- Enable/disable italic for variables
 				variables = { italic = false }, -- true | false
 				-- Background style for floating windows: "default", "dark", "transparent", or hex color
-				floats = "dark", -- "default" | "dark" | "transparent" | "#RRGGBB"
+				floats = "transparent", -- "default" | "dark" | "transparent" | "#RRGGBB"
 				-- Background style for sidebars (nvim-tree, etc.): "default", "dark", "transparent", or hex color
-				sidebars = "default", -- "default" | "dark" | "transparent" | "#RRGGBB"
+				sidebars = "transparent", -- "default" | "dark" | "transparent" | "#RRGGBB"
 			},
 
 			-- Automatically enable plugin integrations (set to false to manually control plugins)
@@ -226,7 +257,7 @@ return {
 		},
 		config = function(_, opts)
 			require("duskhaven").setup(opts)
-			vim.cmd.colorscheme("duskhaven")
+			-- vim.cmd.colorscheme("duskhaven")
 		end,
 	},
 

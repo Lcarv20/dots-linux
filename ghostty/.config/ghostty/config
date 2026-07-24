@@ -9,9 +9,11 @@ cursor-click-to-move = true
 
 # Theme
 # -------------
-theme = Acid Lime
+# theme = Acid Lime
+theme = Claude Dark
 # theme = Operator Mono Dark
-background-opacity = 0.95
+background-opacity = 0.90
+background-blur = true
 
 # open new tab on home
 #--------------
