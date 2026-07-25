@@ -18,12 +18,11 @@ autoload -Uz compinit && compinit
 fpath+=~/.zfunc # Custom completions
 
 
-# 3. Environment (Mise, Starship, Zoxide, Direnv, Fzf)
-eval "$(mise activate zsh)"
+# 3. Environment (Zoxide, Direnv, Fzf)
 eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(fzf --zsh)"
+
 
 # 4. Aliases (Merged from macOS)
 # Better ls
