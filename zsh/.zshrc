@@ -1,17 +1,24 @@
 setopt AUTO_CD
+
 # --- DOTS-LINUX ZSHRC ---
 # Managed with GNU Stow + Antidote
 
-# Reset any existing Starship/ZLE keymap wrappers to allow safe re-sourcing
+# --- Defensive ZLE Reset (prevents re-sourcing widget recursion) ---
 if [[ -n "$ZSH_VERSION" ]]; then
   zle -D zle-keymap-select 2>/dev/null || true
   unfunction starship_zle-keymap-select-wrapped 2>/dev/null || true
   unset __starship_preserved_zle_keymap_select 2>/dev/null
 fi
 
+# --- 1. Environment & Paths ---
+export PATH="$HOME/.local/bin:$PATH"
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+export EDITOR='nvim'
+export XDG_CONFIG_HOME="$HOME/.config"
+export NEXT_TELEMETRY_DISABLED=1
 
-# 1. Antidote Setup
-
+# --- 2. Antidote Plugin Manager ---
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins.zsh
 zsh_plugins_txt=${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
@@ -22,18 +29,15 @@ if [[ ! $zsh_plugins -nt $zsh_plugins_txt ]]; then
 fi
 source $zsh_plugins
 
-# 2. Key Bindings & UI
+# --- 3. Shell Integrations & Keybindings ---
 autoload -Uz compinit && compinit
 fpath+=~/.zfunc # Custom completions
 
-
-# 3. Environment (Zoxide, Direnv, Fzf)
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(fzf --zsh)"
 
-
-# 4. Aliases (Merged from macOS)
+# --- 4. Aliases ---
 # Better ls
 alias ls='lsd'
 alias l='lsd -l'
@@ -45,7 +49,6 @@ alias lla='lsd -la'
 # Neovim
 alias v='nvim'
 alias vim='nvim'
-# (Using default config in ~/.config/nvim)
 
 # Better cat
 if command -v bat &> /dev/null; then
@@ -53,20 +56,11 @@ if command -v bat &> /dev/null; then
   alias catt='bat'
 fi
 
-# Editor for commit messages
+# Git Commit Shortcuts
 alias vscommit='GIT_EDITOR="code --wait" git commit'
 alias zcommit='GIT_EDITOR="zed --wait" git commit'
 
-# 5. Paths & Tooling
-export PATH="$HOME/.local/bin:$PATH"
-export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-export EDITOR='nvim'
-export XDG_CONFIG_HOME="$HOME/.config"
-export NEXT_TELEMETRY_DISABLED=1
-
-
-# 7. Aesthetic Color Banner
+# --- 5. Aesthetic Startup Banner ---
 _show_color_banner() {
   local esc=$'\e'
   local rf="${esc}[31m" gf="${esc}[32m" yf="${esc}[33m" bf="${esc}[34m" reset="${esc}[0m"
@@ -77,7 +71,3 @@ EOF
 }
 _show_color_banner
 
-
-
-# Added by Antigravity CLI installer
-export PATH="/home/lcarv/.local/bin:$PATH"
