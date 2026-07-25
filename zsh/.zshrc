@@ -17,6 +17,7 @@ export PATH="$PNPM_HOME:$PATH"
 export EDITOR='nvim'
 export XDG_CONFIG_HOME="$HOME/.config"
 export NEXT_TELEMETRY_DISABLED=1
+eval "$(mise activate zsh)"
 
 # --- 2. Antidote Plugin Manager ---
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins.zsh
@@ -36,6 +37,8 @@ fpath+=~/.zfunc # Custom completions
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 eval "$(fzf --zsh)"
+eval "$(starship init zsh)"
+
 
 # --- 4. Aliases ---
 # Better ls
