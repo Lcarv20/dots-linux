@@ -61,7 +61,7 @@ return {
 					-- end
 					return ctx.mode ~= "cmdline" or not vim.tbl_contains({ "/", "?", ":%" }, vim.fn.getcmdtype())
 				end,
-        auto_show_delay_ms = 300,
+        auto_show_delay_ms = 600,
 				border = "rounded",
 			},
 			list = {

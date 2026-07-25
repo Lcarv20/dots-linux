@@ -15,8 +15,8 @@ source $zsh_plugins
 
 # 2. Key Bindings & UI
 autoload -Uz compinit && compinit
-bindkey -v # Vi Mode
 fpath+=~/.zfunc # Custom completions
+
 
 # 3. Environment (Mise, Starship, Zoxide, Direnv, Fzf)
 eval "$(mise activate zsh)"
@@ -57,23 +57,6 @@ export EDITOR='nvim'
 export XDG_CONFIG_HOME="$HOME/.config"
 export NEXT_TELEMETRY_DISABLED=1
 
-# 6. Vi Mode Cursor (from macOS)
-# (Ported from macOS config to handle Vi mode cursor shape)
-zle-keymap-select() {
-  if [[ ${KEYMAP} == vicmd ]]; then
-    echo -ne "\e[1 q"
-  else
-    echo -ne "\e[5 q"
-  fi
-  zle reset-prompt
-}
-zle -N zle-keymap-select
-
-zle-line-init() {
-  zle -K viins
-  echo -ne "\e[5 q"
-}
-zle -N zle-line-init
 
 # 7. Aesthetic Color Banner
 _show_color_banner() {
