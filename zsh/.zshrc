@@ -2,7 +2,11 @@ setopt AUTO_CD
 # --- DOTS-LINUX ZSHRC ---
 # Managed with GNU Stow + Antidote
 
+# Prevent Starship re-sourcing keymap recursion loop
+unset __starship_preserved_zle_keymap_select 2>/dev/null
+
 # 1. Antidote Setup
+
 zsh_plugins=${ZDOTDIR:-$HOME}/.zsh_plugins.zsh
 zsh_plugins_txt=${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
