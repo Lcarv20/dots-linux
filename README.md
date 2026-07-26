@@ -10,17 +10,20 @@ Custom development environment for Linux (Pop!_OS / Ubuntu), managed with **GNU 
    cd ~/dots-linux
    ```
 
-2. **Run the setup script:**
+2. **Run the setup script for your OS:**
    ```bash
-   ./setup
+   # If you're on Debian/Ubuntu (Pop!_OS, etc)
+   ./setup-debian
+   
+   # If you're on Fedora
+   ./setup-fedora
    ```
-   *The script will install `apt` packages, `mise` tools, and `stow` your configuration files.*
+   *These scripts will handle package installs, `mise` tools, and `stow` your config files.*
 
 ## 📦 Managed Packages
 
 | Tool | Config Path |
 |------|-------------|
-| **Alacritty** | `~/.config/alacritty` |
 | **Ghostty** | `~/.config/ghostty` |
 | **Zsh** | `~/.zshrc`, `~/.zsh_plugins.txt` |
 | **Neovim** | `~/.config/nvim` |
@@ -29,9 +32,7 @@ Custom development environment for Linux (Pop!_OS / Ubuntu), managed with **GNU 
 | **Fastfetch** | `~/.config/fastfetch` |
 | **Lazygit** | `~/.config/lazygit` |
 | **LSD** | `~/.config/lsd` |
-| **Gemini** | `~/.gemini` |
-| **OpenCode** | `~/.config/opencode` |
-| **Vibe** | `~/.vibe` |
+| **Git** | `~/.config/git` |
 
 ## 🛠 Prerequisites
 
