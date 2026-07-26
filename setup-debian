@@ -128,7 +128,7 @@ fi
 # 4. Packages to Install
 msg "Preparing to install tools"
 APT_PACKAGES=(stow git curl build-essential ncurses-term ghostty)
-MISE_TOOLS=(lsd lazygit fzf starship zoxide bat fastfetch direnv neovim)
+MISE_TOOLS=(lsd lazygit fzf starship zoxide bat fastfetch direnv neovim delta)
 
 echo "The following will be installed:"
 echo ""

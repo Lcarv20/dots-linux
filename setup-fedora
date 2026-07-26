@@ -140,7 +140,7 @@ fi
 # 5. Packages to Install
 msg "Preparing to install tools"
 DNF_PACKAGES=(stow git curl make gcc ncurses ghostty fastfetch)
-MISE_TOOLS=(lsd lazygit fzf starship zoxide bat direnv neovim)
+MISE_TOOLS=(lsd lazygit fzf starship zoxide bat direnv neovim delta)
 
 echo "The following will be installed:"
 echo ""
