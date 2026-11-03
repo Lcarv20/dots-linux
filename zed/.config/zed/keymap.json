@@ -9,7 +9,8 @@
       "alt-k": "editor::MoveLineUp",
       "space u t": "editor::ToggleTabBar",
       "space a t": "editor::ToggleEditPrediction",
-      "ctrl-shift-enter": "editor::OpenExcerpts"
+      "ctrl-shift-enter": "editor::OpenExcerpts",
+      "space q": "pane::CloseActiveItem"
     }
   },
   {

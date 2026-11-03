@@ -31,6 +31,8 @@ fi
 source $zsh_plugins
 
 # --- 3. Shell Integrations & Keybindings ---
+bindkey -e
+
 autoload -Uz compinit && compinit
 fpath+=~/.zfunc # Custom completions
 
@@ -52,6 +54,8 @@ alias lla='lsd -la'
 # Neovim
 alias v='nvim'
 alias vim='nvim'
+# No Plugins Neovim
+alias minivim='NVIM_APPNAME=minivim nvim'
 
 # Better cat
 if command -v bat &> /dev/null; then
@@ -74,3 +78,6 @@ EOF
 }
 _show_color_banner
 
+
+# opencode
+export PATH=/home/lcarv/.opencode/bin:$PATH

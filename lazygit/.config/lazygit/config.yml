@@ -51,9 +51,9 @@ git:
   log:
     showGraph: "always"
     showWholeGraph: true
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: delta --paging=never
+      command: delta --paging=never
   commit:
     autoWrapCommitMessage: true
     autoWrapWidth: 72

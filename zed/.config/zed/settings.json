@@ -7,6 +7,46 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "ssh_connections": [
+    {
+      "host": "localhost",
+      "username": "dev",
+      "port": 2222,
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/dev"
+          ]
+        },
+        {
+          "paths": [
+            "/home/dev/workspace/./"
+          ]
+        }
+      ]
+    }
+  ],
+  "use_podman": true,
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
+  "agent_servers": {
+    "mistral-vibe": {
+      "type": "registry"
+    },
+    "antigravity-acp": {
+      "default_config_options": {
+        "model": "gemini-3.7-flash-low"
+      },
+      "type": "registry"
+    },
+    "opencode": {
+      "type": "registry"
+    }
+  },
   "base_keymap": "VSCode",
   "debugger": {
     "dock": "left",
@@ -21,6 +61,9 @@
     "dock": "left",
   },
   "edit_predictions": {
+    "codestral": {
+      "model": "codestral-latest"
+    },
     "mode": "subtle",
   },
   "context_servers": {
@@ -45,7 +88,9 @@
     "dock": "left",
   },
   "agent": {
-    "sidebar_side": "right",
+    "threads_sidebar": {
+      "position": "right"
+    },
     "dock": "right",
     "inline_assistant_model": {
       "provider": "google",
@@ -61,7 +106,11 @@
     "metrics": true,
   },
   // 🎨 theme settings
-  "theme": "Gruvbox Dark Hard",
+  "theme": {
+    "mode": "system",
+    "light": "VS Code Light 2026",
+    "dark": "VS Code Dark 2026"
+  },
   // 🖼️ background settings
   "terminal": {
     "dock": "bottom",

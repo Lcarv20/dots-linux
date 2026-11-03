@@ -21,7 +21,6 @@ return {
 					},
 				},
 			},
-			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			"saghen/blink.cmp",
 		},
@@ -46,28 +45,15 @@ return {
 					end, "Prev Diagnostic")
 					map("gl", vim.diagnostic.open_float, "Line Diagnostics")
 					map("<leader>c", "", "Code")
-					map("<leader>cs", vim.lsp.buf.document_symbol, "Document Symbols")
-					map("<leader>cS", vim.lsp.buf.workspace_symbol, "[W]orkspace [S]ymbols")
+					-- NOTE: <leader>cs / <leader>cS are owned by Snacks picker
+					-- (lsp_symbols / lsp_workspace_symbols). Defaults gO also covers symbols.
 					map("<leader>cr", vim.lsp.buf.rename, "Rename")
 					map("<leader>ca", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
-
-					-- This function resolves a difference between neovim nightly (version 0.11) and stable (version 0.10)
-					local function client_supports_method(client, method, bufnr)
-						if vim.fn.has("nvim-0.11") == 1 then
-							return client:supports_method(method, bufnr)
-						else
-							return client.supports_method(method, { bufnr = bufnr })
-						end
-					end
 
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
 					if
 						client
-						and client_supports_method(
-							client,
-							vim.lsp.protocol.Methods.textDocument_documentHighlight,
-							event.buf
-						)
+						and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight, event.buf)
 					then
 						local highlight_augroup =
 							vim.api.nvim_create_augroup("kickstart-lsp-highlight", { clear = false })
@@ -91,120 +77,128 @@ return {
 							end,
 						})
 					end
+
+					if
+						client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf)
+					then
+						map("<leader>th", function()
+							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
+						end, "[T]oggle Inlay [H]ints")
+					end
 				end,
 			})
 
 			require("utils.fns").diagnostics_config()
-			require("utils.fns").lsp_popover_borders()
 
-			local capabilities = {
+			local capabilities = vim.tbl_deep_extend("force", require("blink.cmp").get_lsp_capabilities(), {
 				textDocument = {
 					foldingRange = {
 						dynamicRegistration = false,
 						lineFoldingOnly = true,
 					},
 				},
-			}
-			capabilities = require("blink.cmp").get_lsp_capabilities(capabilities)
+			})
 
 			local servers = {
 				gopls = {},
 				pyright = {},
 				vtsls = {},
 				astro = {},
+				svelte = {},
+				html = {},
+				emmet_language_server = {
+					init_options = {
+						showExpandedAbbreviation = "always",
+						showSuggestionsAsSnippets = true,
+					},
+				},
 				jsonls = {
-					on_new_config = function(new_config)
-						new_config.settings.json.schemas = new_config.settings.json.schemas or {}
-						vim.list_extend(new_config.settings.json.schemas, require("schemastore").json.schemas())
-					end,
 					settings = {
 						json = {
-							format = {
-								enable = true,
-							},
+							format = { enable = true },
 							validate = { enable = true },
+							schemas = require("schemastore").json.schemas(),
 						},
 					},
 				},
-				tailwindcss = {
-					filetype_exclude = { "markdown" },
-					settings = {
-						tailwindCSS = {
-							classFunctions = { "cva", "cx" },
-							classAttributes = { "class", "className" }, -- Keep these for actual attributes
-							-- This is the key part for variable assignments
-							experimental = {
-								classRegex = {
-									-- Default patterns
-									"class=['\"][^'\"]*['\"]",
-									"className=['\"][^'\"]*['\"]",
-									-- Pattern for variable assignments ending with 'Styles'
-									"\\b\\w*[Ss]tyles\\s*=\\s*['\"]([^'\"]*)['\"]",
-									-- More general pattern for any variable with tailwind classes
-									"\\b(?:const|let|var)\\s+\\w*[Ss]tyles\\s*=\\s*['\"]([^'\"]*)['\"]",
-									-- Template literals
-									"\\b\\w*[Ss]tyles\\s*=\\s*`([^`]*)`",
-								},
-							},
-						},
-					},
-				},
+				tailwindcss = {},
 				cssls = {
 					settings = {
-						scss = {
-							validate = true,
-							lint = {
-								unknownAtRules = "ignore",
-							},
-						},
-						less = {
-							validate = true,
-							lint = {
-								unknownAtRules = "ignore",
-							},
-						},
-						css = {
-							validate = true,
-							lint = {
-								unknownAtRules = "ignore",
-							},
-						},
+						scss = { validate = true, lint = { unknownAtRules = "ignore" } },
+						less = { validate = true, lint = { unknownAtRules = "ignore" } },
+						css = { validate = true, lint = { unknownAtRules = "ignore" } },
 					},
 				},
 				lua_ls = {
 					settings = {
 						Lua = {
-							completion = {
-								callSnippet = "Replace",
-							},
+							completion = { callSnippet = "Replace" },
 							diagnostics = { disable = { "missing-fields" } },
 						},
 					},
 				},
-        biome = {},
-        rust_analyzer = {},
-        clangd = {},
+				clangd = {
+					cmd = {
+						"clangd",
+						"--background-index",
+						"--clang-tidy",
+						"--header-insertion=iwyu",
+						"--completion-style=detailed",
+						"--function-arg-placeholders",
+						"--fallback-style=llvm",
+					},
+				},
+				biome = {},
+				rust_analyzer = {},
 			}
 
-			local ensure_installed = vim.tbl_keys(servers or {})
-			vim.list_extend(ensure_installed, {
-				"stylua", -- Used to format Lua code
-				"clang-format",
-			})
+			local function to_mason_name(lspconfig_name)
+				local overrides = {
+					html = "html-lsp",
+					emmet_language_server = "emmet-language-server",
+					tailwindcss = "tailwindcss-language-server",
+					lua_ls = "lua-language-server",
+					cssls = "css-lsp",
+					jsonls = "json-lsp",
+					rust_analyzer = "rust-analyzer",
+					astro = "astro-language-server",
+					svelte = "svelte-language-server",
+					clangd = "clangd",
+				}
+				return overrides[lspconfig_name] or lspconfig_name
+			end
 
-			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
+			local ensure_installed = vim.tbl_map(to_mason_name, vim.tbl_keys(servers))
+			vim.list_extend(ensure_installed, { "stylua", "tree-sitter-cli", "prettier", "clang-format" })
+
 			require("mason").setup()
-			vim.lsp.enable(ensure_installed)
+			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
 			for name, config in pairs(servers) do
-				if config == true then
-					config = {}
-				end
-				config = vim.tbl_deep_extend("force", {}, {
-					capabilities = capabilities,
-				}, config)
+				local server_config = vim.tbl_deep_extend("force", { capabilities = capabilities }, config)
 
-				vim.lsp.config(name, config)
+				-- Filter unknown filetypes to suppress checkhealth warnings
+				local template = vim.lsp.config[name]
+				local filetypes = server_config.filetypes or (template and template.filetypes)
+				if filetypes then
+					server_config.filetypes = vim.tbl_filter(function(ft)
+						return #vim.fn.getcompletion(ft, "filetype") > 0
+					end, filetypes)
+				end
+
+				vim.lsp.config(name, server_config)
+			end
+			vim.lsp.enable(vim.tbl_keys(servers))
+
+			if vim.fn.executable("sourcekit-lsp") == 1 then
+				local sourcekit_config = {
+					capabilities = vim.tbl_deep_extend("force", capabilities, {
+						workspace = { didchangewatchedfiles = { dynamicregistration = true } },
+					}),
+					single_file_support = true,
+				}
+				vim.lsp.config("sourcekit", sourcekit_config)
+				vim.lsp.enable("sourcekit")
 			end
 		end,
 	},

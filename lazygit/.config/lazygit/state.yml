@@ -1,10 +1,12 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/lcarv/dots-linux
+    - /home/lcarv/.config/nativevim
+    - /home/lcarv/Developer/Software/Capiche
     - /home/lcarv/Developer/GameDev/C_Raylib
+    - /home/lcarv/.config/qutebrowser
+    - /home/lcarv/dots-linux
 startuppopupversion: 5
 didshowhunkstaginghint: true
-lastversion: 0.63.1
+lastversion: 0.64.1
 customcommandshistory: []
 hidecommandlog: false
-githubPullRequests: {}

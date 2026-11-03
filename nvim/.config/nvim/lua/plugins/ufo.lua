@@ -12,7 +12,7 @@ return {
 		-- vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
 		require("ufo").setup({
 			close_fold_kinds_for_ft = {
-				default = { "imports", "comment" },
+				default = { "imports" },
 			},
 			provider_selector = function(_, filetype, buftype)
 				-- If it's a dashboard or special buffer, return empty to disable UFO

@@ -41,7 +41,99 @@ return {
 				dim_inactive = false,
 				transparent_mode = true,
 			})
-			vim.cmd.colorscheme("gruvbox")
+			-- vim.cmd.colorscheme("gruvbox")
+		end,
+	},
+	{
+		"ember-theme/nvim",
+		name = "ember",
+		priority = 1000,
+		config = function()
+			require("ember").setup({
+				variant = "ember", -- "ember", "ember-soft", "ember-light", "ember-auto"
+				styles = {
+					comments = { italic = true },
+					keywords = { bold = true },
+					functions = {},
+					types = { bold = true },
+				},
+				transparent = true, -- transparent editor background
+				transparent_floats = false, -- follows `transparent` by default; set explicitly to override
+				dark_variant = "ember", -- used by `ember-auto` when background = "dark"
+				light_variant = "ember-light", -- used by `ember-auto` when background = "light"
+				on_colors = nil, -- function(palette) - modify palette before theme builds
+				on_highlights = nil, -- function(highlights, theme) - modify highlight groups
+			})
+			-- vim.cmd("colorscheme ember")
+		end,
+	},
+	{
+		"ThorstenRhau/token",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			local token = require("token")
+
+			---@type token.Config
+			local config = {
+				-- Clear base UI surfaces while preserving semantic backgrounds.
+				transparent = true,
+
+				-- Set Neovim's ANSI terminal palette when the colorscheme loads.
+				terminal_colors = true,
+
+				-- Give inactive windows a quieter foreground and background.
+				dim_inactive = false,
+
+				-- Disable an attribute globally, including in overrides and plugin groups.
+				attributes = {
+					bold = true,
+					italic = true,
+					underline = true,
+					undercurl = true,
+					strikethrough = true,
+				},
+
+				-- Overlay attributes on semantic highlight categories.
+				styles = {
+					booleans = {},
+					comments = {},
+					conditionals = {},
+					constants = {},
+					functions = {},
+					keywords = {},
+					loops = {},
+					numbers = {},
+					operators = {},
+					preprocessor = {},
+					properties = {},
+					strings = {},
+					types = {},
+					variables = {},
+				},
+
+				-- Apply shared colors first, then the active background variant.
+				colors = { all = {}, dark = {}, light = {} },
+
+				-- Replace complete highlight definitions; variant entries take precedence.
+				highlights = { all = {}, dark = {}, light = {} },
+
+				-- Integrations are opt-in. `all = true` restores v1 behavior.
+				plugins = {
+					all = false,
+					gitsigns = true,
+					snacks = true,
+				},
+
+				-- Mutate the configured palette after declarative color overrides.
+				on_colors = function(colors, background) end,
+
+				-- Mutate final highlights before global attribute gates are applied.
+				on_highlights = function(highlights, colors, background) end,
+			}
+
+			token.setup(config)
+			-- vim.cmd.colorscheme("token")
 		end,
 	},
 	{
@@ -73,6 +165,21 @@ return {
 				},
 			})
 			-- vim.cmd.colorscheme("catppuccin")
+		end,
+	},
+	{
+		"Lcarv20/dark2026.nvim",
+		dir = vim.fn.isdirectory(vim.fn.expand("~/Developer/nvim_plugins/dark2026.nvim")) == 1
+				and "~/Developer/nvim_plugins/dark2026.nvim"
+			or nil,
+		lazy = false,
+		priority = 1000,
+		opts = {
+			transparent = false, -- set to true for transparent background
+		},
+		config = function(_, opts)
+			require("dark2026").setup(opts)
+			vim.cmd.colorscheme("dark2026")
 		end,
 	},
 	{
@@ -246,15 +353,6 @@ return {
 		"kbraggins/duskhaven.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {
-			highlight_overrides = {
-				Normal = { bg = "NONE" },
-				NormalNC = { bg = "NONE" },
-				NormalFloat = { bg = "NONE" },
-				FloatBorder = { bg = "NONE" },
-				EndOfBuffer = { bg = "NONE" },
-			},
-		},
 		config = function(_, opts)
 			require("duskhaven").setup(opts)
 			-- vim.cmd.colorscheme("duskhaven")

@@ -11,8 +11,9 @@ cursor-click-to-move = true
 # -------------
 # theme = Acid Lime
 theme = Claude Dark
+# theme = dankcolors
 # theme = Operator Mono Dark
-background-opacity = 0.90
+background-opacity = 0.95
 background-blur = true
 
 # open new tab on home
@@ -30,8 +31,6 @@ font-size = 11
 
 # Window size
 # -------------
-window-width = 150
-window-height = 50
 window-decoration = none
 window-theme = ghostty
 #--------------

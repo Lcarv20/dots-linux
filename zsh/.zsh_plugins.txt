@@ -4,7 +4,6 @@ Aloxaf/fzf-tab
 zap-zsh/supercharge
 paulirish/git-open
 Lcarv20/web-search
-jeffreytse/zsh-vi-mode
 zsh-users/zsh-syntax-highlighting
 
 

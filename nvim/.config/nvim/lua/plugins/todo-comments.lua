@@ -1,18 +1,18 @@
-return {
+	return {
 	"folke/todo-comments.nvim",
 	event = "VimEnter",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = { signs = true },
 	keys = {
 		{
-			"<leader>ft",
-			"<cmd>TodoTelescope<cr>",
-			desc = "Todo Telescope",
+			"<leader>st",
+			"<cmd>TodoTrouble<cr>",
+			desc = "Todo",
 		},
 		{
-			"<leader>fT",
-			"<cmd>TodoTrouble<cr>",
-			desc = "Todo Trouble",
+			"<leader>sT",
+			"<cmd>TodoTelescope<cr>",
+			desc = "Todo (Telescope)",
 		},
 	},
 }

@@ -1,6 +1,6 @@
 return {
 	"nanozuki/tabby.nvim",
-	enabled = true,
+	enabled = false,
 	lazy = true,
 	event = { "TabEnter", "TabNew", "TabClosed" },
 	keys = {
@@ -37,28 +37,52 @@ return {
 			line = function(line)
 				return {
 					{
-						line.sep("🭪", { bg = colors.green }, { fg = colors.fg, bg = colors.bg }),
-						{ "  ", hl = { fg = colors.green, bg = colors.bg, style = "bold" } },
-						line.sep(" ", { bg = colors.bg }, { fg = colors.bg, bg = "NONE" }),
+						{ "  ", hl = "TabLine" },
+						line.sep(" ", "TabLine", "TabLineFill"),
 					},
 					line.tabs().foreach(function(tab)
-						local hl = tab.is_current() and { fg = colors.orange, bg = colors.bg, style = "bold" }
-							or { fg = colors.subtle_gray, bg = colors.bg }
+						local hl = tab.is_current() and "TabLineSel" or "TabLine"
 						return {
-							line.sep(" ", hl, { fg = colors.bg, bg = "NONE", style = "bold" }),
+							line.sep(" ", hl, "TabLineFill"),
 							tab.is_current() and " " or "",
 							tab.number(),
 							tab.name(),
-							-- tab.close_btn(""),
-							line.sep(" ", hl, { fg = colors.fg, bg = colors.bg, style = "bold" }),
+							line.sep("", hl, "TabLineFill"),
 							hl = hl,
-              margin = " ",
-							line.sep("", hl, { fg = colors.bg, bg = "NONE", style = "bold" }),
+							margin = " ",
 						}
 					end),
 					line.spacer(),
+					hl = "TabLineFill",
 				}
 			end,
 		})
+		-- require("tabby").setup({
+		-- 	line = function(line)
+		-- 		return {
+		-- 			{
+		-- 				line.sep("🭪", { bg = colors.green }, { fg = colors.fg, bg = colors.bg }),
+		-- 				{ "  ", hl = { fg = colors.green, bg = colors.bg, style = "bold" } },
+		-- 				line.sep(" ", { bg = colors.bg }, { fg = colors.bg, bg = "NONE" }),
+		-- 			},
+		-- 			line.tabs().foreach(function(tab)
+		-- 				local hl = tab.is_current() and { fg = colors.orange, bg = colors.bg, style = "bold" }
+		-- 					or { fg = colors.subtle_gray, bg = colors.bg }
+		-- 				return {
+		-- 					line.sep(" ", hl, { fg = colors.bg, bg = "NONE", style = "bold" }),
+		-- 					tab.is_current() and " " or "",
+		-- 					tab.number(),
+		-- 					tab.name(),
+		-- 					-- tab.close_btn(""),
+		-- 					line.sep(" ", hl, { fg = colors.fg, bg = colors.bg, style = "bold" }),
+		-- 					hl = hl,
+		--             margin = " ",
+		-- 					line.sep("", hl, { fg = colors.bg, bg = "NONE", style = "bold" }),
+		-- 				}
+		-- 			end),
+		-- 			line.spacer(),
+		-- 		}
+		-- 	end,
+		-- })
 	end,
 }

@@ -1,7 +1,7 @@
 return {
 	"OXY2DEV/markview.nvim",
-	enabled = false,
-	lazy = false,
+	lazy = true,
+	cmd = { "Markview" },
 	ft = { "markdown", "codecompanion", "Avante" },
 	opts = function(_, opts)
 		local presets = require("markview.presets")
@@ -9,16 +9,15 @@ return {
 			headings = presets.headings.glow,
 		}
 		opts.code_blocks = {
-			style = "fancy", -- or "fancy" for more styling
+			style = "fancy",
 		}
 
 		opts.preview = {
+			enable = false,
 			filetypes = { "markdown", "codecompanion", "Avante" },
-			-- ignore_buftypes = { "nofile" },
 			ignore_buftypes = { "nofile" },
 			modes = { "n", "i", "c", ":", "no", "io", "co" },
 			hybrid_modes = { "i", "n" },
-			-- ignore_nodes = { "fenced_code_block" },
 		}
 	end,
 }

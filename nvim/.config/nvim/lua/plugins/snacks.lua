@@ -19,7 +19,7 @@ return {
 	---@type snacks.Config
 	opts = {
 		bigfile = { enabled = true },
-		image = { enabled = false },
+		image = { enabled = true },
 		dashboard = {
 			enabled = true,
 			preset = {
@@ -30,10 +30,6 @@ return {
 		explorer = {
 			enabled = true,
 		},
-		---@class snacks.indent.Config
-		---@field enabled? boolean
-		---@class snacks.indent.Config
-		---@field enabled? boolean
 		indent = {
 			indent = {
 				priority = 1,
@@ -54,15 +50,6 @@ return {
 				--     "SnacksIndent8",
 				-- },
 			},
-			-- animate scopes. Enabled by default for Neovim >= 0.10
-			-- Works on older versions but has to trigger redraws during animation.
-			---@class snacks.indent.animate: snacks.animate.Config
-			---@field enabled? boolean
-			--- * out: animate outwards from the cursor
-			--- * up: animate upwards from the cursor
-			--- * down: animate downwards from the cursor
-			--- * up_down: animate up or down based on the cursor position
-			---@field style? "out"|"up_down"|"down"|"up"
 			animate = {
 				enabled = vim.fn.has("nvim-0.10") == 1,
 				style = "out",
@@ -109,12 +96,18 @@ return {
 			enabled = true,
 			timeout = 3000,
 			border = "none",
+			filter = function(notif)
+				if notif.title and notif.title:find("pyright") then
+					return false
+				end
+				return true
+			end,
 		},
 		picker = {
 			enabled = true,
 			layouts = {
 				vscode = {
-					preview = false,
+					preview = "main",
 					layout = {
 						backdrop = false,
 						row = 1,
@@ -160,16 +153,22 @@ return {
 		scroll = { enabled = false },
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
+		zen = {
+			toggles = {
+				dim = false,
+				git_signs = true,
+			},
+		},
 		styles = {
 			notification = {
 				-- wo = { wrap = true }, -- Wrap notifications
 			},
 		},
 	},
-	init = function()
-		vim.keymap.set("n", "<leader>s", "", { desc = "Search" })
-		vim.keymap.set("n", "<leader>b", "", { desc = "Buffers" })
-	end,
+	-- init = function()
+	-- 	vim.keymap.set("n", "<leader>s", "", { desc = "Search" })
+	-- 	vim.keymap.set("n", "<leader>b", "", { desc = "Buffers" })
+	-- end,
 
 	keys = {
 		-- Top Pickers & Explorer
@@ -193,6 +192,13 @@ return {
 				Snacks.picker.notifications()
 			end,
 			desc = "Notification History",
+		},
+		{
+			"<D-b>",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
 		},
 		{
 			"<leader>e",
@@ -224,18 +230,18 @@ return {
 			desc = "Find Files",
 		},
 		{
-			"<C-p>",
+			"<D-p>",
 			function()
 				Snacks.picker.files()
 			end,
 			desc = "Find Files",
 		},
 		{
-			"<leader>fg",
+			"<C-p>",
 			function()
-				Snacks.picker.git_files()
+				Snacks.picker.files()
 			end,
-			desc = "Find Git Files",
+			desc = "Find Files",
 		},
 		{
 			"<leader>fp",
@@ -352,13 +358,6 @@ return {
 				Snacks.picker.autocmds()
 			end,
 			desc = "Autocmds",
-		},
-		{
-			"<leader>sb",
-			function()
-				Snacks.picker.lines()
-			end,
-			desc = "Buffer Lines",
 		},
 		{
 			"<leader>sc",
@@ -560,13 +559,6 @@ return {
 			desc = "Select Scratch Buffer",
 		},
 		{
-			"<leader>n",
-			function()
-				Snacks.notifier.show_history()
-			end,
-			desc = "Notification History",
-		},
-		{
 			"<leader>bd",
 			function()
 				Snacks.bufdelete()
@@ -603,7 +595,9 @@ return {
 			desc = "Dismiss All Notifications",
 		},
 		{
-			"]]",
+			-- NOTE: ]]/[[ are owned by treesitter-textobjects (class navigation).
+			-- Words jump moved to ]w/[w to avoid shadowing.
+			"]w",
 			function()
 				Snacks.words.jump(vim.v.count1)
 			end,
@@ -611,7 +605,7 @@ return {
 			mode = { "n", "t" },
 		},
 		{
-			"[[",
+			"[w",
 			function()
 				Snacks.words.jump(-vim.v.count1)
 			end,
@@ -673,6 +667,24 @@ return {
 						end,
 					})
 					:map("<leader>l")
+
+				local markview_on = false
+				snacks.toggle
+					.new({
+						name = "Markview",
+						get = function()
+							return markview_on
+						end,
+						set = function(state)
+							markview_on = state
+							if state then
+								vim.cmd("Markview Enable")
+							else
+								vim.cmd("Markview Disable")
+							end
+						end,
+					})
+					:map("<leader>um")
 			end,
 		})
 	end,

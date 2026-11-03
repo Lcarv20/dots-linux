@@ -4,18 +4,16 @@ local ignore = { desc = "which_key_ignore" }
 -- General
 map("n", "J", "mzJ`z") -- keep cursor in place
 map("i", "jj", "<ESC>") -- quit insert mode
+-- Clear hlsearch
 map("n", "<leader>h", "<cmd>nohlsearch<CR>", ignore)
--- Clear copilot suggestion with Esc if visible, otherwise preserve default Esc behavior
-vim.keymap.set("n", "<esc>", function()
-	-- if not require("copilot-lsp.nes").clear() then
-	-- 	vim.cmd("nohlsearch")
-	-- end
+map("n", "<esc>", function()
 	vim.cmd("nohlsearch")
 end, ignore)
 map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+map({ "i", "x", "n", "s" }, "<D-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
 map("n", "<leader>q", "", { desc = "Session", noremap = true })
-map("n", "<leader>qa", "<cmd>qa<cr>", { desc = "Quit All" , noremap = true})
-map("n", "<leader>qq", "<cmd>q<cr>", { desc = "Quit current", noremap = true})
+map("n", "<leader>qa", "<cmd>qa<cr>", { desc = "Quit All", noremap = true })
+map("n", "<leader>qq", "<cmd>q<cr>", { desc = "Quit current", noremap = true })
 
 -- Maintain scroll in the middle
 map("n", "<C-d>", "<C-d>zz")
@@ -24,12 +22,9 @@ map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
--- -- Resize with arrows
+-- Resize with arrows
 map("n", "<M-Up>", ":resize -2<CR>")
 map("n", "<M-Down>", ":resize +2<CR>")
--- Map("n", "<M-Left>", ":vertical resize -2<CR>")
--- Map("n", "<M-Right", ":vertical resize +2<CR>")
--- Escape sequence for the commented above keymaps for mac
 map("n", "<Esc>b", ":vertical resize -2<CR>", { noremap = true, silent = true })
 map("n", "<Esc>f", ":vertical resize +2<CR>", { noremap = true, silent = true })
 
@@ -65,11 +60,16 @@ end, { noremap = true, silent = true, desc = "Toggle terminal" })
 map("t", "<C-j>", function()
 	Snacks.terminal()
 end, { noremap = true, silent = true, desc = "Toggle terminal" })
+map("n", "<d-j>", function()
+	Snacks.terminal()
+end, { noremap = true, silent = true, desc = "Toggle terminal" })
+map("t", "<d-j>", function()
+	Snacks.terminal()
+end, { noremap = true, silent = true, desc = "Toggle terminal" })
 map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true, desc = "Switch to normal mode from terminal" })
 map("t", "<C-n>", function()
 	Snacks.terminal.open()
 end, { noremap = true, silent = true, desc = "Open new terminal split" })
--- map("t", "jj", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- Git
 map("n", "<leader>g", "", { desc = "Git" })
@@ -98,5 +98,3 @@ map("n", "<leader>mD", function()
 	vim.cmd("delmarks a-zA-Z")
 	vim.notify("All marks deleted", vim.log.levels.INFO)
 end, { desc = "Delete all marks" })
-
-vim.keymap.set("n", "<C-i>", "<C-i>", { noremap = true })
