@@ -171,7 +171,8 @@ overview {
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
-// This line starts waybar, a commonly used bar for Wayland compositors.
+// Ensure Dux Shell (dms) starts even if niri is launched directly from a TTY instead of niri-session.
+spawn-at-startup "sh" "-c" "systemctl --user is-active --quiet dms.service || pgrep -x dms >/dev/null || exec dms run --session"
 environment {
   XDG_CURRENT_DESKTOP "niri"
   // dux-files: use the customized UI copy (bigger picker + "Dux Chooser" title prefix)

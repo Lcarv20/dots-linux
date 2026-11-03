@@ -37,6 +37,7 @@ QtObject {
     // --------------------------------------------------------------- state
     property var colorMap: ({})
     property bool mapLoaded: false
+    property bool mapRefreshAttempted: false
     property string lastApplied: ""
     property string lastMode: ""
     property string lastAccent: ""
@@ -136,7 +137,10 @@ QtObject {
             return;
         }
         if (!mapLoaded) {
-            loadMap(() => applyNow());
+            if (!mapRefreshAttempted) {
+                mapRefreshAttempted = true;
+                refreshMapAndApply();
+            }
             return;
         }
         const accent = currentAccentHex;
@@ -198,11 +202,16 @@ QtObject {
                     statusMessage = "error: bad color map JSON";
                     log.error("failed to parse color map: " + e.message);
                 }
+            } else if (!mapRefreshAttempted) {
+                mapRefreshAttempted = true;
+                log.info("color map missing at " + mapPath + " — building via " + refreshTool + " --refresh-map");
+                refreshMapAndApply();
+                return;
             } else {
                 statusMessage = "error: color map missing (run --refresh-map)";
                 log.error("color map not readable at " + mapPath);
             }
-            if (callback)
+            if (callback && mapLoaded)
                 callback();
         });
     }

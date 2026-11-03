@@ -43,6 +43,15 @@ else
     ui_warn "mise unavailable — skipped core CLI tools ($MISE_CORE)."
 fi
 
+# --- antidote (zsh plugin manager) ---------------------------------------------
+ANTIDOTE_DIR="${ZDOTDIR:-$HOME}/.antidote"
+if [[ -d "$ANTIDOTE_DIR" ]]; then
+    ui_step "antidote already present ($ANTIDOTE_DIR)"
+else
+    run_cmd "Install antidote zsh plugin manager → ~/.antidote" \
+        git clone --depth=1 https://github.com/mattmc3/antidote.git "$ANTIDOTE_DIR"
+fi
+
 # --- login shell ----------------------------------------------------------------
 ZSH_BIN="/usr/bin/zsh"
 CURRENT_SHELL="$(getent passwd "$USER" | cut -d: -f7)"

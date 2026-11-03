@@ -4,6 +4,7 @@
 
 # --- Niri + Dux Shell ---
 niri
+xwayland-satellite
 dms
 dms-cli
 dms-greeter
@@ -13,6 +14,7 @@ dankcalendar
 quickshell
 matugen
 awww
+acl
 
 # --- Graphical apps & helpers ---
 ghostty

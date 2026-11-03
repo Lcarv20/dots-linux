@@ -111,4 +111,33 @@ else
     ui_step "~/.Xresources: Xcursor.theme JuxCursor · Xcursor.size 32"
 fi
 
+# --- DMS initial state, default palette & cursor color map ---------------------
+DMS_STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/dms"
+DMS_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/dms"
+
+if is_dry_run; then
+    ui_dry "Seed default DMS session.json ($DMS_STATE_DIR/session.json) and palette ($DMS_CACHE_DIR/dms-colors.json)"
+    ui_dry "Build Bibata Patched cursor color map (~/.local/bin/dms-cursor-adapt --refresh-map)"
+else
+    mkdir -p "$DMS_STATE_DIR" "$DMS_CACHE_DIR"
+    if [[ ! -s "$DMS_STATE_DIR/session.json" && -f "$DOTS_ROOT/system/dms/session.json" ]]; then
+        sed "s|__HOME__|$HOME|g" "$DOTS_ROOT/system/dms/session.json" > "$DMS_STATE_DIR/session.json"
+        ui_step "Seeded default DMS session state (wallpaper: rogue.jpg) → $DMS_STATE_DIR/session.json"
+    else
+        ui_step "DMS session.json already present"
+    fi
+
+    if [[ ! -s "$DMS_CACHE_DIR/dms-colors.json" && -f "$DOTS_ROOT/system/dms/dms-colors.json" ]]; then
+        cp -f "$DOTS_ROOT/system/dms/dms-colors.json" "$DMS_CACHE_DIR/dms-colors.json"
+        ui_step "Seeded default DMS Material 3 palette → $DMS_CACHE_DIR/dms-colors.json"
+    else
+        ui_step "DMS color palette already present"
+    fi
+
+    if [[ -x "$HOME/.local/bin/dms-cursor-adapt" ]]; then
+        run_cmd "Build cursor color map (dms-cursor-adapt --refresh-map)" \
+            "$HOME/.local/bin/dms-cursor-adapt" --refresh-map
+    fi
+fi
+
 ui_info "Dotfiles stage complete."

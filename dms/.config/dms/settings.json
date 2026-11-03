@@ -112,7 +112,13 @@
         }
       ],
       "centerWidgets": [
-        "music",
+        {
+          "id": "music",
+          "enabled": true,
+          "mediaShowLyrics": false,
+          "mediaShowCoverArt": true,
+          "mediaSize": 1
+        },
         "clock",
         "weather"
       ],
@@ -375,7 +381,7 @@
     }
   ],
   "displayProfileAutoSelect": true,
-  "niriLayoutBorderSize": 6,
+  "niriLayoutBorderSize": 2,
   "niriLayoutGapsOverride": 24,
   "notificationPopupPosition": 0,
   "matugenTemplateGhostty": false,
@@ -447,5 +453,6 @@
   "m3ElevationIntensity": 18,
   "m3ElevationOpacity": 30,
   "m3ElevationEnabled": true,
-  "dankLauncherV2BorderColor": "primary"
+  "dankLauncherV2BorderColor": "primary",
+  "nightModeExcludeFullscreen": false
 }
