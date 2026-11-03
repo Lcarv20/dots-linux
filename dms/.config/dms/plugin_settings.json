@@ -1,0 +1,35 @@
+{
+  "dankStickerSearch": {
+    "enabled": true
+  },
+  "dankLauncherKeys": {
+    "enabled": true
+  },
+  "dankDesktopWeather": {
+    "enabled": true
+  },
+  "trackpadBattery": {
+    "enabled": true
+  },
+  "swwwSync": {
+    "enabled": true
+  },
+  "simpleCalc": {
+    "enabled": true
+  },
+  "localWebSearch": {
+    "enabled": true
+  },
+  "dankCursorAdapt": {
+    "enabled": true,
+    "lastApplied": {
+      "theme": "Bibata-Material-Soft-Blue",
+      "mode": "dark",
+      "accent": "#bec2ff"
+    },
+    "invertSets": false
+  },
+  "emojiLauncher": {
+    "enabled": true
+  }
+}
