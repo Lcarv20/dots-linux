@@ -129,6 +129,10 @@ PluginComponent {
 
     readonly property bool hasDevices: devicesList.length > 0
 
+    // Only show on the top bar when peripheral devices are actually connected
+    _visibilityOverride: true
+    _visibilityOverrideValue: root.hasDevices
+
     // Control Center Integration
     ccWidgetIcon: "devices"
     ccWidgetPrimaryText: "Peripherals"
@@ -142,9 +146,12 @@ PluginComponent {
     ccWidgetIsActive: hasDevices
 
     // Bar Pill (Horizontal)
-    horizontalBarPill: Component {
+    horizontalBarPill: root.hasDevices ? horizontalPillComponent : null
+    verticalBarPill: root.hasDevices ? verticalPillComponent : null
+
+    Component {
+        id: horizontalPillComponent
         Row {
-            visible: root.hasDevices
             spacing: Theme.spacingM
             anchors.verticalCenter: parent.verticalCenter
 
@@ -174,10 +181,9 @@ PluginComponent {
         }
     }
 
-    // Bar Pill (Vertical)
-    verticalBarPill: Component {
+    Component {
+        id: verticalPillComponent
         Column {
-            visible: root.hasDevices
             spacing: Theme.spacingM
             anchors.horizontalCenter: parent.horizontalCenter
 
@@ -212,7 +218,10 @@ PluginComponent {
     popoutHeight: Math.max(120, 30 + root.devicesList.length * 105)
 
     // Sleek Popout Card (No redundant headers or sub-badges)
-    popoutContent: Component {
+    popoutContent: root.hasDevices ? popoutComponent : null
+
+    Component {
+        id: popoutComponent
         PopoutComponent {
             id: popoutCol
             headerText: ""
