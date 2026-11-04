@@ -7,7 +7,7 @@ source "$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)/lib.sh"
 ui_header "40 · Dotfiles (stow --no-folding)"
 
 STOW_PKGS=(fastfetch ghostty git lazygit lsd nvim starship zed zsh
-           niri dms portals environment systemd-user autostart scripts
+           niri dms portals environment systemd-user scripts
            desktop-tools)
 [[ "$WITH_MANGO" == "true" ]] && STOW_PKGS+=(mango)
 

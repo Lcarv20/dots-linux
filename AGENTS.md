@@ -24,7 +24,7 @@ hosts/               Per-host hardware quirks (imac18-3, vm) applied by
                     stages/90-hardware.sh → hosts/<profile>/apply.sh.
 <stow packages>/     fastfetch, ghostty, git, lazygit, lsd, nvim, starship,
                     zed, zsh, niri, dms, portals, environment, systemd-user,
-                    autostart, scripts, desktop-tools, mango, …
+                    scripts, desktop-tools, mango, …
 ```
 
 ## Golden rules

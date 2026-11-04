@@ -76,7 +76,7 @@ re-run `./install` after a partial failure without fear.
 ### Stowed packages
 
 fastfetch · ghostty · git · lazygit · lsd · nvim · starship · zed · zsh ·
-niri · dms · portals · environment · systemd-user · autostart · scripts ·
+niri · dms · portals · environment · systemd-user · scripts ·
 desktop-tools (· mango with `--with-mango`)
 
 | Tool | Config path |
