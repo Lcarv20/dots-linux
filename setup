@@ -45,18 +45,21 @@ log_out() { # log_out <path-to-captured-output>
     cat "$1" >> "$LOG_FILE"; rm -f "$1"
 }
 
-# run <cmd…> — execute (or print in dry-run), log output, stop on failure
+# run <label> <cmd…> — execute (or print in dry-run), log output, stop on
+# failure unless NOSTOP=1 (same dynamic-scope contract as run_bg)
 run() {
-    if $DRY_RUN; then printf "  [dry] %s\n" "$*"; return 0; fi
-    log_cmd "$*"
-    local tmp; tmp="$(mktemp)"
-    if "$@" >"$tmp" 2>&1; then
+    local label="$1"; shift
+    if $DRY_RUN; then printf "  [dry] %s: %s\n" "$label" "$*"; return 0; fi
+    log_cmd "$label: $*"
+    local tmp rc; tmp="$(mktemp)"
+    rc=0; "$@" >"$tmp" 2>&1 || rc=$?   # set -e safe capture
+    if (( rc == 0 )); then
         log_out "$tmp"; return 0
     fi
-    local rc=$?
     log_out "$tmp"
-    fail "command failed ($rc): $*"
+    fail "$label (exit $rc)"
     $LOGGING && fail "see $LOG_FILE"
+    (( NOSTOP )) && return "$rc"
     exit "$rc"
 }
 
@@ -76,7 +79,7 @@ run_bg() {
         printf "\r  %s %s" "${spin:$i:1}" "$label"
         sleep 0.1
     done
-    wait "$pid"; rc=$?
+    rc=0; wait "$pid" || rc=$?   # set -e safe: never let a failed `wait` kill us
     printf "\r%*s\r" "$width" ""
     if (( rc == 0 )); then
         ok "$label"; log_out "$tmp"
@@ -90,6 +93,10 @@ run_bg() {
 
 have()     { command -v "$1" &>/dev/null; }
 sudo_cmd() { if (( EUID == 0 )); then "$@"; else sudo "$@"; fi; }
+
+# Non-fatal failure notes — surfaced again in the summary
+WARNINGS=()
+warn_note() { WARNINGS+=("$1"); printf "${C_R}  ! %s${C_0} (continuing)\n" "$1"; }
 
 # pkg_run <label> <pkg…> — install package(s) with the detected manager
 pkg_run() {
@@ -187,6 +194,10 @@ phase_base() {
     for p in git stow curl make gcc unzip zsh; do
         pkg_run "install $p" "$p"
     done
+    # apt-only extras: gnupg (for third-party repo keys)
+    if [[ "$PKG_MGR" == apt ]]; then
+        pkg_run "install gnupg" gnupg
+    fi
     ok "base packages ready"
 }
 
@@ -204,27 +215,46 @@ skip_antidote() { printf "  • ~/.antidote already cloned\n"; }
 phase_ghostty() {
     msg "Ghostty"
     have ghostty && { printf "  • ghostty $(ghostty --version 2>/dev/null | head -1)\n"; return; }
+    local NOSTOP=1
     case "$PKG_MGR" in
         dnf)
-            run_bg "enable pgdev/ghostty COPR" sudo_cmd dnf copr enable -y pgdev/ghostty
-            pkg_run "install ghostty" ghostty
+            # ghostty isn't in official Fedora repos; try plain install first
+            # (works where terra/danklinux are already enabled), then the
+            # COPRs — scottames is the one linked from ghostty.org docs,
+            # danklinux is the Dux-ecosystem one.
+            if pkg_run "install ghostty" ghostty; then
+                return
+            fi
+            if run_bg "enable scottames/ghostty COPR" sudo_cmd dnf copr enable -y scottames/ghostty \
+               && pkg_run "install ghostty (scottames)" ghostty; then
+                return
+            fi
+            if run_bg "enable avengemedia/danklinux COPR" sudo_cmd dnf copr enable -y avengemedia/danklinux \
+               && pkg_run "install ghostty (danklinux)" ghostty; then
+                return
+            fi
+            warn_note "ghostty not installed — see setup.log (options: scottames/ghostty COPR, terra-release, avengemedia/danklinux COPR)"
             ;;
         apt)
-            # upstream publishes Ubuntu-built .debs on GitHub releases; they work
-            # on current Debian releases too. Prefer the ubuntu24.04 build.
-            local tmp asset url
-            tmp="$(mktemp -d)"
-            run "query ghostty latest release" curl -fsSL \
-                -o "$tmp/release.json" https://api.github.com/repos/ghostty-org/ghostty/releases/latest
-            asset="$(grep -o '"browser_download_url": *"[^"]*amd64\.deb"' "$tmp/release.json" \
-                     | sed 's/.*"\(https[^"]*\)"/\1/' | grep -F ubuntu24.04 | head -1 || true)"
-            [[ -z "$asset" ]] && asset="$(grep -o '"browser_download_url": *"[^"]*amd64\.deb"' "$tmp/release.json" \
-                     | sed 's/.*"\(https[^"]*\)"/\1/' | head -1 || true)"
-            [[ -n "$asset" ]] || { rm -rf "$tmp"; die "no ghostty .deb asset found — install manually from github.com/ghostty-org/ghostty/releases"; }
-            url="$asset"
-            run_bg "download ghostty .deb" curl -fsSL -o "$tmp/ghostty.deb" "$url"
-            pkg_run "install ghostty .deb" "$tmp/ghostty.deb"
-            rm -rf "$tmp"
+            # ghostty is not in the Debian archive; ghostty.org links the
+            # community griffo repo. We use the always-free mirror
+            # (deb-free.griffo.io): no account needed, at most ~2 months
+            # behind upstream, security fixes published immediately.
+            local suite
+            suite="$(. /etc/os-release && echo "${DEBIAN_CODENAME:-${UBUNTU_CODENAME:-$VERSION_CODENAME}}")"
+            [[ -z "$suite" ]] && { warn_note "ghostty not installed — no codename in /etc/os-release"; return; }
+            local S=""; (( EUID != 0 )) && S="sudo"
+            run "create /etc/apt/keyrings" sudo_cmd install -d -m 0755 /etc/apt/keyrings \
+                || warn_note "could not create /etc/apt/keyrings"
+            if run_bg "add deb-free.griffo.io GPG key" \
+                    bash -c "curl -fsSL https://deb-free.griffo.io/EA0F721D231FDD3A0A17B9AC7808B4DD62C41256.asc | $S gpg --dearmor --yes -o /etc/apt/keyrings/deb-free.griffo.io.gpg" \
+               && run_bg "add deb-free.griffo.io repo" \
+                    bash -c "echo 'deb [signed-by=/etc/apt/keyrings/deb-free.griffo.io.gpg] https://deb-free.griffo.io/apt $suite main' | $S tee /etc/apt/sources.list.d/deb-free.griffo.io.list >/dev/null" \
+               && run_bg "apt update (griffo-free)" sudo_cmd apt-get update \
+               && pkg_run "install ghostty (griffo-free)" ghostty; then
+                return
+            fi
+            warn_note "ghostty not installed — deb-free.griffo.io setup failed (see setup.log)"
             ;;
     esac
 }
@@ -232,21 +262,24 @@ phase_ghostty() {
 phase_fastfetch() {
     msg "Fastfetch"
     have fastfetch && { printf "  • fastfetch $(fastfetch --version 2>/dev/null | head -1)\n"; return; }
+    local NOSTOP=1 tmp
     if [[ "$PKG_MGR" == dnf ]]; then
-        pkg_run "install fastfetch" fastfetch
+        pkg_run "install fastfetch" fastfetch || { warn_note "fastfetch not installed via dnf"; return; }
         return
     fi
     # apt: trixie+ ships fastfetch; older debians fall back to the GitHub .deb
-    local NOSTOP=1 rc
     if pkg_run "install fastfetch (apt)" fastfetch; then
         return
     fi
-    local tmp; tmp="$(mktemp -d)"
-    run_bg "download fastfetch .deb" curl -fsSL \
-        -o "$tmp/fastfetch.deb" \
-        https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb
-    pkg_run "install fastfetch .deb" "$tmp/fastfetch.deb"
+    tmp="$(mktemp -d)"
+    if run_bg "download fastfetch .deb" curl -fsSL \
+            -o "$tmp/fastfetch.deb" \
+            https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb \
+       && pkg_run "install fastfetch .deb" "$tmp/fastfetch.deb"; then
+        rm -rf "$tmp"; return
+    fi
     rm -rf "$tmp"
+    warn_note "fastfetch not installed (apt + GitHub .deb both failed)"
 }
 
 phase_mise() {
@@ -331,14 +364,21 @@ phase_stow() {
 phase_chsh() {
     $WITH_CHSH || { msg "Login shell — unchanged (--no-chsh)"; return; }
     msg "Login shell"
-    local zsh_path; zsh_path="$(command -v zsh)"
+    if ! have chsh; then
+        warn_note "chsh not available — login shell not changed"
+        return
+    fi
+    local NOSTOP=1 zsh_path
+    zsh_path="$(command -v zsh)"
     if ! grep -qx "$zsh_path" /etc/shells; then
-        run "register $zsh_path in /etc/shells" sudo_cmd tee -a /etc/shells <<< "$zsh_path" >/dev/null
+        run "register $zsh_path in /etc/shells" sudo_cmd tee -a /etc/shells <<< "$zsh_path" >/dev/null \
+            || warn_note "could not register zsh in /etc/shells"
     fi
     if [[ "${SHELL:-}" == "$zsh_path" ]]; then
         printf "  • login shell already %s\n" "$zsh_path"
     else
-        run_bg "chsh -s $zsh_path" sudo_cmd chsh -s "$zsh_path" "$(id -un)"
+        run_bg "chsh -s $zsh_path" sudo_cmd chsh -s "$zsh_path" "$(id -un)" \
+            || warn_note "could not change login shell to zsh"
     fi
 }
 
@@ -355,11 +395,16 @@ phase_summary() {
     else
         printf "${C_R}  ! not found (new shells may be needed for mise shims):%s %s\n" "$C_0" "${missing[*]}"
     fi
+    if ((${#WARNINGS[@]} > 0)); then
+        printf "${C_R}  warnings:%s\n" "$C_0"
+        local w
+        for w in "${WARNINGS[@]}"; do printf "    - %s\n" "$w"; done
+    fi
     echo
     ok "dots-linux setup complete — open a new zsh shell ✨"
     echo "     first launch will generate ~/.zsh_plugins.zsh via antidote"
     echo "     stowed: ${STOW_PKGS[*]}"
-    $LOGGING && echo "     log: $LOG_FILE"
+    if $LOGGING; then echo "     log: $LOG_FILE"; fi
 }
 
 # ─────────────────────────────── main ────────────────────────────────
