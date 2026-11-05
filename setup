@@ -1,0 +1,380 @@
+#!/usr/bin/env bash
+# setup — dots-linux dev environment bootstrap
+#
+# Auto-detects the distro family (/etc/os-release: Fedora → dnf,
+# Debian/Ubuntu → apt), installs the dev toolchain, and stows every
+# package in this repo with --no-folding.
+#
+# Everything is idempotent: re-run at any time.
+#
+# Usage: ./setup [flags]
+#   --dry-run        print every action, change nothing
+#   --yes            non-interactive (accept the plan)
+#   --no-runtimes    skip mise language runtimes (bun node go rust pnpm lua)
+#   --no-chsh        don't change the login shell to zsh
+#   --log            write verbose output to setup.log
+#   --help           this help
+set -euo pipefail
+
+# ─────────────────────────────── config ───────────────────────────────
+DOTS_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
+LOG_FILE="$DOTS_DIR/setup.log"
+LOGGING=false
+DRY_RUN=false
+ASSUME_YES=false
+WITH_RUNTIMES=true
+WITH_CHSH=true
+NOSTOP=0   # when 1, run_bg returns non-zero instead of exiting (see phase_fastfetch)
+
+STOW_PKGS=(fastfetch ghostty git lazygit lsd nvim starship zed zsh)
+MISE_TOOLS=(lsd lazygit fzf starship zoxide bat direnv neovim delta)
+MISE_RUNTIMES=(bun node go rust pnpm lua)
+
+# ─────────────────────────────── ui ───────────────────────────────────
+C_G="\033[32m"; C_R="\033[31m"; C_B="\033[36m"; C_M="\033[35m"; C_0="\033[0m"
+msg()   { printf "${C_M}▶ %s${C_0}\n" "$*"; }
+ok()    { printf "${C_G}  ✔ %s${C_0}\n" "$*"; }
+fail()  { printf "${C_R}  ✖ %s${C_0}\n" "$*"; }
+die()   { fail "$*"; exit 1; }
+log_cmd() { # log_cmd <command…> — append to setup.log when --log
+    $LOGGING || return 0
+    printf '\n--- %s ---\n' "$*" >> "$LOG_FILE"
+}
+log_out() { # log_out <path-to-captured-output>
+    $LOGGING || return 0
+    cat "$1" >> "$LOG_FILE"; rm -f "$1"
+}
+
+# run <cmd…> — execute (or print in dry-run), log output, stop on failure
+run() {
+    if $DRY_RUN; then printf "  [dry] %s\n" "$*"; return 0; fi
+    log_cmd "$*"
+    local tmp; tmp="$(mktemp)"
+    if "$@" >"$tmp" 2>&1; then
+        log_out "$tmp"; return 0
+    fi
+    local rc=$?
+    log_out "$tmp"
+    fail "command failed ($rc): $*"
+    $LOGGING && fail "see $LOG_FILE"
+    exit "$rc"
+}
+
+# run_bg <label> <cmd…> — run with the classic spinner; exits on failure
+# unless NOSTOP=1 is set by the caller (dynamic scoping).
+run_bg() {
+    local label="$1"; shift
+    if $DRY_RUN; then printf "  [dry] %s: %s\n" "$label" "$*"; return 0; fi
+    log_cmd "$label: $*"
+    local tmp spin='⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏' i=0 pid rc
+    local width; width="$(tput cols 2>/dev/null || echo 80)"
+    tmp="$(mktemp)"
+    "$@" >"$tmp" 2>&1 & pid=$!
+    printf "  %s %s" "${spin:0:1}" "$label"
+    while kill -0 "$pid" 2>/dev/null; do
+        i=$(( (i+1) % ${#spin} ))
+        printf "\r  %s %s" "${spin:$i:1}" "$label"
+        sleep 0.1
+    done
+    wait "$pid"; rc=$?
+    printf "\r%*s\r" "$width" ""
+    if (( rc == 0 )); then
+        ok "$label"; log_out "$tmp"
+    else
+        fail "$label (exit $rc)"; log_out "$tmp"
+        (( NOSTOP )) && return "$rc"
+        $LOGGING && fail "see $LOG_FILE"
+        exit "$rc"
+    fi
+}
+
+have()     { command -v "$1" &>/dev/null; }
+sudo_cmd() { if (( EUID == 0 )); then "$@"; else sudo "$@"; fi; }
+
+# pkg_run <label> <pkg…> — install package(s) with the detected manager
+pkg_run() {
+    local label="$1"; shift
+    case "$PKG_MGR" in
+        dnf) run_bg "$label" sudo_cmd dnf install -y "$@" ;;
+        apt) run_bg "$label" sudo_cmd env DEBIAN_FRONTEND=noninteractive apt-get install -y "$@" ;;
+        *)   die "unsupported package manager: $PKG_MGR" ;;
+    esac
+}
+
+show_help() {
+    sed -n '2,16p' "$0" | sed 's/^# \{0,1\}//'
+    exit 0
+}
+
+# ─────────────────────────────── args ────────────────────────────────
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --dry-run)     DRY_RUN=true ;;
+        --yes)         ASSUME_YES=true ;;
+        --no-runtimes) WITH_RUNTIMES=false ;;
+        --no-chsh)     WITH_CHSH=false ;;
+        --log)         LOGGING=true ;;
+        -h|--help)     show_help ;;
+        *)             die "unknown flag: $1 (try --help)" ;;
+    esac
+    shift
+done
+$LOGGING && { : > "$LOG_FILE"; msg "Logging to $LOG_FILE"; }
+
+# ─────────────────────── distro detection ────────────────────────────
+detect_distro() {
+    [[ -r /etc/os-release ]] || die "/etc/os-release not found — unsupported system"
+    # shellcheck source=/dev/null
+    . /etc/os-release
+    ID="${ID:-}"; ID_LIKE="${ID_LIKE:-}"; PRETTY_NAME="${PRETTY_NAME:-unknown}"
+
+    case "$ID" in
+        fedora|rhel|centos|rocky|almalinux)  PKG_MGR=dnf ;;
+        debian|ubuntu|pop|linuxmint|neon)    PKG_MGR=apt ;;
+        *)
+            case "$ID_LIKE" in
+                *fedora*|*rhel*)  PKG_MGR=dnf ;;
+                *debian*)         PKG_MGR=apt ;;
+                *) die "unsupported distro: $PRETTY_NAME (id=$ID, id_like=$ID_LIKE)" ;;
+            esac
+            ;;
+    esac
+
+    if (( EUID == 0 )); then
+        PRIV="root"
+    else
+        have sudo || die "needs root: run as root or install sudo"
+        PRIV="sudo"
+    fi
+}
+
+# ─────────────────────────────── plan ────────────────────────────────
+show_plan() {
+    echo
+    printf "${C_B}dots-linux setup${C_0}\n"
+    printf "  distro          %s (id=%s%s)\n" "$PRETTY_NAME" "$ID" "${ID_LIKE:+, like=$ID_LIKE}"
+    printf "  packages        %s\n" "$PKG_MGR"
+    printf "  privileges      %s\n" "$PRIV"
+    printf "  repo            %s\n" "$DOTS_DIR"
+    printf "  runtimes        %s\n" "$($WITH_RUNTIMES && echo yes || echo skipped)"
+    printf "  login shell     %s\n" "$($WITH_CHSH && echo zsh || echo unchanged)"
+    echo
+    printf "  ${C_B}system packages${C_0}: git stow curl make gcc unzip zsh fastfetch ghostty\n"
+    printf "  ${C_B}via mise${C_0}        : ${MISE_TOOLS[*]}\n"
+    $WITH_RUNTIMES && printf "  ${C_B}runtimes${C_0}        : ${MISE_RUNTIMES[*]}\n"
+    printf "  ${C_B}other${C_0}           : antidote, zed, stow ×${#STOW_PKGS[@]} packages (--no-folding)\n"
+    echo
+}
+
+confirm() {
+    $ASSUME_YES && return 0
+    [[ -t 0 ]] || die "refusing to run non-interactively without --yes — pass --yes or use a TTY"
+    local reply
+    read -rp "Proceed? [y/N] " reply
+    [[ "$reply" =~ ^[Yy]$ ]] || { echo "Aborted."; exit 0; }
+}
+
+# ─────────────────────── phase implementations ───────────────────────
+phase_base() {
+    msg "Base packages ($PKG_MGR)"
+    if [[ "$PKG_MGR" == apt ]]; then
+        run_bg "apt-get update" sudo_cmd apt-get update
+    else
+        # dnf-plugins-core provides `dnf copr` (needed for ghostty)
+        pkg_run "install dnf-plugins-core" dnf-plugins-core
+    fi
+    local p
+    for p in git stow curl make gcc unzip zsh; do
+        pkg_run "install $p" "$p"
+    done
+    ok "base packages ready"
+}
+
+# antidote — zsh plugin manager, cloned to ~/.antidote
+phase_antidote() {
+    msg "Antidote"
+    if [[ -f "$HOME/.antidote/antidote.zsh" ]]; then
+        skip_antidote
+    else
+        run_bg "clone antidote" git clone --depth 1 https://github.com/mattmc3/antidote "$HOME/.antidote"
+    fi
+}
+skip_antidote() { printf "  • ~/.antidote already cloned\n"; }
+
+phase_ghostty() {
+    msg "Ghostty"
+    have ghostty && { printf "  • ghostty $(ghostty --version 2>/dev/null | head -1)\n"; return; }
+    case "$PKG_MGR" in
+        dnf)
+            run_bg "enable pgdev/ghostty COPR" sudo_cmd dnf copr enable -y pgdev/ghostty
+            pkg_run "install ghostty" ghostty
+            ;;
+        apt)
+            # upstream publishes Ubuntu-built .debs on GitHub releases; they work
+            # on current Debian releases too. Prefer the ubuntu24.04 build.
+            local tmp asset url
+            tmp="$(mktemp -d)"
+            run "query ghostty latest release" curl -fsSL \
+                -o "$tmp/release.json" https://api.github.com/repos/ghostty-org/ghostty/releases/latest
+            asset="$(grep -o '"browser_download_url": *"[^"]*amd64\.deb"' "$tmp/release.json" \
+                     | sed 's/.*"\(https[^"]*\)"/\1/' | grep -F ubuntu24.04 | head -1 || true)"
+            [[ -z "$asset" ]] && asset="$(grep -o '"browser_download_url": *"[^"]*amd64\.deb"' "$tmp/release.json" \
+                     | sed 's/.*"\(https[^"]*\)"/\1/' | head -1 || true)"
+            [[ -n "$asset" ]] || { rm -rf "$tmp"; die "no ghostty .deb asset found — install manually from github.com/ghostty-org/ghostty/releases"; }
+            url="$asset"
+            run_bg "download ghostty .deb" curl -fsSL -o "$tmp/ghostty.deb" "$url"
+            pkg_run "install ghostty .deb" "$tmp/ghostty.deb"
+            rm -rf "$tmp"
+            ;;
+    esac
+}
+
+phase_fastfetch() {
+    msg "Fastfetch"
+    have fastfetch && { printf "  • fastfetch $(fastfetch --version 2>/dev/null | head -1)\n"; return; }
+    if [[ "$PKG_MGR" == dnf ]]; then
+        pkg_run "install fastfetch" fastfetch
+        return
+    fi
+    # apt: trixie+ ships fastfetch; older debians fall back to the GitHub .deb
+    local NOSTOP=1 rc
+    if pkg_run "install fastfetch (apt)" fastfetch; then
+        return
+    fi
+    local tmp; tmp="$(mktemp -d)"
+    run_bg "download fastfetch .deb" curl -fsSL \
+        -o "$tmp/fastfetch.deb" \
+        https://github.com/fastfetch-cli/fastfetch/releases/latest/download/fastfetch-linux-amd64.deb
+    pkg_run "install fastfetch .deb" "$tmp/fastfetch.deb"
+    rm -rf "$tmp"
+}
+
+phase_mise() {
+    msg "mise"
+    if have mise; then
+        printf "  • mise $(mise --version 2>/dev/null | head -1)\n"
+    elif [[ -x "$HOME/.local/bin/mise" ]]; then
+        printf "  • ~/.local/bin/mise\n"
+    else
+        if $DRY_RUN; then
+            printf "  [dry] curl -fsSL https://mise.run | sh\n"
+        else
+            local tmp; tmp="$(mktemp)"
+            run_bg "fetch mise installer" curl -fsSL https://mise.run -o "$tmp"
+            run_bg "run mise installer" sh "$tmp"
+            rm -f "$tmp"
+        fi
+    fi
+    export PATH="$HOME/.local/bin:$PATH"
+    have mise || $DRY_RUN || die "mise still not on PATH after install"
+}
+
+phase_mise_tools() {
+    msg "CLI tools via mise"
+    local t
+    for t in "${MISE_TOOLS[@]}"; do
+        run_bg "mise: $t" mise use -g "$t@latest"
+    done
+}
+
+phase_runtimes() {
+    $WITH_RUNTIMES || { msg "Runtimes — skipped (--no-runtimes)"; return; }
+    msg "Language runtimes via mise"
+    local r
+    for r in "${MISE_RUNTIMES[@]}"; do
+        run_bg "mise: $r" mise use -g "$r@latest"
+    done
+}
+
+phase_zed() {
+    msg "Zed"
+    have zed && { printf "  • zed $(zed --version 2>/dev/null | head -1)\n"; return; }
+    [[ -x "$HOME/.local/bin/zed" ]] && { printf "  • ~/.local/bin/zed\n"; return; }
+    if $DRY_RUN; then
+        printf "  [dry] curl -f https://zed.dev/install.sh | sh\n"
+    else
+        local tmp; tmp="$(mktemp)"
+        run_bg "fetch zed installer" curl -f https://zed.dev/install.sh -o "$tmp"
+        run_bg "install zed" sh "$tmp"
+        rm -f "$tmp"
+    fi
+}
+
+phase_stow() {
+    msg "Stow packages (--no-folding)"
+    local BACKUP_DIR="$HOME/.dots-backup-$(date +%Y%m%d-%H%M%S)"
+    local pkg rel target
+    for pkg in "${STOW_PKGS[@]}"; do
+        [[ -d "$DOTS_DIR/$pkg" ]] || die "package missing: $pkg"
+
+        # Back up any *real* file that would collide with a package file.
+        # Existing symlinks are left alone — stow is idempotent for those.
+        while IFS= read -r -d '' rel; do
+            rel="${rel#./}"
+            target="$HOME/$rel"
+            [[ -e "$target" || -L "$target" ]] || continue
+            [[ -L "$target" ]] && continue
+            [[ "$(readlink -f "$target" 2>/dev/null)" == "$DOTS_DIR/"* ]] && continue
+            if $DRY_RUN; then
+                printf "  [dry] backup ~/%s → %s\n" "$rel" "$BACKUP_DIR"
+            else
+                mkdir -p "$BACKUP_DIR/$(dirname "$rel")"
+                mv "$target" "$BACKUP_DIR/$rel"
+                printf "        backed up ~/%s\n" "$rel"
+            fi
+        done < <(cd "$DOTS_DIR/$pkg" && find . -mindepth 1 \( -type f -o -type l \) -print0)
+
+        run_bg "stow $pkg" stow --dir="$DOTS_DIR" --target="$HOME" --no-folding -S "$pkg"
+    done
+}
+
+phase_chsh() {
+    $WITH_CHSH || { msg "Login shell — unchanged (--no-chsh)"; return; }
+    msg "Login shell"
+    local zsh_path; zsh_path="$(command -v zsh)"
+    if ! grep -qx "$zsh_path" /etc/shells; then
+        run "register $zsh_path in /etc/shells" sudo_cmd tee -a /etc/shells <<< "$zsh_path" >/dev/null
+    fi
+    if [[ "${SHELL:-}" == "$zsh_path" ]]; then
+        printf "  • login shell already %s\n" "$zsh_path"
+    else
+        run_bg "chsh -s $zsh_path" sudo_cmd chsh -s "$zsh_path" "$(id -un)"
+    fi
+}
+
+phase_summary() {
+    echo
+    msg "Summary"
+    local checks=(git stow zsh ghostty fastfetch nvim starship lsd lazygit zoxide fzf bat direnv zed)
+    local missing=() c
+    for c in "${checks[@]}"; do
+        have "$c" || [[ -x "$HOME/.local/bin/$c" ]] || missing+=("$c")
+    done
+    if ((${#missing[@]} == 0)); then
+        ok "all tools on PATH"
+    else
+        printf "${C_R}  ! not found (new shells may be needed for mise shims):%s %s\n" "$C_0" "${missing[*]}"
+    fi
+    echo
+    ok "dots-linux setup complete — open a new zsh shell ✨"
+    echo "     first launch will generate ~/.zsh_plugins.zsh via antidote"
+    echo "     stowed: ${STOW_PKGS[*]}"
+    $LOGGING && echo "     log: $LOG_FILE"
+}
+
+# ─────────────────────────────── main ────────────────────────────────
+detect_distro
+show_plan
+confirm
+
+phase_base
+phase_antidote
+phase_ghostty
+phase_fastfetch
+phase_mise
+phase_mise_tools
+phase_zed
+phase_stow
+phase_runtimes
+phase_chsh
+phase_summary
