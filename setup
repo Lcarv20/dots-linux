@@ -411,10 +411,10 @@ phase_summary() {
     if ((${#missing[@]} == 0)); then
         ok "all tools on PATH"
     else
-        printf "${C_R}  ! not found (new shells may be needed for mise shims):%s %s\n" "$C_0" "${missing[*]}"
+        printf "${C_R}  ! not found (new shells may be needed for mise shims): ${C_0}%s\n" "${missing[*]}"
     fi
     if ((${#WARNINGS[@]} > 0)); then
-        printf "${C_R}  warnings:%s\n" "$C_0"
+        printf "${C_R}  warnings:${C_0}\n"
         local w
         for w in "${WARNINGS[@]}"; do printf "    - %s\n" "$w"; done
     fi
