@@ -32,10 +32,15 @@ MISE_RUNTIMES=(bun node go rust pnpm lua)
 
 # ─────────────────────────────── ui ───────────────────────────────────
 C_G="\033[32m"; C_R="\033[31m"; C_B="\033[36m"; C_M="\033[35m"; C_0="\033[0m"
+# PFX indents ui lines — set it (local) before a fallback block and every
+# ✔/✖/! line drawn underneath aligns inside the tree bar.
+PFX=""
 msg()   { printf "${C_M}▶ %s${C_0}\n" "$*"; }
-ok()    { printf "${C_G}  ✔ %s${C_0}\n" "$*"; }
-fail()  { printf "${C_R}  ✖ %s${C_0}\n" "$*"; }
+ok()    { printf "${C_G}%s  ✔ %s${C_0}\n" "$PFX" "$*"; }
+fail()  { printf "${C_R}%s  ✖ %s${C_0}\n" "$PFX" "$*"; }
 die()   { fail "$*"; exit 1; }
+# scope_step <label> — open a fallback branch under the failed attempt
+scope_step() { printf "%s  │\n%s  ╰─ %s\n" "$PFX" "$PFX" "$1"; }
 log_cmd() { # log_cmd <command…> — append to setup.log when --log
     $LOGGING || return 0
     printf '\n--- %s ---\n' "$*" >> "$LOG_FILE"
@@ -49,7 +54,7 @@ log_out() { # log_out <path-to-captured-output>
 # failure unless NOSTOP=1 (same dynamic-scope contract as run_bg)
 run() {
     local label="$1"; shift
-    if $DRY_RUN; then printf "  [dry] %s: %s\n" "$label" "$*"; return 0; fi
+    if $DRY_RUN; then printf "%s  [dry] %s: %s\n" "$PFX" "$label" "$*"; return 0; fi
     log_cmd "$label: $*"
     local tmp rc; tmp="$(mktemp)"
     rc=0; "$@" >"$tmp" 2>&1 || rc=$?   # set -e safe capture
@@ -67,16 +72,16 @@ run() {
 # unless NOSTOP=1 is set by the caller (dynamic scoping).
 run_bg() {
     local label="$1"; shift
-    if $DRY_RUN; then printf "  [dry] %s: %s\n" "$label" "$*"; return 0; fi
+    if $DRY_RUN; then printf "%s  [dry] %s: %s\n" "$PFX" "$label" "$*"; return 0; fi
     log_cmd "$label: $*"
     local tmp spin='⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏' i=0 pid rc
     local width; width="$(tput cols 2>/dev/null || echo 80)"
     tmp="$(mktemp)"
     "$@" >"$tmp" 2>&1 & pid=$!
-    printf "  %s %s" "${spin:0:1}" "$label"
+    printf "%s  %s %s" "$PFX" "${spin:0:1}" "$label"
     while kill -0 "$pid" 2>/dev/null; do
         i=$(( (i+1) % ${#spin} ))
-        printf "\r  %s %s" "${spin:$i:1}" "$label"
+        printf "\r%s  %s %s" "$PFX" "${spin:$i:1}" "$label"
         sleep 0.1
     done
     rc=0; wait "$pid" || rc=$?   # set -e safe: never let a failed `wait` kill us
@@ -96,7 +101,7 @@ sudo_cmd() { if (( EUID == 0 )); then "$@"; else sudo "$@"; fi; }
 
 # Non-fatal failure notes — surfaced again in the summary
 WARNINGS=()
-warn_note() { WARNINGS+=("$1"); printf "${C_R}  ! %s${C_0} (continuing)\n" "$1"; }
+warn_note() { printf "${C_R}%s  ! %s${C_0} (continuing)\n" "$PFX" "$1"; WARNINGS+=("$1"); }
 
 # pkg_run <label> <pkg…> — install package(s) with the detected manager
 pkg_run() {
@@ -225,24 +230,34 @@ phase_ghostty() {
             if pkg_run "install ghostty" ghostty; then
                 return
             fi
+            scope_step "fallback 1: scottames/ghostty COPR (per ghostty.org docs)"
+            local PFX="    "
             if run_bg "enable scottames/ghostty COPR" sudo_cmd dnf copr enable -y scottames/ghostty \
                && pkg_run "install ghostty (scottames)" ghostty; then
                 return
             fi
+            scope_step "fallback 2: avengemedia/danklinux COPR"
+            PFX="      "
             if run_bg "enable avengemedia/danklinux COPR" sudo_cmd dnf copr enable -y avengemedia/danklinux \
                && pkg_run "install ghostty (danklinux)" ghostty; then
                 return
             fi
+            PFX=""
             warn_note "ghostty not installed — see setup.log (options: scottames/ghostty COPR, terra-release, avengemedia/danklinux COPR)"
             ;;
         apt)
-            # ghostty is not in the Debian archive; ghostty.org links the
-            # community griffo repo. We use the always-free mirror
-            # (deb-free.griffo.io): no account needed, at most ~2 months
-            # behind upstream, security fixes published immediately.
+            # Ubuntu 26.04+ ships ghostty officially; Debian never has.
+            if pkg_run "install ghostty" ghostty; then
+                return
+            fi
+            # ghostty.org links the community griffo repo. We use the
+            # always-free mirror (deb-free.griffo.io): no account needed,
+            # at most ~2 months behind upstream, security fixes immediate.
+            scope_step "fallback: deb-free.griffo.io community repo"
+            local PFX="    "
             local suite
             suite="$(. /etc/os-release && echo "${DEBIAN_CODENAME:-${UBUNTU_CODENAME:-$VERSION_CODENAME}}")"
-            [[ -z "$suite" ]] && { warn_note "ghostty not installed — no codename in /etc/os-release"; return; }
+            [[ -z "$suite" ]] && { PFX=""; warn_note "ghostty not installed — no codename in /etc/os-release"; return; }
             local S=""; (( EUID != 0 )) && S="sudo"
             run "create /etc/apt/keyrings" sudo_cmd install -d -m 0755 /etc/apt/keyrings \
                 || warn_note "could not create /etc/apt/keyrings"
@@ -271,6 +286,8 @@ phase_fastfetch() {
     if pkg_run "install fastfetch (apt)" fastfetch; then
         return
     fi
+    scope_step "fallback: GitHub .deb (fastfetch-cli releases)"
+    local PFX="    "
     tmp="$(mktemp -d)"
     if run_bg "download fastfetch .deb" curl -fsSL \
             -o "$tmp/fastfetch.deb" \
@@ -279,6 +296,7 @@ phase_fastfetch() {
         rm -rf "$tmp"; return
     fi
     rm -rf "$tmp"
+    PFX=""
     warn_note "fastfetch not installed (apt + GitHub .deb both failed)"
 }
 
