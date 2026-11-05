@@ -403,15 +403,18 @@ phase_chsh() {
 phase_summary() {
     echo
     msg "Summary"
+    local shims="$HOME/.local/share/mise/shims"
     local checks=(git stow zsh ghostty fastfetch nvim starship lsd lazygit zoxide fzf bat direnv zed)
     local missing=() c
     for c in "${checks[@]}"; do
-        have "$c" || [[ -x "$HOME/.local/bin/$c" ]] || missing+=("$c")
+        have "$c" || [[ -x "$HOME/.local/bin/$c" ]] || [[ -x "$shims/$c" ]] || missing+=("$c")
     done
     if ((${#missing[@]} == 0)); then
-        ok "all tools on PATH"
+        ok "all tools installed"
+        echo "     mise-managed tools live as shims and activate in new zsh shells"
+        echo "     (~/.zshrc runs: eval \"\$(mise activate zsh)\") — open a new shell and run: nvim --version"
     else
-        printf "${C_R}  ! not found (new shells may be needed for mise shims): ${C_0}%s\n" "${missing[*]}"
+        printf "${C_R}  ! not installed: ${C_0}%s\n" "${missing[*]}"
     fi
     if ((${#WARNINGS[@]} > 0)); then
         printf "${C_R}  warnings:${C_0}\n"
