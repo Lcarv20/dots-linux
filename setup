@@ -412,6 +412,13 @@ detect_distro
 show_plan
 confirm
 
+# Prime sudo credentials up front, on a clean line — otherwise the
+# first backgrounded sudo prompts mid-spinner and garbles the output.
+if (( EUID != 0 )) && ! $DRY_RUN; then
+    msg "Sudo access"
+    sudo -v
+fi
+
 phase_base
 phase_antidote
 phase_ghostty
