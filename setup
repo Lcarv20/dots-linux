@@ -238,8 +238,9 @@ phase_ghostty() {
             fi
             scope_step "fallback 2: terra repo (fyralabs)"
             PFX="      "
-            if run_bg "install terra-release" sudo_cmd dnf install -y --nogpgcheck \
-                    --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release \
+            if run_bg "install terra-release + terra-gpg-keys" sudo_cmd dnf install -y --nogpgcheck \
+                    --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' \
+                    terra-release terra-gpg-keys \
                && pkg_run "install ghostty (terra)" ghostty; then
                 return
             fi
