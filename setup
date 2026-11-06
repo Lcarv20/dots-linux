@@ -223,11 +223,11 @@ phase_ghostty() {
     local NOSTOP=1
     case "$PKG_MGR" in
         dnf)
-            # ghostty isn't in official Fedora repos; try plain install first
-            # (works where terra/danklinux are already enabled), then the
-            # COPRs — scottames is the one linked from ghostty.org docs,
-            # danklinux is the Dux-ecosystem one.
-            if pkg_run "install ghostty" ghostty; then
+            # ghostty isn't in official Fedora repos; try the plain install
+            # first (works where terra/danklinux are already enabled), then
+            # the fallback chain: scottames COPR (linked from ghostty.org
+            # docs), terra (fyralabs), danklinux (Dux-ecosystem).
+            if pkg_run "install ghostty (official repos)" ghostty; then
                 return
             fi
             scope_step "fallback 1: scottames/ghostty COPR (per ghostty.org docs)"
@@ -236,8 +236,15 @@ phase_ghostty() {
                && pkg_run "install ghostty (scottames)" ghostty; then
                 return
             fi
-            scope_step "fallback 2: avengemedia/danklinux COPR"
+            scope_step "fallback 2: terra repo (fyralabs)"
             PFX="      "
+            if run_bg "install terra-release" sudo_cmd dnf install -y --nogpgcheck \
+                    --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release \
+               && pkg_run "install ghostty (terra)" ghostty; then
+                return
+            fi
+            scope_step "fallback 3: avengemedia/danklinux COPR"
+            PFX="        "
             if run_bg "enable avengemedia/danklinux COPR" sudo_cmd dnf copr enable -y avengemedia/danklinux \
                && pkg_run "install ghostty (danklinux)" ghostty; then
                 return
