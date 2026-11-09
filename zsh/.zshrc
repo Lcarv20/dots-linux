@@ -81,3 +81,12 @@ _show_color_banner
 
 # opencode
 export PATH=/home/lcarv/.opencode/bin:$PATH
+
+# Keybindings
+
+## Mapping alt+left/right to actually work
+bindkey "^[[1;3D" backward-word
+bindkey "^[[1;3C" forward-word
+# ╰╴> Fallback bindings for standard ESC+b and ESC+f
+bindkey "^[b" backward-word
+bindkey "^[f" forward-word

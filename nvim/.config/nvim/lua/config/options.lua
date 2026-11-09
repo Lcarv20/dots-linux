@@ -8,9 +8,11 @@ vim.opt.termguicolors = true
 
 vim.opt.winborder = "rounded"
 vim.g.have_nerd_font = true
+vim.opt.laststatus = 3 -- Don't show status lines everywhere
 vim.opt.relativenumber = true -- set relative numbered lines
 vim.opt.numberwidth = 2 -- set number column width to 2 {default 4}
 vim.opt.showtabline = 1
+vim.opt.laststatus = 3
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.clipboard = ""

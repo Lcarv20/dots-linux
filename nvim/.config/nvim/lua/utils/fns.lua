@@ -19,7 +19,7 @@ M.diagnostics_config = function(border)
 		vim.diagnostic.config({
 			signs = { text = diagnostic_signs },
 			virtual_text = {
-				prefix = "⏺",
+				prefix = " ",
 			},
 			virtual_lines = false,
 			update_in_insert = false,

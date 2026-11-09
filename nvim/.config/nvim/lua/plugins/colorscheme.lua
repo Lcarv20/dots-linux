@@ -179,7 +179,7 @@ return {
 		},
 		config = function(_, opts)
 			require("dark2026").setup(opts)
-			vim.cmd.colorscheme("dark2026")
+			-- vim.cmd.colorscheme("dark2026")
 		end,
 	},
 	{
@@ -278,16 +278,19 @@ return {
 	},
 	{
 		"Lcarv20/sugoi.nvim",
-		-- dir = "~/Developer/nvim-plugins/sugoi.nvim",
+		dir = vim.fn.isdirectory(vim.fn.expand("~/Developer/nvim_plugins/sugoi.nvim")) == 1
+				and "~/Developer/nvim_plugins/sugoi.nvim"
+			or nil,
 		dependencies = { "tjdevries/colorbuddy.nvim" },
 		lazy = false,
 		priority = 1000,
 		opts = {
 			transparent = true,
 		},
-		config = function(_, opts)
-			require("sugoi").setup(opts)
-			-- vim.cmd.colorscheme("sugoi") -- applies when you want
+		config = function()
+			local sugoi_adapt = require("utils.sugoi_adapt")
+			sugoi_adapt.apply()
+			sugoi_adapt.watch()
 		end,
 	},
 	-- Using Lazy

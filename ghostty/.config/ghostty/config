@@ -1,56 +1,54 @@
-# Cursor
-# -------------
+# Font Configuration
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+
+# Window Configuration
+# window-theme = ghostty
+window-decoration = false
+window-padding-x = 12
+window-padding-y = 12
+background-opacity = 1.0
+# background-blur-radius = 32
+
+# Cursor Configuration
 cursor-style = block
-shell-integration-features = no-cursor
-# cursor-style-blink = false
-cursor-click-to-move = true
-# cursor-text = #181818
-# cursor-color = #e86d6d
+cursor-style-blink = true
 
-# Theme
-# -------------
-# theme = Acid Lime
-theme = Claude Dark
-# theme = dankcolors
-# theme = Operator Mono Dark
-background-opacity = 0.95
-background-blur = true
+# Scrollback
+scrollback-limit = 3023
 
-# open new tab on home
-#--------------
-adjust-cell-height = 40%
-#--------------
+# Terminal features
+mouse-hide-while-typing = true
+copy-on-select = false
+confirm-close-surface = false
 
-# Font
-# -------------
-font-family = ComicShannsMono Nerd Font
-# font-family = caskaydiaCove NF
-font-size = 11
-# window-title-font-family = caskaydiaCove NF
-#--------------
+# Disable in-app Ghostty toast notifications
+app-notifications = false
 
-# Window size
-# -------------
-window-decoration = none
+# Key bindings for common actions
+#keybind = ctrl+c=copy_to_clipboard
+#keybind = ctrl+v=paste_from_clipboard
+keybind = ctrl+shift+n=new_window
+keybind = ctrl+t=new_tab
+keybind = ctrl+plus=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+zero=reset_font_size
+
+# Material 3 UI elements
+unfocused-split-opacity = 0.7
+unfocused-split-fill = #44464f
+
+# Tab configuration
+gtk-titlebar = false
+
+# Shell integration
+shell-integration = detect
+shell-integration-features = cursor,sudo,title,no-cursor
+keybind = shift+enter=text:\n
+
+# Rando stuff
+gtk-single-instance = true
+
+# Dank color generation
+theme = dankcolors
 window-theme = ghostty
-#--------------
-
-# Notifications
-# -------------
-app-notifications=no-clipboard-copy
-#--------------
-
-# cmd+backspace to delete the entire line
-# keybind = super+backspace=text:\x15
-
-# map alt+backspace to delete the word before the cursor
-keybind = ctrl+backspace=text:\x17
-
-# # Split navigation
-# keybind = super+ctrl+h=goto_split:left
-# keybind = super+ctrl+j=goto_split:bottom
-# keybind = super+ctrl+k=goto_split:top
-# keybind = super+ctrl+l=goto_split:right
-#
-# # Split zoom
-# keybind = super+ctrl+enter=toggle_split_zoom

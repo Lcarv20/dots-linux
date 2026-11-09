@@ -16,8 +16,8 @@ map("n", "<leader>qa", "<cmd>qa<cr>", { desc = "Quit All", noremap = true })
 map("n", "<leader>qq", "<cmd>q<cr>", { desc = "Quit current", noremap = true })
 
 -- Maintain scroll in the middle
-map("n", "<C-d>", "<C-d>zz")
-map("n", "<C-u>", "<C-u>zz")
+map({ "n", "x" }, "<C-d>", "<C-d>zz")
+map({ "n", "x" }, "<C-u>", "<C-u>zz")
 -- Middle of the screen when going through searches
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
