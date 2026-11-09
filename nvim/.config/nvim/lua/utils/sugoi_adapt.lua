@@ -4,6 +4,14 @@ local uv = vim.uv or vim.loop
 local path = vim.fn.expand("~/.cache/dms/dms-colors.json")
 local settings_path = vim.fn.expand("~/.config/dms/settings.json")
 
+function M.is_dux_active()
+	return vim.fn.executable("dms") == 1 and uv.fs_stat(path) ~= nil
+end
+
+function M.is_sugoi_active()
+	return vim.g.colors_name == "sugoi"
+end
+
 local function hex_to_rgb(hex)
 	hex = hex:gsub("#", "")
 	return tonumber(hex:sub(1, 2), 16), tonumber(hex:sub(3, 4), 16), tonumber(hex:sub(5, 6), 16)
@@ -25,6 +33,10 @@ local function lerp(h1, h2, t)
 end
 
 function M.get_adapted_palette()
+	if not M.is_dux_active() then
+		return nil, nil
+	end
+
 	local f = io.open(path, "r")
 	if not f then
 		return nil, nil
@@ -91,7 +103,19 @@ function M.get_adapted_palette()
 	return palette, mode
 end
 
-function M.apply()
+function M.apply(force)
+	-- Guard: If a different theme is actively set and not forced, don't hijack it
+	if not force and vim.g.colors_name and vim.g.colors_name ~= "sugoi" then
+		return
+	end
+
+	-- Guard: If Dux is not the shell, simply run standard sugoi
+	if not M.is_dux_active() then
+		require("sugoi").setup({ transparent = true })
+		vim.cmd.colorscheme("sugoi")
+		return
+	end
+
 	local pal, mode = M.get_adapted_palette()
 	if pal and mode then
 		vim.o.background = mode
@@ -114,6 +138,11 @@ function M.watch()
 		return
 	end
 
+	-- Guard: Don't start watching if Dux is not installed or active
+	if not M.is_dux_active() then
+		return
+	end
+
 	local watcher = uv.new_fs_event()
 	local debounce_timer = uv.new_timer()
 
@@ -128,8 +157,11 @@ function M.watch()
 			100,
 			0,
 			vim.schedule_wrap(function()
-				M.apply()
-				vim.notify("Sugoi palette adapted from DMS", vim.log.levels.INFO, { title = "Sugoi" })
+				-- Guard: Only adapt if sugoi is STILL the active colorscheme AND Dux is active!
+				if M.is_sugoi_active() and M.is_dux_active() then
+					M.apply(true)
+					vim.notify("Sugoi palette adapted from DMS", vim.log.levels.INFO, { title = "Sugoi" })
+				end
 				-- Re-arm watcher to cleanly handle atomic file writes / inode recreation
 				pcall(function()
 					watcher:stop()
