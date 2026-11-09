@@ -171,7 +171,7 @@ show_plan() {
     printf "  runtimes        %s\n" "$($WITH_RUNTIMES && echo yes || echo skipped)"
     printf "  login shell     %s\n" "$($WITH_CHSH && echo zsh || echo unchanged)"
     echo
-    printf "  ${C_B}system packages${C_0}: git stow curl make gcc unzip zsh fastfetch ghostty\n"
+    printf "  ${C_B}system packages${C_0}: git stow curl make gcc unzip zsh fastfetch ghostty chrome\n"
     printf "  ${C_B}via mise${C_0}        : ${MISE_TOOLS[*]}\n"
     $WITH_RUNTIMES && printf "  ${C_B}runtimes${C_0}        : ${MISE_RUNTIMES[*]}\n"
     printf "  ${C_B}other${C_0}           : antidote, zed, stow ×${#STOW_PKGS[@]} packages (--no-folding)\n"
@@ -308,6 +308,46 @@ phase_fastfetch() {
     warn_note "fastfetch not installed (apt + GitHub .deb both failed)"
 }
 
+phase_chrome() {
+    msg "Google Chrome"
+    if have google-chrome || have google-chrome-stable; then
+        local ver
+        ver="$(google-chrome --version 2>/dev/null || google-chrome-stable --version 2>/dev/null || true)"
+        printf "  • %s\n" "${ver:-google-chrome}"
+        return
+    fi
+    local NOSTOP=1
+    case "$PKG_MGR" in
+        dnf)
+            local S=""; (( EUID != 0 )) && S="sudo"
+            if ! run_bg "enable fedora google-chrome repo" \
+                    bash -c "$S dnf install -y fedora-workstation-repositories && ($S dnf config-manager --set-enabled google-chrome 2>/dev/null || $S dnf config-manager set-enabled google-chrome 2>/dev/null)"; then
+                scope_step "fallback: direct google-chrome repository config"
+                local PFX="    "
+                run_bg "add google-chrome repo" \
+                    bash -c "printf '[google-chrome]\nname=google-chrome\nbaseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64\nenabled=1\ngpgcheck=1\ngpgkey=https://dl.google.com/linux/linux_signing_key.pub\n' | $S tee /etc/yum.repos.d/google-chrome.repo >/dev/null"
+                PFX=""
+            fi
+            pkg_run "install google-chrome-stable" google-chrome-stable \
+                || warn_note "google-chrome-stable not installed (see setup.log)"
+            ;;
+        apt)
+            local S=""; (( EUID != 0 )) && S="sudo"
+            run "create /etc/apt/keyrings" sudo_cmd install -d -m 0755 /etc/apt/keyrings \
+                || warn_note "could not create /etc/apt/keyrings"
+            if run_bg "add google-chrome GPG key" \
+                    bash -c "curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | $S gpg --dearmor --yes -o /etc/apt/keyrings/google-chrome.gpg" \
+               && run_bg "add google-chrome repo" \
+                    bash -c "echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main' | $S tee /etc/apt/sources.list.d/google-chrome.list >/dev/null" \
+               && run_bg "apt update (google-chrome)" sudo_cmd apt-get update \
+               && pkg_run "install google-chrome-stable" google-chrome-stable; then
+                return
+            fi
+            warn_note "google-chrome-stable not installed — apt setup failed (see setup.log)"
+            ;;
+    esac
+}
+
 phase_mise() {
     msg "mise"
     if have mise; then
@@ -412,7 +452,7 @@ phase_summary() {
     echo
     msg "Summary"
     local shims="$HOME/.local/share/mise/shims"
-    local checks=(git stow zsh ghostty fastfetch nvim starship lsd lazygit zoxide fzf bat direnv zed)
+    local checks=(git stow zsh ghostty fastfetch google-chrome nvim starship lsd lazygit zoxide fzf bat direnv zed)
     local missing=() c
     for c in "${checks[@]}"; do
         have "$c" || [[ -x "$HOME/.local/bin/$c" ]] || [[ -x "$shims/$c" ]] || missing+=("$c")
@@ -452,6 +492,7 @@ phase_base
 phase_antidote
 phase_ghostty
 phase_fastfetch
+phase_chrome
 phase_mise
 phase_mise_tools
 phase_zed
