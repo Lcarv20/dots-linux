@@ -27,7 +27,7 @@ WITH_CHSH=true
 NOSTOP=0   # when 1, run_bg returns non-zero instead of exiting (see phase_fastfetch)
 
 STOW_PKGS=(fastfetch ghostty git lazygit lsd nvim starship zed zsh)
-MISE_TOOLS=(lsd lazygit fzf starship zoxide bat direnv neovim delta)
+MISE_TOOLS=(lsd lazygit fzf starship zoxide bat direnv neovim delta fd rg)
 MISE_RUNTIMES=(bun node go rust pnpm lua)
 
 # ─────────────────────────────── ui ───────────────────────────────────
@@ -460,7 +460,7 @@ phase_summary() {
     echo
     msg "Summary"
     local shims="$HOME/.local/share/mise/shims"
-    local checks=(git stow zsh ghostty fastfetch google-chrome nvim starship lsd lazygit zoxide fzf bat direnv zed)
+    local checks=(git stow zsh ghostty fastfetch google-chrome nvim starship lsd lazygit zoxide fzf bat direnv zed fd rg)
     local missing=() c
     for c in "${checks[@]}"; do
         have "$c" || [[ -x "$HOME/.local/bin/$c" ]] || [[ -x "$shims/$c" ]] || missing+=("$c")
