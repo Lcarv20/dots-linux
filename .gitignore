@@ -7,3 +7,7 @@ lazygit/.config/lazygit/state.yml
 
 # System
 .DS_Store
+
+# Matugen generated themes in Zed
+zed/.config/zed/themes/dank-zed-*.json
+

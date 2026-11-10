@@ -310,10 +310,14 @@ phase_fastfetch() {
 
 phase_chrome() {
     msg "Google Chrome"
+    local user_grp
+    user_grp="$(id -gn 2>/dev/null || echo "$USER")"
+
     if have google-chrome || have google-chrome-stable; then
         local ver
         ver="$(google-chrome --version 2>/dev/null || google-chrome-stable --version 2>/dev/null || true)"
         printf "  • %s\n" "${ver:-google-chrome}"
+        sudo_cmd install -d -o root -g "$user_grp" -m 0775 /etc/opt/chrome/policies/managed 2>/dev/null || true
         return
     fi
     local NOSTOP=1
@@ -328,8 +332,11 @@ phase_chrome() {
                     bash -c "printf '[google-chrome]\nname=google-chrome\nbaseurl=http://dl.google.com/linux/chrome/rpm/stable/x86_64\nenabled=1\ngpgcheck=1\ngpgkey=https://dl.google.com/linux/linux_signing_key.pub\n' | $S tee /etc/yum.repos.d/google-chrome.repo >/dev/null"
                 PFX=""
             fi
-            pkg_run "install google-chrome-stable" google-chrome-stable \
-                || warn_note "google-chrome-stable not installed (see setup.log)"
+            if pkg_run "install google-chrome-stable" google-chrome-stable; then
+                sudo_cmd install -d -o root -g "$user_grp" -m 0775 /etc/opt/chrome/policies/managed 2>/dev/null || true
+            else
+                warn_note "google-chrome-stable not installed (see setup.log)"
+            fi
             ;;
         apt)
             local S=""; (( EUID != 0 )) && S="sudo"
@@ -341,6 +348,7 @@ phase_chrome() {
                     bash -c "echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main' | $S tee /etc/apt/sources.list.d/google-chrome.list >/dev/null" \
                && run_bg "apt update (google-chrome)" sudo_cmd apt-get update \
                && pkg_run "install google-chrome-stable" google-chrome-stable; then
+                sudo_cmd install -d -o root -g "$user_grp" -m 0775 /etc/opt/chrome/policies/managed 2>/dev/null || true
                 return
             fi
             warn_note "google-chrome-stable not installed — apt setup failed (see setup.log)"

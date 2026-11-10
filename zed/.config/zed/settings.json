@@ -7,6 +7,21 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "title_bar": {
+    "button_layout": "platform_default",
+    "show_user_menu": true,
+    "show_sign_in": true,
+    "show_project_items": true,
+    "show_worktree_name": true,
+    "show_branch_name": true,
+    "show_branch_status_icon": false
+  },
+  "buffer_line_height": {
+    "custom": 1.4
+  },
+  "active_pane_modifiers": {
+    "inactive_opacity": 1.0
+  },
   "ssh_connections": [
     {
       "host": "localhost",
@@ -30,8 +45,8 @@
   "use_podman": true,
   "icon_theme": {
     "mode": "system",
-    "light": "Zed (Default)",
-    "dark": "Zed (Default)"
+    "light": "Icons modern material (Dark)",
+    "dark": "Icons modern material (Dark)"
   },
   "agent_servers": {
     "mistral-vibe": {
@@ -44,6 +59,18 @@
       "type": "registry"
     },
     "opencode": {
+      "default_config_options": {
+        "mode": "plan",
+        "model": "zai-coding-plan/glm-5.3-flash"
+      },
+      "favorite_config_option_values": {
+        "model": [
+          "zai-coding-plan/glm-5.3",
+          "zai-coding-plan/glm-5.3-flash",
+          "opencode/big-pickle",
+          "opencode/deepseek-v4.1-flash-free"
+        ]
+      },
       "type": "registry"
     }
   },
@@ -78,13 +105,14 @@
     },
   },
   "tab_bar": {
-    "show": true,
+    "show": false,
   },
   "toolbar": {
     "breadcrumbs": false,
     "quick_actions": false,
   },
   "project_panel": {
+    "button": true,
     "dock": "left",
   },
   "agent": {
@@ -98,8 +126,9 @@
     },
     "default_profile": "write",
     "default_model": {
+      "enable_thinking": true,
       "provider": "mistral",
-      "model": "devstral-medium-latest",
+      "model": "zai-glm-latest",
     },
   },
   "telemetry": {
@@ -107,14 +136,14 @@
   },
   // 🎨 theme settings
   "theme": {
-    "mode": "system",
-    "light": "VS Code Light 2026",
-    "dark": "VS Code Dark 2026"
+    "mode": "dark",
+    "light": "DankShell Glass Light",
+    "dark": "DankShell Glass Dark"
   },
   // 🖼️ background settings
   "terminal": {
     "dock": "bottom",
-    "font_size": 14,
+    "font_size": 16,
     "font_family": "ComicShannsMono Nerd Font",
     "line_height": { "custom": 1.2 },
     "font_weight": 500,
@@ -135,9 +164,9 @@
 
   // 🎨 font settings
   // "ui_font_family": "CaskaydiaCove Nerd Font",
-  // "buffer_line_height": { "custom": 1.4 },
+  "ui_font_size": 16.0,
   "buffer_font_family": "ComicShannsMono Nerd Font",
-  "buffer_font_size": 14.0,
+  "buffer_font_size": 16.0,
 
   // disable cursor blink
   "cursor_blink": false,
