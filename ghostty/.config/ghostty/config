@@ -1,6 +1,7 @@
 # Font Configuration
 font-family = JetBrainsMono Nerd Font
 font-size = 12
+adjust-cell-height = 15
 
 # Window Configuration
 # window-theme = ghostty
